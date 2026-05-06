@@ -1,0 +1,455 @@
+// =============================================
+// CONTACT PAGE STYLES
+// =============================================
+
+// ---- Shared ----
+.eyebrow {
+  font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--eyebrow-color);
+  font-weight: 500;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+
+.crumb {
+  font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
+  font-size: 12px;
+  color: var(--slate-500);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+
+  a {
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--blue-900);
+    }
+  }
+}
+
+// =============================================
+// 1. HERO
+// =============================================
+.hero {
+  padding: 96px 0 48px;
+
+  @media (max-width: 768px) {
+    padding: 64px 0 32px;
+  }
+
+  h1 {
+    max-width: 720px;
+    font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    margin: 16px 0 20px;
+  }
+
+  .lead {
+    max-width: 560px;
+  }
+}
+
+// =============================================
+// 2. MAIN GRID
+// =============================================
+.mainGrid {
+  padding-bottom: 96px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 64px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+// ---- Contact channels ----
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.channel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  background: white;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--slate-300);
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--slate-600);
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+}
+
+.channelLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.channelLink {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--blue-900);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+  align-self: flex-start;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: var(--blue-900);
+  }
+}
+
+// ---- Form card ----
+.formCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  background: white;
+  box-shadow: var(--shadow);
+
+  @media (max-width: 600px) {
+    padding: 28px 20px;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 32px;
+}
+
+.tab {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--slate-500);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--blue-900);
+  }
+}
+
+.tabActive {
+  color: var(--blue-900);
+  border-bottom-color: var(--blue-900);
+}
+
+// ---- Form internals ----
+.form {
+  display: grid;
+  gap: 16px;
+
+  h3 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 4px;
+  }
+}
+
+.formLead {
+  font-size: 14px;
+  color: var(--slate-600);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--slate-700);
+    letter-spacing: 0.01em;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--slate-300);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--slate-900);
+    background: white;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    outline: none;
+    resize: vertical;
+
+    &::placeholder {
+      color: var(--slate-400);
+    }
+
+    &:focus {
+      border-color: var(--blue-600);
+      box-shadow: 0 0 0 3px rgba(24, 94, 212, 0.1);
+    }
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--slate-600);
+  line-height: 1.5;
+
+  input[type='checkbox'] {
+    margin-top: 2px;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--blue-600);
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--blue-900);
+  color: white;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  align-self: flex-start;
+
+  &:hover {
+    background: var(--ink);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+
+    .arrow {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+.success {
+  padding: 20px 24px;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #15803d;
+  border-radius: var(--radius);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+// =============================================
+// 3. OFFICES
+// =============================================
+.offices {
+  padding: 72px 0;
+  border-top: 1px solid var(--line);
+  background: var(--slate-50);
+
+  @media (max-width: 768px) {
+    padding: 48px 0;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 16px 0 8px;
+  }
+}
+
+.officeLead {
+  font-size: 15px;
+  color: var(--slate-600);
+  margin-bottom: 32px;
+}
+
+.officeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.officeCard {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--slate-300);
+    transform: translateY(-2px);
+  }
+}
+
+.officeCity {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--blue-900);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.officeCountry {
+  font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+  margin-bottom: 12px;
+}
+
+.officeAddr {
+  font-size: 13px;
+  color: var(--slate-600);
+  line-height: 1.55;
+}
+
+// =============================================
+// 4. FAQ MINI
+// =============================================
+.faqSection {
+  padding: 96px 0;
+  background: white;
+
+  @media (max-width: 768px) {
+    padding: 64px 0;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 16px 0 40px;
+  }
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faqItem {
+  padding: 24px;
+  background: var(--slate-50);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--slate-300);
+  }
+
+  h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--blue-900);
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--slate-600);
+    line-height: 1.6;
+  }
+}
+
+.faqLink {
+  color: var(--blue-600);
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
