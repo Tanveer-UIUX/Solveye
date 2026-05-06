@@ -1,5 +1,5 @@
-// =============================================
-// CAREERS PAGE — section styles
+﻿// =============================================
+// CAREERS PAGE â€” section styles
 // =============================================
 
 // ---- Section utilities ----
@@ -13,7 +13,42 @@
 
 .sectionAlt {
   composes: section;
-  background: var(--slate-50);
+  --eyebrow-color: var(--blue-100);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(24, 94, 212, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 0% 110%, rgba(14, 165, 160, 0.35) 0%, transparent 50%),
+    var(--blue-900);
+  color: white;
+
+  h2 {
+    color: white;
+  }
+
+  .lead {
+    color: var(--slate-300);
+  }
+
+  .secHead {
+    h2 { color: white; }
+    .note { color: var(--slate-300); }
+  }
+
+  .hpIntro {
+    h2 { color: white; }
+
+    .lead {
+      color: var(--slate-300);
+
+      a {
+        color: var(--blue-300);
+        border-bottom-color: currentColor;
+
+        &:hover { color: white; }
+      }
+    }
+  }
 }
 
 // ---- Shared building blocks ----
@@ -138,7 +173,7 @@
     box-shadow 0.15s ease;
 
   &:hover {
-    background: var(--ink);
+    background: var(--blue-600);
     transform: translateY(-1px);
     box-shadow: var(--shadow);
   }
@@ -184,7 +219,7 @@
   box-shadow: 0 20px 48px -24px rgba(15, 23, 42, 0.25);
 
   &::before {
-    // Subtle top-down highlight — pale tint behind the subject
+    // Subtle top-down highlight â€” pale tint behind the subject
     content: '';
     position: absolute;
     inset: 0;
@@ -202,7 +237,7 @@
   }
 }
 
-// ---- Staggered vertical offsets (short → tall → medium) ----
+// ---- Staggered vertical offsets (short â†’ tall â†’ medium) ----
 .a1 {
   transform: translateY(48px);
   height: calc(100% - 48px);
@@ -439,27 +474,36 @@
 }
 
 .ben {
-  background: white;
-  border: 1px solid var(--line);
+  background: rgba(255 255 255 / 0.06);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255 255 255 / 0.12);
+  box-shadow: inset 0 1px 0 rgba(255 255 255 / 0.08), 0 4px 16px -8px rgba(0 0 0 / 0.3);
   border-radius: var(--radius);
   padding: 24px;
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    border-color: var(--slate-300);
+    border-color: rgba(255 255 255 / 0.22);
+    background: rgba(255 255 255 / 0.1);
     transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    box-shadow: inset 0 1px 0 rgba(255 255 255 / 0.12), 0 12px 28px -8px rgba(0 0 0 / 0.45);
   }
 
   .ic {
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    background: var(--blue-100);
-    color: var(--blue-700);
+    background: rgba(255 255 255 / 0.1);
+    color: white;
     display: grid;
     place-items: center;
     margin-bottom: 16px;
+    transition: background 0.2s ease;
+  }
+
+  &:hover .ic {
+    background: rgba(255 255 255 / 0.18);
   }
 
   h5 {
@@ -467,11 +511,12 @@
     font-weight: 600;
     margin-bottom: 6px;
     letter-spacing: -0.01em;
+    color: white;
   }
 
   p {
     font-size: 13px;
-    color: var(--slate-600);
+    color: var(--slate-300);
     line-height: 1.5;
   }
 }
@@ -492,21 +537,25 @@
 
 .hpCard {
   padding: 24px;
-  background: white;
-  border: 1px solid var(--line);
+  background: rgba(255 255 255 / 0.06);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255 255 255 / 0.12);
+  box-shadow: inset 0 1px 0 rgba(255 255 255 / 0.08), 0 4px 16px -8px rgba(0 0 0 / 0.3);
   border-radius: var(--radius);
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    border-color: var(--slate-300);
+    border-color: rgba(255 255 255 / 0.22);
+    background: rgba(255 255 255 / 0.1);
     transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    box-shadow: inset 0 1px 0 rgba(255 255 255 / 0.12), 0 12px 28px -8px rgba(0 0 0 / 0.45);
   }
 
   .num {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: 12px;
-    color: var(--blue-700);
+    color: var(--blue-100);
     letter-spacing: 0.1em;
     margin-bottom: 12px;
     text-transform: uppercase;
@@ -516,11 +565,12 @@
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 6px;
+    color: white;
   }
 
   p {
     font-size: 13px;
-    color: var(--slate-600);
+    color: var(--slate-300);
     line-height: 1.5;
   }
 }
