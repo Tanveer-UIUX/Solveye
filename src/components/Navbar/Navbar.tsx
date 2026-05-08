@@ -56,6 +56,12 @@ export default function Navbar() {
           <Link href="/careers" className={`${s.link} ${isActive('/careers') ? s.active : ''}`}>
             Careers
           </Link>
+          <Link href="/Lifeatsolveye" className={`${s.link} ${isActive('/Lifeatsolveye') ? s.active : ''}`}>
+            Life at Solveye
+          </Link>
+          <Link href="/trainingandworkshop" className={`${s.link} ${isActive('/trainingandworkshop') ? s.active : ''}`}>
+            Traning & Workshop
+          </Link>
           <Link href="/team" className={`${s.link} ${isActive('/team') ? s.active : ''}`}>
             Team
           </Link>
@@ -85,6 +91,8 @@ export default function Navbar() {
         <Link href="/services" className={s.link} onClick={() => setOpen(false)}>Services</Link>
         <Link href="/about" className={s.link} onClick={() => setOpen(false)}>About</Link>
         <Link href="/careers" className={s.link} onClick={() => setOpen(false)}>Careers</Link>
+        <Link href="/team" className={s.link} onClick={() => setOpen(false)}>Life at Solveye</Link>
+        <Link href="/team" className={s.link} onClick={() => setOpen(false)}>Traning & Workshop</Link>
         <Link href="/team" className={s.link} onClick={() => setOpen(false)}>Team</Link>
         <Link href="/contact" className={s.link} onClick={() => setOpen(false)}>Contact</Link>
       </div>
