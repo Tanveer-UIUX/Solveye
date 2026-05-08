@@ -253,22 +253,63 @@ export default function AboutPage() {
       {/* ===== 1. HERO ===== */}
       <section className={s.hero}>
         <div className="container">
-          <div className={s.crumb}>
-            <Link href="/">Home</Link> / About
-          </div>
-          <span className={s.eyebrow}>About Solveye</span>
-          <h1>
-            We&rsquo;re rebuilding the back office of healthcare, one pod at a
-            time.
-          </h1>
-          <p className={s.lead}>
-            Solveye is a healthcare BPO and IT services company that runs the
-            operational backbone — billing, coding, credentialing, AR,
-            analytics, compliance — for clinics, hospitals, and labs across 38
-            states. We started as five operators and a hypothesis. Today
-            we&rsquo;re 1,200+ specialists serving 480+ customers.
-          </p>
+          <div className={s.heroGrid}>
 
+            {/* Left: copy */}
+            <div className={s.heroCopy}>
+              <div className={s.crumb}>
+                <Link href="/">Home</Link> / About
+              </div>
+              <span className={s.eyebrow}>About Solveye</span>
+              <h1>
+                We&rsquo;re rebuilding the back office of healthcare, one pod at a time.
+              </h1>
+              <p className={s.lead}>
+                Solveye is a healthcare BPO and IT services company that runs the
+                operational backbone — billing, coding, credentialing, AR,
+                analytics, compliance — for clinics, hospitals, and labs across 38
+                states. We started as five operators and a hypothesis. Today
+                we&rsquo;re 1,200+ specialists serving 480+ customers.
+              </p>
+            </div>
+
+            {/* Right: photo composition with floating cards */}
+            <div className={s.heroMedia}>
+              <div className={s.heroPhoto}>
+                {/* Top-right floating card — AI Insight */}
+                <div className={s.floatCardRight}>
+                  <div className={s.cardHead}>
+                    <span className={s.cardIcon}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#185ed4">
+                        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+                      </svg>
+                    </span>
+                    <strong>AI Insight</strong>
+                  </div>
+                  <div className={s.cardSub}>Best Productivity Today:</div>
+                  <div className={s.cardVal}>Wednesday</div>
+                </div>
+
+                {/* Bottom-left floating card — Team Update */}
+                <div className={s.floatCardLeft}>
+                  <div className={s.cardHead}>
+                    <span className={s.cardIcon} style={{ background: '#f0fdf4', color: '#16a34a' }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                      </svg>
+                    </span>
+                    <strong>Team Update</strong>
+                  </div>
+                  <div className={s.cardSub}>Sarah completed 3 tasks today</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* KPI strip — full width below the grid */}
           <div className={s.strip}>
             <div>
               <strong><AnimatedNumber value="2014" /></strong>

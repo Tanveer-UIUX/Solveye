@@ -142,11 +142,11 @@ export default function Home() {
                 specialists.
               </p>
               <div className={s.heroCta}>
-                <Link href="/contact#demo" className={s.btnPrimary}>
-                  Book a 30-min demo <span className={s.arrow}>&rarr;</span>
+                <Link href="/careers#roles" className={s.btnPrimary}>
+                  Drop Your Resume <span className={s.arrow}>&rarr;</span>
                 </Link>
-                <Link href="/services" className={s.btnSecondary}>
-                  Explore services
+                <Link href="/contact#form" className={s.btnSecondary}>
+                  Contact Us
                 </Link>
               </div>
               <div className={s.heroProof}>
@@ -328,7 +328,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 6. TESTIMONIAL ===== */}
+      {/* ===== 6. OFFICE GALLERY ===== */}
+      <section className={s.section}>
+        <div className="container">
+          <div className={s.secHead}>
+            <div>
+              <span className={s.eyebrow}>Office life &amp; rituals</span>
+              <h2>The things that make Solveye, Solveye.</h2>
+            </div>
+          </div>
+
+          <div className={s.gallery}>
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>
+
+          <div className={s.rituals}>
+            {[
+              { em: 'Monday', title: 'All-hands', desc: '30 minutes, every Monday, every hub. Numbers, stories, and one shoutout.' },
+              { em: 'Quarterly', title: 'Pod awards', desc: 'The cleanest pod, the fastest credentialer, the best teach — voted by peers.' },
+              { em: 'Annually', title: 'SolveCon', desc: 'Three days, one city, the whole company. Last year: New Orleans.' },
+              { em: 'Every hire', title: 'Buddy week', desc: 'New hires shadow a senior pod member for a full week before touching live charts.' },
+            ].map((r) => (
+              <article key={r.title} className={s.ritual}>
+                <div className={s.ritualEm}>{r.em}</div>
+                <h5>{r.title}</h5>
+                <p>{r.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 7. TESTIMONIAL ===== */}
       <section className={s.sectionSm}>
         <div className="container">
           <div className={s.testimonial}>
@@ -402,10 +437,10 @@ export default function Home() {
             </div>
             <div className={s.ctaButtons}>
               <Link href="/contact#demo" className={s.ctaBtnLight}>
-                Book a demo <span className={s.arrow}>&rarr;</span>
+                Drop Your Resume <span className={s.arrow}>&rarr;</span>
               </Link>
               <Link href="/contact" className={s.ctaBtnOutline}>
-                Talk to sales
+                Contact Us
               </Link>
             </div>
           </div>

@@ -42,12 +42,11 @@
   padding: 96px 0 48px;
 
   @media (max-width: 768px) {
-    padding: 64px 0 32px;
+    padding: 64px 0 40px;
   }
 
   h1 {
-    max-width: 720px;
-    font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 1.05;
@@ -55,7 +54,133 @@
   }
 
   .lead {
-    max-width: 560px;
+    max-width: 520px;
+  }
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.heroViz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
+.heroSvg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+}
+
+// ── SVG keyframes ──
+@keyframes ctFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes ctTypeDot {
+  0%, 55%, 100% { transform: translateY(0px); }
+  28%           { transform: translateY(-7px); }
+}
+
+@keyframes ctPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.2); }
+}
+
+@keyframes ctArcBreath {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 0.08; }
+}
+
+@keyframes ctArcBreathDash {
+  0%, 100% { opacity: 0.28; }
+  50%      { opacity: 0.04; }
+}
+
+// ── Envelope: slow bob ──
+.ctEnvelope {
+  animation: ctFloat 3.8s ease-in-out infinite;
+}
+
+// ── Left bubble: slower, offset phase ──
+.ctBubbleLeft {
+  animation: ctFloat 4.6s ease-in-out infinite;
+  animation-delay: -1.7s;
+}
+
+// ── Right bubble: slightly different cadence ──
+.ctBubbleRight {
+  animation: ctFloat 4.1s ease-in-out infinite;
+  animation-delay: -2.4s;
+}
+
+// ── Typing dots: staggered bounce ──
+.ctDot1 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ctTypeDot 1.3s ease-in-out infinite;
+}
+
+.ctDot2 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ctTypeDot 1.3s ease-in-out infinite;
+  animation-delay: 0.22s;
+}
+
+.ctDot3 {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ctTypeDot 1.3s ease-in-out infinite;
+  animation-delay: 0.44s;
+}
+
+// ── Notification badge: heartbeat pulse ──
+.ctBadge {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ctPulse 2.4s ease-in-out infinite;
+}
+
+// ── Signal arcs: breathe in/out ──
+.ctArcInner {
+  animation: ctArcBreath 2.8s ease-in-out infinite;
+}
+
+.ctArcOuter {
+  animation: ctArcBreathDash 3.6s ease-in-out infinite;
+  animation-delay: -1.2s;
+}
+
+// ── Respect reduced-motion preference ──
+@media (prefers-reduced-motion: reduce) {
+  .ctEnvelope,
+  .ctBubbleLeft,
+  .ctBubbleRight,
+  .ctDot1,
+  .ctDot2,
+  .ctDot3,
+  .ctBadge,
+  .ctArcInner,
+  .ctArcOuter {
+    animation: none;
   }
 }
 
@@ -275,7 +400,7 @@
 }
 
 .submitBtn {
-  display: inline-flex;
+
   align-items: center;
   gap: 8px;
   padding: 14px 28px;

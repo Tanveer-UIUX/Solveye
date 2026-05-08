@@ -808,3 +808,94 @@
       0 8px 20px -6px rgba(0 0 0 / 0.3);
   }
 }
+
+// =============================================
+// OFFICE GALLERY + RITUALS
+// =============================================
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  height: 560px;
+
+  > div {
+    border-radius: var(--radius);
+    background-size: cover;
+    background-position: center;
+    min-height: 220px;
+  }
+
+  > :nth-child(1) {
+    grid-row: span 2;
+    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80');
+  }
+  > :nth-child(2) {
+    background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80');
+  }
+  > :nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80');
+  }
+  > :nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=600&q=80');
+  }
+  > :nth-child(5) {
+    background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80');
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+
+    > :nth-child(1) {
+      grid-row: span 1;
+    }
+  }
+}
+
+.rituals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ritual {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: var(--slate-300);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 13px;
+    color: var(--slate-600);
+    line-height: 1.5;
+  }
+}
+
+.ritualEm {
+  font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
+  font-size: 11px;
+  color: var(--blue-700);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
