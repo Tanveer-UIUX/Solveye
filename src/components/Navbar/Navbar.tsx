@@ -56,10 +56,10 @@ export default function Navbar() {
           <Link href="/careers" className={`${s.link} ${isActive('/careers') ? s.active : ''}`}>
             Careers
           </Link>
-          <Link href="/Lifeatsolveye" className={`${s.link} ${isActive('/Lifeatsolveye') ? s.active : ''}`}>
+          <Link href="/life-at-solveye" className={`${s.link} ${isActive('/life-at-solveye') ? s.active : ''}`}>
             Life at Solveye
           </Link>
-          <Link href="/trainingandworkshop" className={`${s.link} ${isActive('/trainingandworkshop') ? s.active : ''}`}>
+          <Link href="/training-workshops" className={`${s.link} ${isActive('/training-workshop') ? s.active : ''}`}>
             Traning & Workshop
           </Link>
           <Link href="/team" className={`${s.link} ${isActive('/team') ? s.active : ''}`}>

@@ -52,6 +52,9 @@
   // ---- Layout ----
   --container: 1280px;
 
+  // ---- Typography: mono — maps to the assigned eyebrow font (Exo) for visual consistency ----
+  --font-mono: var(--font-eyebrow), ui-sans-serif, sans-serif;
+
   // ---- Contextual tokens (overridable per section) ----
   // Eyebrow defaults to dark blue for light backgrounds.
   // Dark sections override --eyebrow-color in their own scope.
