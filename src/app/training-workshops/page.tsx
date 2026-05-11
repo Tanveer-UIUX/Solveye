@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import AnimatedNumber from '@/components/AnimatedNumber'
 import FaqAccordion from './FaqAccordion'
+import HeroScroll from './HeroScroll'
 import s from './page.module.scss'
 
 export const metadata: Metadata = {
@@ -234,17 +235,28 @@ export default function TrainingWorkshopsPage() {
       {/* ===== HERO ===== */}
       <section className={s.hero}>
         <div className="container">
-          <div className={s.crumb}>
-            <Link href="/">Home</Link> / Training &amp; Workshops
-          </div>
-          <span className={s.eyebrow}>Learning &amp; development</span>
-          <h1>Trained on Tuesday. Confident by Friday.</h1>
-          <p className={s.lead}>
-            In healthcare RCM, a missed payer rule isn&rsquo;t a typo — it&rsquo;s a denied claim and a patient who
-            gets billed twice. So we train continuously. Every Solveye specialist completes 96+ hours of structured
-            training their first year, and another 40+ every year after. Here&rsquo;s how it works.
-          </p>
+          <div className={s.heroGrid}>
 
+            {/* Left: text */}
+            <div className={s.heroLeft}>
+              <div className={s.crumb}>
+                <Link href="/">Home</Link> / Training &amp; Workshops
+              </div>
+              <span className={s.eyebrow}>Learning &amp; development</span>
+              <h1>Trained on Tuesday. Confident by Friday.</h1>
+              <p className={s.lead}>
+                In healthcare RCM, a missed payer rule isn&rsquo;t a typo — it&rsquo;s a denied claim and a patient who
+                gets billed twice. So we train continuously. Every Solveye specialist completes 96+ hours of structured
+                training their first year, and another 40+ every year after. Here&rsquo;s how it works.
+              </p>
+            </div>
+
+            {/* Right: scrolling photos */}
+            <HeroScroll />
+
+          </div>
+
+          {/* Stats strip — full width below the grid */}
           <div className={s.strip}>
             <div>
               <div className={s.statNum}><AnimatedNumber value="96+" /></div>

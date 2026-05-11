@@ -44,18 +44,132 @@
 }
 
 // =============================================
+// 0. HERO SCROLL (visual only — rendered inside hero)
+// =============================================
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.heroLeft {
+  h1 { max-width: 560px; }
+  .lead { max-width: 520px; }
+}
+
+.hsVisual {
+  position: relative;
+  height: 580px;
+  overflow: hidden;
+  border-radius: var(--radius-lg, 16px);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(to bottom, var(--slate-50) 0%, transparent 100%);
+  }
+
+  &::after {
+    bottom: 0;
+    background: linear-gradient(to top, var(--slate-50) 0%, transparent 100%);
+  }
+
+  @media (max-width: 960px) { height: 380px; }
+}
+
+.hsTrack {
+  display: flex;
+  gap: 12px;
+  height: 100%;
+}
+
+.hsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  animation: hsScrollUp 22s linear infinite;
+  will-change: transform;
+}
+
+.hsColOffset {
+  animation-delay: -11s;
+}
+
+.hsPaused .hsCol {
+  animation-play-state: paused;
+}
+
+@keyframes hsScrollUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
+.hsCard {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow);
+  transition: opacity 0.2s ease;
+
+  &:hover { opacity: 0.92; }
+}
+
+.hsPauseBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0 0 0 / 0.55);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: rgba(0 0 0 / 0.8);
+    transform: scale(1.08);
+  }
+}
+
+// =============================================
 // 1. HERO
 // =============================================
 .hero {
-  padding: 80px 0 48px;
+  padding: 80px 0 80px;
   background: linear-gradient(180deg, #fff, var(--slate-50));
+  overflow: hidden;
 
   h1 {
     font-size: clamp(2.25rem, 4.6vw, 3.5rem);
     letter-spacing: -0.02em;
     line-height: 1.05;
     margin: 16px 0 20px;
-    max-width: 820px;
   }
 
   .lead { max-width: 640px; }
