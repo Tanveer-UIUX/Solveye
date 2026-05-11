@@ -113,17 +113,36 @@ export default function LifeAtSolveyePage() {
       {/* ===== HERO ===== */}
       <section className={s.hero}>
         <div className="container">
-          <div className={s.crumb}>
-            <Link href="/">Home</Link> / Life at Solveye
-          </div>
-          <span className={s.eyebrow}>Culture &amp; rhythm</span>
-          <h1>Life at Solveye isn&rsquo;t a vibe. It&rsquo;s a rhythm.</h1>
-          <p className={s.lead}>
-            We move in cycles — daily standups that actually clear blockers, weekly demos that show real work,
-            quarterly retros that close loops. Most teammates can describe their week before it starts. That&rsquo;s
-            not boring. That&rsquo;s how 1,200+ specialists ship for 480+ clients without burning out.
-          </p>
+          <div className={s.heroGrid}>
 
+            {/* Left: text */}
+            <div className={s.heroLeft}>
+              <div className={s.crumb}>
+                <Link href="/">Home</Link> / Life at Solveye
+              </div>
+              <span className={s.eyebrow}>Culture &amp; rhythm</span>
+              <h1>Life at Solveye isn&rsquo;t a vibe. It&rsquo;s a rhythm.</h1>
+              <p className={s.lead}>
+                We move in cycles — daily standups that actually clear blockers, weekly demos that show real work,
+                quarterly retros that close loops. Most teammates can describe their week before it starts. That&rsquo;s
+                not boring. That&rsquo;s how 1,200+ specialists ship for 480+ clients without burning out.
+              </p>
+              <div className={s.heroCta}>
+                <Link href="/careers#roles" className={s.btnPrimary}>
+                  Drop Your Resume <span className={s.arrow}>&rarr;</span>
+                </Link>
+                <Link href="/contact#form" className={s.btnSecondary}>
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: team photo */}
+            <div className={s.heroPhoto} />
+
+          </div>
+
+          {/* Stats strip — full width below the grid */}
           <div className={s.strip}>
             <div>
               <div className={s.statNum}><AnimatedNumber value="92%" /></div>
