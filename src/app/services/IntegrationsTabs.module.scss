@@ -1,8 +1,8 @@
 .tabs {
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   border-bottom: 1px solid var(--se-color-line);
-  margin-bottom: 32px;
+  margin-bottom: var(--se-space-d1);
   overflow-x: auto;
   scrollbar-width: none;
 
@@ -12,7 +12,7 @@
 }
 
 .tab {
-  padding: 14px 20px;
+  padding: var(--se-space-sm) var(--se-space-lg);
   font-size: var(--se-text-sm);
   font-weight: 500;
   color: var(--se-color-slate-500);
@@ -34,14 +34,14 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 12px;
-  margin-top: 32px;
+  gap: var(--se-space-xs);
+  margin-top: var(--se-space-d1);
 
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 30rem) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -49,7 +49,7 @@
 .tile {
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
-  padding: 24px 16px;
+  padding: var(--se-space-xl) var(--se-space);
   text-align: center;
   background: white;
   font-size: var(--se-text-13);
@@ -71,7 +71,7 @@
     display: block;
     font-size: var(--se-text-md);
     color: var(--se-color-blue-900);
-    margin-bottom: 6px;
+    margin-bottom: var(--se-space-4xs);
     letter-spacing: 0.04em;
   }
 }

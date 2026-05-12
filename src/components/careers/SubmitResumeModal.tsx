@@ -1,5 +1,6 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import type { DragEvent, ChangeEvent } from 'react'
 import s from './SubmitResumeModal.module.scss'
 
@@ -61,10 +62,13 @@ const INITIAL: FormState = {
 
 export default function SubmitResumeModal({ label = 'Submit Resume', triggerClass }: ModalProps = {}) {
   const [open, setOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const [form, setForm] = useState<FormState>(INITIAL)
   const [dragging, setDragging] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => { setMounted(true) }, [])
 
   function close() {
     setOpen(false)
@@ -111,7 +115,7 @@ export default function SubmitResumeModal({ label = 'Submit Resume', triggerClas
         {label}
       </button>
 
-      {open && (
+      {mounted && open && createPortal(
         <div
           className={s.overlay}
           role="dialog"
@@ -313,7 +317,8 @@ export default function SubmitResumeModal({ label = 'Submit Resume', triggerClas
               </form>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   )

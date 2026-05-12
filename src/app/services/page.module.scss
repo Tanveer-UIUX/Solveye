@@ -22,29 +22,29 @@
 // 1. SERVICES HERO
 // =============================================
 .hero {
-  padding: 64px 0 48px;
+  padding: var(--se-space-d5) 0 var(--se-space-d3);
   border-bottom: 1px solid var(--se-color-line);
   background: linear-gradient(180deg, var(--se-color-slate-50), white);
 
   h1 {
-    margin: 16px 0 20px;
+    margin: var(--se-space) 0 var(--se-space-lg);
     font-size: var(--se-text-fluid-h1);
     font-weight: 700;
     letter-spacing: -0.035em;
   }
 
   .lead {
-    max-width: 580px;
+    max-width: 36.25rem;
   }
 }
 
 .heroGrid {
   display: grid;
   grid-template-columns: 55fr 45fr;
-  gap: 48px;
+  gap: var(--se-space-d3);
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     grid-template-columns: 1fr;
   }
 }
@@ -56,11 +56,11 @@
     width: 100%;
     height: auto;
     display: block;
-    max-width: 520px;
+    max-width: 32.5rem;
     margin-left: auto;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     display: none;
   }
 }
@@ -71,7 +71,7 @@
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: var(--se-space-xl);
 
   a {
     transition: color 0.15s;
@@ -90,14 +90,14 @@
 }
 
 .svcDetail {
-  padding: 80px 0;
+  padding: 5rem 0;
   border-bottom: 1px solid var(--se-color-line);
 
   // Even-indexed: shaded background + image flips to left on desktop.
   &:nth-child(even) {
     background: var(--se-color-slate-50);
 
-    @media (min-width: 901px) {
+    @media (min-width: 56.3125rem) {
       .grid > .img {
         order: -1;
       }
@@ -108,12 +108,12 @@
 .grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 64px;
+  gap: var(--se-space-d5);
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: var(--se-space-d1);
   }
 }
 
@@ -122,7 +122,7 @@
   font-size: var(--se-text-xs);
   letter-spacing: 0.12em;
   color: var(--se-color-slate-500);
-  margin-bottom: 12px;
+  margin-bottom: var(--se-space-xs);
   text-transform: uppercase;
 }
 
@@ -130,33 +130,33 @@
   font-size: var(--se-text-fluid-h2-sm);
   font-weight: 700;
   letter-spacing: -0.025em;
-  margin-bottom: 16px;
+  margin-bottom: var(--se-space);
 }
 
 .svcLead {
   font-size: var(--se-text-lead);
   color: var(--se-color-slate-600);
   line-height: 1.6;
-  margin-bottom: 24px;
-  max-width: 540px;
+  margin-bottom: var(--se-space-xl);
+  max-width: 33.75rem;
 }
 
 .feats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin: 24px 0;
+  gap: var(--se-space-sm);
+  margin: var(--se-space-xl) 0;
   list-style: none;
   padding: 0;
 
-  @media (max-width: 600px) {
+  @media (max-width: 37.5rem) {
     grid-template-columns: 1fr;
   }
 
   li {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: var(--se-space-xs);
     font-size: var(--se-text-sm);
     line-height: 1.5;
     color: var(--se-color-slate-700);
@@ -164,24 +164,24 @@
     &::before {
       content: '';
       flex-shrink: 0;
-      width: 14px;
-      height: 14px;
+      width: var(--se-space-sm);
+      height: var(--se-space-sm);
       background: var(--se-color-blue-100);
       border-radius: 50%;
-      border: 3px solid var(--se-color-blue-700);
+      border: 0.1875rem solid var(--se-color-blue-700);
     }
   }
 }
 
 .kpis {
   display: flex;
-  gap: 32px;
+  gap: var(--se-space-d1);
   flex-wrap: wrap;
-  padding: 20px 24px;
+  padding: var(--se-space-lg) var(--se-space-xl);
   background: white;
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
-  margin-top: 24px;
+  margin-top: var(--se-space-xl);
 
   > div {
     display: flex;
@@ -203,7 +203,7 @@
       display: block;
       font-size: var(--se-text-13);
       color: var(--se-color-slate-500);
-      margin-top: 12px;
+      margin-top: var(--se-space-xs);
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
       letter-spacing: 0.04em;
     }
@@ -216,21 +216,21 @@
   background-size: cover;
   background-position: center;
   box-shadow: var(--se-shadow-lg);
-  min-height: 320px;
+  min-height: 20rem;
 }
 
 // ---- Service-detail buttons ----
 .btnPrimary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space-xs) var(--se-space-lg);
   border-radius: var(--se-radius-sm);
   background: var(--se-color-blue-900);
   color: white;
   font-weight: 500;
   font-size: var(--se-text-15);
-  margin-top: 24px;
+  margin-top: var(--se-space-xl);
   transition: all 0.15s;
 
   &:hover {
@@ -239,7 +239,7 @@
     box-shadow: var(--se-shadow);
 
     .arrow {
-      transform: translateX(3px);
+      transform: translateX(0.1875rem);
     }
   }
 }
@@ -247,8 +247,8 @@
 .detailLink {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 16px;
+  gap: var(--se-space-4xs);
+  margin-top: var(--se-space);
   font-weight: 500;
   font-size: var(--se-text-15);
   color: var(--se-color-blue-900);
@@ -258,7 +258,7 @@
     color: var(--se-color-blue-700);
 
     .arrow {
-      transform: translateX(3px);
+      transform: translateX(0.1875rem);
     }
   }
 }
@@ -281,49 +281,49 @@
     radial-gradient(circle at 0% 100%, rgba(14, 165, 160, 0.3) 0%, transparent 50%),
     var(--se-color-blue-900);
   color: white;
-  padding: 96px 0;
+  padding: var(--se-space-d6) 0;
 
   h2 {
     color: white;
-    max-width: 600px;
+    max-width: 37.5rem;
     font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: var(--se-space);
+    margin-bottom: var(--se-space);
   }
 
   .lead {
     color: var(--se-color-slate-300);
-    max-width: 600px;
-    margin-bottom: 48px;
+    max-width: 37.5rem;
+    margin-bottom: var(--se-space-d3);
   }
 }
 
 .indGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: var(--se-space);
 
-  @media (max-width: 1024px) {
+  @media (max-width: 64rem) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 37.5rem) {
     grid-template-columns: 1fr;
   }
 }
 
 .indCard {
   background: rgba(255 255 255 / 0.06);
-  backdrop-filter: blur(14px) saturate(180%);
-  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(var(--se-space-sm)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--se-space-sm)) saturate(180%);
   border: 1px solid rgba(255 255 255 / 0.12);
   border-radius: var(--se-radius);
-  padding: 24px;
+  padding: var(--se-space-xl);
   box-shadow:
     inset 0 1px 0 rgba(255 255 255 / 0.08),
-    0 4px 16px -8px rgba(0 0 0 / 0.3);
+    0 0.25rem var(--se-space) calc(-1 * var(--se-space-3xs)) rgba(0 0 0 / 0.3);
   transition:
     background 0.2s ease,
     border-color 0.2s ease,
@@ -336,12 +336,12 @@
     transform: translateY(-2px);
     box-shadow:
       inset 0 1px 0 rgba(255 255 255 / 0.12),
-      0 12px 28px -8px rgba(0 0 0 / 0.45);
+      0 var(--se-space-xs) 1.75rem calc(-1 * var(--se-space-3xs)) rgba(0 0 0 / 0.45);
   }
 
   h4 {
     color: white;
-    margin-bottom: 8px;
+    margin-bottom: var(--se-space-3xs);
     font-size: var(--se-text-de);
     font-weight: 600;
   }
@@ -357,25 +357,25 @@
 // 4. INTEGRATIONS
 // =============================================
 .integrations {
-  padding: 96px 0;
+  padding: var(--se-space-d6) 0;
 }
 
 .secHead {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 24px;
+  gap: var(--se-space-xl);
   align-items: end;
-  margin-bottom: 24px;
+  margin-bottom: var(--se-space-xl);
 
   h2 {
-    max-width: 560px;
+    max-width: 35rem;
     font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin-top: 16px;
+    margin-top: var(--se-space);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     grid-template-columns: 1fr;
   }
 }
@@ -384,10 +384,10 @@
 // 5. CTA BAND (glass treatment, mirrors home)
 // =============================================
 .ctaWrap {
-  padding: 96px 0;
+  padding: var(--se-space-d6) 0;
 
-  @media (max-width: 768px) {
-    padding: 64px 0;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0;
   }
 }
 
@@ -402,10 +402,10 @@
     var(--se-color-blue-900);
   color: white;
   border-radius: var(--se-radius-lg);
-  padding: 64px;
+  padding: var(--se-space-d5);
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 48px;
+  gap: var(--se-space-d3);
   align-items: center;
 
   h2 {
@@ -413,31 +413,31 @@
     font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin: 16px 0;
+    margin: var(--se-space) 0;
   }
 
   p {
     color: var(--se-color-slate-300);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     grid-template-columns: 1fr;
-    padding: 40px;
+    padding: var(--se-space-d2);
   }
 }
 
 .ctaButtons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--se-space-xs);
 }
 
 .ctaBtnLight {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 16px 28px;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: var(--se-text-de);
@@ -451,7 +451,7 @@
   }
 
   &:hover .arrow {
-    transform: translateX(3px);
+    transform: translateX(0.1875rem);
   }
 }
 
@@ -459,13 +459,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 28px;
+  padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
   border: 1px solid rgba(255 255 255 / 0.18);
   color: white;
   box-shadow: inset 0 1px 0 rgba(255 255 255 / 0.1);
@@ -481,6 +481,6 @@
     transform: translateY(-1px);
     box-shadow:
       inset 0 1px 0 rgba(255 255 255 / 0.14),
-      0 8px 20px -6px rgba(0 0 0 / 0.3);
+      0 var(--se-space-3xs) var(--se-space-lg) calc(-1 * var(--se-space-4xs)) rgba(0 0 0 / 0.3);
   }
 }

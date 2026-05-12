@@ -451,17 +451,21 @@ export default function TrainingWorkshopsPage() {
       <FaqAccordion />
 
       {/* ===== CTA ===== */}
-      <section className={s.cta}>
+      <section className={s.ctaWrap}>
         <div className="container">
-          <h2>Want to know what training looks like for a specific role?</h2>
-          <p className={s.lead}>Hop on a call with our L&amp;D team. 20 minutes, no pitch.</p>
-          <div className={s.ctaButtons}>
-            <Link href="/contact#form" className={s.btnPrimary}>
-              Talk to L&amp;D <span className={s.arrow}>&rarr;</span>
-            </Link>
-            <Link href="/careers" className={s.btnSecondary}>
-              See life at Solveye
-            </Link>
+          <div className={s.ctaBand}>
+            <div>
+              <h2>Want to know what training looks like for a specific role?</h2>
+              <p>Hop on a call with our L&amp;D team. 20 minutes, no pitch.</p>
+            </div>
+            <div className={s.ctaButtons}>
+              <Link href="/contact#form" className={s.ctaBtnLight}>
+                Talk to L&amp;D <span className={s.arrow}>&rarr;</span>
+              </Link>
+              <Link href="/careers" className={s.ctaBtnOutline}>
+                See life at Solveye
+              </Link>
+            </div>
           </div>
         </div>
       </section>

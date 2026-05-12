@@ -150,16 +150,24 @@
 
   // =================================================================
   // 10. SPACING — 4px base unit
+  // All values in rem (base: 16px).
+  // Named using a t-shirt ladder (4xs→xl) + display sizes (d1→d5).
   // =================================================================
-  --se-space-1: 4px;
-  --se-space-2: 8px;
-  --se-space-3: 12px;
-  --se-space-4: 16px;
-  --se-space-5: 24px;
-  --se-space-6: 32px;
-  --se-space-7: 48px;
-  --se-space-8: 64px;
-  --se-space-9: 96px;
+  --se-space-4xs: 0.375rem;  //  6px
+  --se-space-3xs: 0.5rem;    //  8px
+  --se-space-2xs: 0.625rem;  // 10px
+  --se-space-xs:  0.75rem;   // 12px
+  --se-space-sm:  0.875rem;  // 14px
+  --se-space:     1rem;      // 16px — default
+  --se-space-md:  1.125rem;  // 18px
+  --se-space-lg:  1.25rem;   // 20px
+  --se-space-xl:  1.5rem;    // 24px
+  --se-space-d1:  2rem;      // 32px
+  --se-space-d2:  2.5rem;    // 40px
+  --se-space-d3:  3rem;      // 48px
+  --se-space-d4: 3.5rem;    // 56px
+  --se-space-d5:  4rem;      // 64px
+  --se-space-d6:  6rem;      // 96px
 
   // =================================================================
   // 11. RADIUS

@@ -1,17 +1,17 @@
 .bar {
   position: sticky;
-  top: 68px;
+  top: 4.25rem;
   z-index: 20;
   background: rgba(255 255 255 / 0.92);
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(var(--se-space-xs));
+  -webkit-backdrop-filter: saturate(180%) blur(var(--se-space-xs));
   border-bottom: 1px solid var(--se-color-line);
-  padding: 14px 0;
+  padding: var(--se-space-sm) 0;
 }
 
 .row {
   display: flex;
-  gap: 8px;
+  gap: var(--se-space-3xs);
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -29,18 +29,18 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--se-color-slate-500);
-  margin-right: 4px;
+  margin-right: 0.25rem;
   white-space: nowrap;
 }
 
 .item {
-  padding: 8px 14px;
+  padding: var(--se-space-3xs) var(--se-space-sm);
   font-size: var(--se-text-13);
   font-weight: 500;
   color: var(--se-color-slate-600);
   white-space: nowrap;
   border: 1px solid var(--se-color-line);
-  border-radius: 999px;
+  border-radius: 62.4375rem;
   background: white;
   transition:
     background 0.15s ease,

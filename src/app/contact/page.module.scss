@@ -24,7 +24,7 @@
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: var(--se-space-xl);
 
   a {
     transition: color 0.15s;
@@ -39,10 +39,10 @@
 // 1. HERO
 // =============================================
 .hero {
-  padding: 96px 0 48px;
+  padding: var(--se-space-d6) 0 var(--se-space-d3);
 
-  @media (max-width: 768px) {
-    padding: 64px 0 40px;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0 var(--se-space-d2);
   }
 
   h1 {
@@ -50,23 +50,23 @@
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 1.05;
-    margin: 16px 0 20px;
+    margin: var(--se-space) 0 var(--se-space-lg);
   }
 
   .lead {
-    max-width: 520px;
+    max-width: 32.5rem;
   }
 }
 
 .heroGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: var(--se-space-d3);
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: var(--se-space-d2);
   }
 }
 
@@ -75,15 +75,15 @@
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 900px) {
-    max-width: 380px;
+  @media (max-width: 56.25rem) {
+    max-width: 23.75rem;
     margin: 0 auto;
   }
 }
 
 .heroSvg {
   width: 100%;
-  max-width: 480px;
+  max-width: 30rem;
   height: auto;
   display: block;
 }
@@ -91,12 +91,12 @@
 // ── SVG keyframes ──
 @keyframes ctFloat {
   0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-6px); }
+  50%       { transform: translateY(calc(-1 * var(--se-space-4xs))); }
 }
 
 @keyframes ctTypeDot {
   0%, 55%, 100% { transform: translateY(0px); }
-  28%           { transform: translateY(-7px); }
+  28%           { transform: translateY(-0.4375rem); }
 }
 
 @keyframes ctPulse {
@@ -188,21 +188,21 @@
 // 2. MAIN GRID
 // =============================================
 .mainGrid {
-  padding-bottom: 96px;
+  padding-bottom: var(--se-space-d6);
 
-  @media (max-width: 768px) {
-    padding-bottom: 64px;
+  @media (max-width: 48rem) {
+    padding-bottom: var(--se-space-d5);
   }
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 64px;
+  gap: var(--se-space-d5);
 
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: var(--se-space-d2);
   }
 }
 
@@ -210,13 +210,13 @@
 .side {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--se-space);
 }
 
 .channel {
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
-  padding: 24px;
+  padding: var(--se-space-xl);
   background: white;
   transition: border-color 0.2s ease;
 
@@ -227,7 +227,7 @@
   h4 {
     font-size: var(--se-text-de);
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: var(--se-space-3xs);
     letter-spacing: -0.01em;
   }
 
@@ -235,14 +235,14 @@
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.55;
-    margin-bottom: 12px;
+    margin-bottom: var(--se-space-xs);
   }
 }
 
 .channelLinks {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .channelLink {
@@ -250,7 +250,7 @@
   font-size: var(--se-text-sm);
   color: var(--se-color-blue-900);
   border-bottom: 1px solid var(--se-color-line);
-  padding-bottom: 1px;
+  padding-bottom: 0.0625rem;
   align-self: flex-start;
   transition: border-color 0.15s ease;
 
@@ -263,24 +263,24 @@
 .formCard {
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius-lg);
-  padding: 40px;
+  padding: var(--se-space-d2);
   background: white;
   box-shadow: var(--se-shadow);
 
-  @media (max-width: 600px) {
-    padding: 28px 20px;
+  @media (max-width: 37.5rem) {
+    padding: 1.75rem var(--se-space-lg);
   }
 }
 
 .tabs {
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   border-bottom: 1px solid var(--se-color-line);
-  margin-bottom: 32px;
+  margin-bottom: var(--se-space-d1);
 }
 
 .tab {
-  padding: 10px 16px;
+  padding: var(--se-space-2xs) var(--se-space);
   font-size: var(--se-text-sm);
   font-weight: 500;
   color: var(--se-color-slate-500);
@@ -303,13 +303,13 @@
 // ---- Form internals ----
 .form {
   display: grid;
-  gap: 16px;
+  gap: var(--se-space);
 
   h3 {
     font-size: var(--se-text-fluid-h4);
     font-weight: 700;
     letter-spacing: -0.025em;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
   }
 }
 
@@ -317,15 +317,15 @@
   font-size: var(--se-text-sm);
   color: var(--se-color-slate-600);
   line-height: 1.6;
-  margin-bottom: 8px;
+  margin-bottom: var(--se-space-3xs);
 }
 
 .fieldRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: var(--se-space);
 
-  @media (max-width: 560px) {
+  @media (max-width: 35rem) {
     grid-template-columns: 1fr;
   }
 }
@@ -333,7 +333,7 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--se-space-4xs);
 
   label {
     font-size: var(--se-text-13);
@@ -346,7 +346,7 @@
   select,
   textarea {
     width: 100%;
-    padding: 10px 14px;
+    padding: var(--se-space-2xs) var(--se-space-sm);
     border: 1px solid var(--se-color-slate-300);
     border-radius: var(--se-radius-sm);
     font-size: var(--se-text-sm);
@@ -363,7 +363,7 @@
 
     &:focus {
       border-color: var(--se-color-blue-600);
-      box-shadow: 0 0 0 3px rgba(24, 94, 212, 0.1);
+      box-shadow: 0 0 0 0.1875rem rgba(24, 94, 212, 0.1);
     }
   }
 
@@ -371,8 +371,8 @@
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 14px center;
-    padding-right: 36px;
+    background-position: right var(--se-space-sm) center;
+    padding-right: 2.25rem;
     cursor: pointer;
   }
 }
@@ -380,16 +380,16 @@
 .consent {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: var(--se-space-2xs);
   font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
   line-height: 1.5;
 
   input[type='checkbox'] {
-    margin-top: 2px;
+    margin-top: 0.125rem;
     flex-shrink: 0;
-    width: 16px;
-    height: 16px;
+    width: var(--se-space);
+    height: var(--se-space);
     accent-color: var(--se-color-blue-600);
     cursor: pointer;
   }
@@ -402,8 +402,8 @@
 .submitBtn {
 
   align-items: center;
-  gap: 8px;
-  padding: 14px 28px;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space-sm) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: var(--se-text-15);
@@ -419,7 +419,7 @@
     box-shadow: var(--se-shadow);
 
     .arrow {
-      transform: translateX(3px);
+      transform: translateX(0.1875rem);
     }
   }
 }
@@ -430,7 +430,7 @@
 }
 
 .success {
-  padding: 20px 24px;
+  padding: var(--se-space-lg) var(--se-space-xl);
   background: #dcfce7;
   border: 1px solid #86efac;
   color: #15803d;
@@ -443,44 +443,44 @@
 // 3. OFFICES
 // =============================================
 .offices {
-  padding: 72px 0;
+  padding: 4.5rem 0;
   border-top: 1px solid var(--se-color-line);
   background: var(--se-color-slate-50);
 
-  @media (max-width: 768px) {
-    padding: 48px 0;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d3) 0;
   }
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin: 16px 0 8px;
+    margin: var(--se-space) 0 var(--se-space-3xs);
   }
 }
 
 .officeLead {
   font-size: var(--se-text-15);
   color: var(--se-color-slate-600);
-  margin-bottom: 32px;
+  margin-bottom: var(--se-space-d1);
 }
 
 .officeGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: var(--se-space);
 
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 30rem) {
     grid-template-columns: 1fr;
   }
 }
 
 .officeCard {
-  padding: 20px;
+  padding: var(--se-space-lg);
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
   background: white;
@@ -496,7 +496,7 @@
   font-weight: 600;
   font-size: var(--se-text-de);
   color: var(--se-color-blue-900);
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
   letter-spacing: -0.01em;
 }
 
@@ -506,7 +506,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--se-color-slate-500);
-  margin-bottom: 12px;
+  margin-bottom: var(--se-space-xs);
 }
 
 .officeAddr {
@@ -519,33 +519,33 @@
 // 4. FAQ MINI
 // =============================================
 .faqSection {
-  padding: 96px 0;
+  padding: var(--se-space-d6) 0;
   background: white;
 
-  @media (max-width: 768px) {
-    padding: 64px 0;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0;
   }
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin: 16px 0 40px;
+    margin: var(--se-space) 0 var(--se-space-d2);
   }
 }
 
 .faqGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: var(--se-space-xl);
 
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
     grid-template-columns: 1fr;
   }
 }
 
 .faqItem {
-  padding: 24px;
+  padding: var(--se-space-xl);
   background: var(--se-color-slate-50);
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
@@ -558,7 +558,7 @@
   h5 {
     font-size: var(--se-text-15);
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: var(--se-space-3xs);
     color: var(--se-color-blue-900);
     letter-spacing: -0.01em;
   }
