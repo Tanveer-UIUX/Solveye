@@ -197,13 +197,13 @@ function HeroIllustration() {
     >
       <defs>
         <linearGradient id="heroBlobGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="var(--blue-600)" stopOpacity="0.28" />
-          <stop offset="100%" stopColor="var(--teal-500)" stopOpacity="0.16" />
+          <stop offset="0%" stopColor="var(--se-color-blue-600)" stopOpacity="0.28" />
+          <stop offset="100%" stopColor="var(--se-color-teal-500)" stopOpacity="0.16" />
         </linearGradient>
 
         <linearGradient id="heroShieldGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="var(--blue-500)" />
-          <stop offset="100%" stopColor="var(--blue-700)" />
+          <stop offset="0%" stopColor="var(--se-color-blue-500)" />
+          <stop offset="100%" stopColor="var(--se-color-blue-700)" />
         </linearGradient>
 
         <pattern
@@ -214,7 +214,7 @@ function HeroIllustration() {
           height="20"
           patternUnits="userSpaceOnUse"
         >
-          <circle cx="2" cy="2" r="1.6" fill="var(--blue-100)" />
+          <circle cx="2" cy="2" r="1.6" fill="var(--se-color-blue-100)" />
         </pattern>
 
         <filter id="heroCardShadow" x="-20%" y="-20%" width="140%" height="140%">
@@ -239,7 +239,7 @@ function HeroIllustration() {
       {/* dashed connector (claim → shield) */}
       <path
         d="M280 340 Q330 370 370 400"
-        stroke="var(--blue-400)"
+        stroke="var(--se-color-blue-400)"
         strokeWidth="2"
         strokeDasharray="5 7"
         fill="none"
@@ -251,37 +251,37 @@ function HeroIllustration() {
         <rect width="300" height="380" rx="18" fill="white" />
 
         {/* card eyebrow */}
-        <rect x="24" y="26" width="56" height="6" rx="3" fill="var(--blue-100)" />
+        <rect x="24" y="26" width="56" height="6" rx="3" fill="var(--se-color-blue-100)" />
         {/* card title */}
-        <rect x="24" y="42" width="200" height="14" rx="4" fill="var(--blue-900)" />
+        <rect x="24" y="42" width="200" height="14" rx="4" fill="var(--se-color-blue-900)" />
         {/* card sub */}
-        <rect x="24" y="62" width="140" height="8" rx="2" fill="var(--slate-300)" />
+        <rect x="24" y="62" width="140" height="8" rx="2" fill="var(--se-color-slate-300)" />
 
         {/* divider */}
-        <line x1="24" y1="92" x2="276" y2="92" stroke="var(--line)" strokeWidth="1" />
+        <line x1="24" y1="92" x2="276" y2="92" stroke="var(--se-color-line)" strokeWidth="1" />
 
         {/* form field (full) */}
         <g transform="translate(24 108)">
-          <rect width="252" height="48" rx="8" fill="var(--slate-50)" stroke="var(--line)" strokeWidth="1" />
-          <rect x="14" y="12" width="60" height="6" rx="2" fill="var(--slate-400)" />
-          <rect x="14" y="26" width="120" height="10" rx="2" fill="var(--blue-900)" />
+          <rect width="252" height="48" rx="8" fill="var(--se-color-slate-50)" stroke="var(--se-color-line)" strokeWidth="1" />
+          <rect x="14" y="12" width="60" height="6" rx="2" fill="var(--se-color-slate-400)" />
+          <rect x="14" y="26" width="120" height="10" rx="2" fill="var(--se-color-blue-900)" />
         </g>
 
         {/* form fields (split) */}
         <g transform="translate(24 168)">
-          <rect width="120" height="48" rx="8" fill="var(--slate-50)" stroke="var(--line)" strokeWidth="1" />
-          <rect x="14" y="12" width="50" height="6" rx="2" fill="var(--slate-400)" />
-          <rect x="14" y="26" width="80" height="10" rx="2" fill="var(--blue-900)" />
+          <rect width="120" height="48" rx="8" fill="var(--se-color-slate-50)" stroke="var(--se-color-line)" strokeWidth="1" />
+          <rect x="14" y="12" width="50" height="6" rx="2" fill="var(--se-color-slate-400)" />
+          <rect x="14" y="26" width="80" height="10" rx="2" fill="var(--se-color-blue-900)" />
 
-          <rect x="132" y="0" width="120" height="48" rx="8" fill="var(--slate-50)" stroke="var(--line)" strokeWidth="1" />
-          <rect x="146" y="12" width="50" height="6" rx="2" fill="var(--slate-400)" />
-          <rect x="146" y="26" width="70" height="10" rx="2" fill="var(--blue-900)" />
+          <rect x="132" y="0" width="120" height="48" rx="8" fill="var(--se-color-slate-50)" stroke="var(--se-color-line)" strokeWidth="1" />
+          <rect x="146" y="12" width="50" height="6" rx="2" fill="var(--se-color-slate-400)" />
+          <rect x="146" y="26" width="70" height="10" rx="2" fill="var(--se-color-blue-900)" />
         </g>
 
         {/* VERIFIED pill */}
         <g transform="translate(24 240)">
-          <rect width="120" height="32" rx="16" fill="var(--green-500)" fillOpacity="0.14" />
-          <circle cx="18" cy="16" r="8" fill="var(--green-500)" />
+          <rect width="120" height="32" rx="16" fill="var(--se-color-green-500)" fillOpacity="0.14" />
+          <circle cx="18" cy="16" r="8" fill="var(--se-color-green-500)" />
           <path
             d="M14 16 L17 19 L23 12"
             stroke="white"
@@ -293,7 +293,7 @@ function HeroIllustration() {
           <text
             x="34"
             y="20"
-            fill="var(--green-500)"
+            fill="var(--se-color-green-500)"
             fontSize="11"
             fontWeight="700"
             letterSpacing="0.06em"
@@ -304,7 +304,7 @@ function HeroIllustration() {
 
         {/* CTA button mockup */}
         <g transform="translate(24 290)">
-          <rect width="130" height="42" rx="8" fill="var(--blue-900)" />
+          <rect width="130" height="42" rx="8" fill="var(--se-color-blue-900)" />
           <rect x="20" y="17" width="70" height="8" rx="2" fill="white" fillOpacity="0.9" />
           <path
             d="M104 21 L114 21 M110 17 L114 21 L110 25"
@@ -342,13 +342,13 @@ function HeroIllustration() {
 
       {/* FLOATING KPI CHIP (top-right) */}
       <g transform="translate(330 50)" filter="url(#heroChipShadow)">
-        <rect width="160" height="62" rx="14" fill="white" stroke="var(--line)" strokeWidth="1" />
+        <rect width="160" height="62" rx="14" fill="white" stroke="var(--se-color-line)" strokeWidth="1" />
 
         {/* mini circular icon */}
-        <circle cx="22" cy="31" r="12" fill="var(--blue-100)" />
+        <circle cx="22" cy="31" r="12" fill="var(--se-color-blue-100)" />
         <path
           d="M16 31 L20 35 L28 24"
-          stroke="var(--blue-700)"
+          stroke="var(--se-color-blue-700)"
           strokeWidth="2.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -359,7 +359,7 @@ function HeroIllustration() {
         <text
           x="44"
           y="30"
-          fill="var(--blue-900)"
+          fill="var(--se-color-blue-900)"
           fontSize="16"
           fontWeight="700"
           letterSpacing="-0.01em"
@@ -370,7 +370,7 @@ function HeroIllustration() {
         <text
           x="44"
           y="46"
-          fill="var(--slate-500)"
+          fill="var(--se-color-slate-500)"
           fontSize="9.5"
           fontWeight="600"
           letterSpacing="0.08em"

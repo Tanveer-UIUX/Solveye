@@ -1,4 +1,4 @@
-﻿// =============================================
+// =============================================
 // CONTACT PAGE STYLES
 // =============================================
 
@@ -8,20 +8,20 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--eyebrow-color);
+  color: var(--se-color-eyebrow);
   font-weight: 500;
 }
 
 .lead {
   font-size: 1.125rem;
-  color: var(--slate-600);
+  color: var(--se-color-slate-600);
   line-height: 1.6;
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: 12px;
-  color: var(--slate-500);
+  color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -30,7 +30,7 @@
     transition: color 0.15s;
 
     &:hover {
-      color: var(--blue-900);
+      color: var(--se-color-blue-900);
     }
   }
 }
@@ -214,14 +214,14 @@
 }
 
 .channel {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid var(--se-color-line);
+  border-radius: var(--se-radius);
   padding: 24px;
   background: white;
   transition: border-color 0.2s ease;
 
   &:hover {
-    border-color: var(--slate-300);
+    border-color: var(--se-color-slate-300);
   }
 
   h4 {
@@ -233,7 +233,7 @@
 
   p {
     font-size: 14px;
-    color: var(--slate-600);
+    color: var(--se-color-slate-600);
     line-height: 1.55;
     margin-bottom: 12px;
   }
@@ -248,24 +248,24 @@
 .channelLink {
   font-weight: 500;
   font-size: 14px;
-  color: var(--blue-900);
-  border-bottom: 1px solid var(--line);
+  color: var(--se-color-blue-900);
+  border-bottom: 1px solid var(--se-color-line);
   padding-bottom: 1px;
   align-self: flex-start;
   transition: border-color 0.15s ease;
 
   &:hover {
-    border-color: var(--blue-900);
+    border-color: var(--se-color-blue-900);
   }
 }
 
 // ---- Form card ----
 .formCard {
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--se-color-line);
+  border-radius: var(--se-radius-lg);
   padding: 40px;
   background: white;
-  box-shadow: var(--shadow);
+  box-shadow: var(--se-shadow);
 
   @media (max-width: 600px) {
     padding: 28px 20px;
@@ -275,7 +275,7 @@
 .tabs {
   display: flex;
   gap: 4px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--se-color-line);
   margin-bottom: 32px;
 }
 
@@ -283,7 +283,7 @@
   padding: 10px 16px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--slate-500);
+  color: var(--se-color-slate-500);
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   transition: color 0.15s ease, border-color 0.15s ease;
@@ -291,13 +291,13 @@
   cursor: pointer;
 
   &:hover {
-    color: var(--blue-900);
+    color: var(--se-color-blue-900);
   }
 }
 
 .tabActive {
-  color: var(--blue-900);
-  border-bottom-color: var(--blue-900);
+  color: var(--se-color-blue-900);
+  border-bottom-color: var(--se-color-blue-900);
 }
 
 // ---- Form internals ----
@@ -315,7 +315,7 @@
 
 .formLead {
   font-size: 14px;
-  color: var(--slate-600);
+  color: var(--se-color-slate-600);
   line-height: 1.6;
   margin-bottom: 8px;
 }
@@ -338,7 +338,7 @@
   label {
     font-size: 13px;
     font-weight: 500;
-    color: var(--slate-700);
+    color: var(--se-color-slate-700);
     letter-spacing: 0.01em;
   }
 
@@ -347,22 +347,22 @@
   textarea {
     width: 100%;
     padding: 10px 14px;
-    border: 1px solid var(--slate-300);
-    border-radius: var(--radius-sm);
+    border: 1px solid var(--se-color-slate-300);
+    border-radius: var(--se-radius-sm);
     font-size: 14px;
     font-family: inherit;
-    color: var(--slate-900);
+    color: var(--se-color-slate-900);
     background: white;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
     outline: none;
     resize: vertical;
 
     &::placeholder {
-      color: var(--slate-400);
+      color: var(--se-color-slate-400);
     }
 
     &:focus {
-      border-color: var(--blue-600);
+      border-color: var(--se-color-blue-600);
       box-shadow: 0 0 0 3px rgba(24, 94, 212, 0.1);
     }
   }
@@ -382,7 +382,7 @@
   align-items: flex-start;
   gap: 10px;
   font-size: 13px;
-  color: var(--slate-600);
+  color: var(--se-color-slate-600);
   line-height: 1.5;
 
   input[type='checkbox'] {
@@ -390,7 +390,7 @@
     flex-shrink: 0;
     width: 16px;
     height: 16px;
-    accent-color: var(--blue-600);
+    accent-color: var(--se-color-blue-600);
     cursor: pointer;
   }
 
@@ -404,19 +404,19 @@
   align-items: center;
   gap: 8px;
   padding: 14px 28px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: 15px;
-  background: var(--blue-900);
+  background: var(--se-color-blue-900);
   color: white;
   transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   cursor: pointer;
   align-self: flex-start;
 
   &:hover {
-    background: var(--blue-600);
+    background: var(--se-color-blue-600);
     transform: translateY(-1px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--se-shadow);
 
     .arrow {
       transform: translateX(3px);
@@ -434,7 +434,7 @@
   background: #dcfce7;
   border: 1px solid #86efac;
   color: #15803d;
-  border-radius: var(--radius);
+  border-radius: var(--se-radius);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -444,8 +444,8 @@
 // =============================================
 .offices {
   padding: 72px 0;
-  border-top: 1px solid var(--line);
-  background: var(--slate-50);
+  border-top: 1px solid var(--se-color-line);
+  background: var(--se-color-slate-50);
 
   @media (max-width: 768px) {
     padding: 48px 0;
@@ -461,7 +461,7 @@
 
 .officeLead {
   font-size: 15px;
-  color: var(--slate-600);
+  color: var(--se-color-slate-600);
   margin-bottom: 32px;
 }
 
@@ -481,13 +481,13 @@
 
 .officeCard {
   padding: 20px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid var(--se-color-line);
+  border-radius: var(--se-radius);
   background: white;
   transition: border-color 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    border-color: var(--slate-300);
+    border-color: var(--se-color-slate-300);
     transform: translateY(-2px);
   }
 }
@@ -495,7 +495,7 @@
 .officeCity {
   font-weight: 600;
   font-size: 1rem;
-  color: var(--blue-900);
+  color: var(--se-color-blue-900);
   margin-bottom: 4px;
   letter-spacing: -0.01em;
 }
@@ -505,13 +505,13 @@
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--slate-500);
+  color: var(--se-color-slate-500);
   margin-bottom: 12px;
 }
 
 .officeAddr {
   font-size: 13px;
-  color: var(--slate-600);
+  color: var(--se-color-slate-600);
   line-height: 1.55;
 }
 
@@ -546,32 +546,32 @@
 
 .faqItem {
   padding: 24px;
-  background: var(--slate-50);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  background: var(--se-color-slate-50);
+  border: 1px solid var(--se-color-line);
+  border-radius: var(--se-radius);
   transition: border-color 0.2s ease;
 
   &:hover {
-    border-color: var(--slate-300);
+    border-color: var(--se-color-slate-300);
   }
 
   h5 {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--blue-900);
+    color: var(--se-color-blue-900);
     letter-spacing: -0.01em;
   }
 
   p {
     font-size: 14px;
-    color: var(--slate-600);
+    color: var(--se-color-slate-600);
     line-height: 1.6;
   }
 }
 
 .faqLink {
-  color: var(--blue-600);
+  color: var(--se-color-blue-600);
   font-weight: 500;
 
   &:hover {

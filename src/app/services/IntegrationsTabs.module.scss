@@ -1,7 +1,7 @@
 .tabs {
   display: flex;
   gap: 4px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--se-color-line);
   margin-bottom: 32px;
   overflow-x: auto;
   scrollbar-width: none;
@@ -15,19 +15,19 @@
   padding: 14px 20px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--slate-500);
+  color: var(--se-color-slate-500);
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   white-space: nowrap;
   transition: color 0.15s ease, border-color 0.15s ease;
 
   &:hover {
-    color: var(--blue-900);
+    color: var(--se-color-blue-900);
   }
 
   &.active {
-    color: var(--blue-900);
-    border-bottom-color: var(--blue-900);
+    color: var(--se-color-blue-900);
+    border-bottom-color: var(--se-color-blue-900);
   }
 }
 
@@ -47,30 +47,30 @@
 }
 
 .tile {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid var(--se-color-line);
+  border-radius: var(--se-radius);
   padding: 24px 16px;
   text-align: center;
   background: white;
   font-size: 13px;
   font-weight: 500;
-  color: var(--blue-900);
+  color: var(--se-color-blue-900);
   transition:
     border-color 0.15s ease,
     transform 0.15s ease,
     box-shadow 0.15s ease;
 
   &:hover {
-    border-color: var(--blue-900);
+    border-color: var(--se-color-blue-900);
     transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--se-shadow);
   }
 
   .mark {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     display: block;
     font-size: 18px;
-    color: var(--blue-900);
+    color: var(--se-color-blue-900);
     margin-bottom: 6px;
     letter-spacing: 0.04em;
   }

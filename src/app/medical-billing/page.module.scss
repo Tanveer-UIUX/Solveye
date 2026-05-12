@@ -1,4 +1,4 @@
-﻿// =============================================
+// =============================================
 // MEDICAL BILLING â€” Service detail page styles
 // =============================================
 
@@ -25,20 +25,20 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--eyebrow-color);
+  color: var(--se-color-eyebrow);
   font-weight: 500;
 }
 
 .lead {
   font-size: 1.125rem;
-  color: var(--slate-600);
+  color: var(--se-color-slate-600);
   line-height: 1.6;
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: 12px;
-  color: var(--slate-500);
+  color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -48,7 +48,7 @@
   }
 
   a:hover {
-    color: var(--blue-900);
+    color: var(--se-color-blue-900);
   }
 }
 
@@ -69,8 +69,8 @@
 // =============================================
 .hero {
   padding: 64px 0 80px;
-  background: linear-gradient(180deg, var(--slate-50), white);
-  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--se-color-slate-50), white);
+  border-bottom: 1px solid var(--se-color-line);
 
   @media (max-width: 768px) {
     padding: 48px 0 56px;
@@ -114,18 +114,18 @@
   align-items: center;
   gap: 8px;
   padding: 16px 28px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: 16px;
-  background: var(--blue-900);
+  background: var(--se-color-blue-900);
   color: white;
   transition: all 0.15s;
   white-space: nowrap;
 
   &:hover {
-    background: var(--blue-600);
+    background: var(--se-color-blue-600);
     transform: translateY(-1px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--se-shadow);
 
     .arrow {
       transform: translateX(3px);
@@ -138,16 +138,16 @@
   align-items: center;
   gap: 8px;
   padding: 16px 28px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: 16px;
   background: white;
-  color: var(--blue-900);
-  border: 1px solid var(--slate-300);
+  color: var(--se-color-blue-900);
+  border: 1px solid var(--se-color-slate-300);
   transition: border-color 0.15s ease;
 
   &:hover {
-    border-color: var(--blue-900);
+    border-color: var(--se-color-blue-900);
   }
 }
 
@@ -157,11 +157,11 @@
 }
 
 .heroImg {
-  border-radius: var(--radius-lg);
+  border-radius: var(--se-radius-lg);
   aspect-ratio: 5 / 4;
   background: url('https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&w=900&q=80')
     center / cover;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--se-shadow-lg);
   min-height: 320px;
 }
 
@@ -184,15 +184,15 @@
 
 .benefit {
   padding: 28px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid var(--se-color-line);
+  border-radius: var(--se-radius);
   background: white;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    border-color: var(--slate-300);
+    border-color: var(--se-color-slate-300);
     transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--se-shadow);
   }
 
   .num {
@@ -200,7 +200,7 @@
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.04em;
-    color: var(--blue-900);
+    color: var(--se-color-blue-900);
     font-feature-settings: 'tnum';
     line-height: 1;
     margin: 0;
@@ -215,7 +215,7 @@
 
   p {
     font-size: 14px;
-    color: var(--slate-600);
+    color: var(--se-color-slate-600);
     line-height: 1.55;
   }
 }
@@ -224,7 +224,7 @@
 // 3. PROCESS (light gray section)
 // =============================================
 .process {
-  background: var(--slate-50);
+  background: var(--se-color-slate-50);
   padding: 96px 0;
 
   @media (max-width: 768px) {
@@ -260,22 +260,22 @@
 
 .procStep {
   background: white;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid var(--se-color-line);
+  border-radius: var(--se-radius);
   padding: 28px;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    border-color: var(--slate-300);
+    border-color: var(--se-color-slate-300);
     transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--se-shadow);
   }
 
   .num {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: 12px;
     letter-spacing: 0.12em;
-    color: var(--blue-700);
+    color: var(--se-color-blue-700);
     margin-bottom: 16px;
     text-transform: uppercase;
   }
@@ -289,7 +289,7 @@
 
   p {
     font-size: 14px;
-    color: var(--slate-600);
+    color: var(--se-color-slate-600);
     line-height: 1.5;
   }
 
@@ -297,11 +297,11 @@
     margin-top: 14px;
     padding-left: 18px;
     font-size: 13px;
-    color: var(--slate-600);
+    color: var(--se-color-slate-600);
     line-height: 1.7;
 
     li::marker {
-      color: var(--blue-400);
+      color: var(--se-color-blue-400);
     }
   }
 }
@@ -338,16 +338,16 @@
 // 5. CTA (compact band)
 // =============================================
 .ctaBand {
-  --eyebrow-color: var(--blue-100);
+  --se-color-eyebrow: var(--se-color-blue-100);
 
   position: relative;
   overflow: hidden;
   background:
     radial-gradient(circle at 10% 20%, rgba(24, 94, 212, 0.45) 0%, transparent 50%),
     radial-gradient(circle at 100% 100%, rgba(14, 165, 160, 0.3) 0%, transparent 50%),
-    var(--blue-900);
+    var(--se-color-blue-900);
   color: white;
-  border-radius: var(--radius-lg);
+  border-radius: var(--se-radius-lg);
   padding: 56px;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -363,7 +363,7 @@
   }
 
   p {
-    color: var(--slate-300);
+    color: var(--se-color-slate-300);
     line-height: 1.55;
   }
 
@@ -385,17 +385,17 @@
   justify-content: center;
   gap: 8px;
   padding: 16px 28px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: 16px;
   background: white;
-  color: var(--blue-900);
+  color: var(--se-color-blue-900);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   white-space: nowrap;
 
   &:hover {
     transform: translateY(-1px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--se-shadow);
 
     .arrow {
       transform: translateX(3px);
@@ -408,7 +408,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px 28px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: 16px;
   background: rgba(255 255 255 / 0.06);

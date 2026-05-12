@@ -4,10 +4,10 @@
 }
 
 .item {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--se-color-line);
 
   &:last-child {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--se-color-line);
   }
 }
 
@@ -24,16 +24,16 @@
   font-family: inherit;
   font-weight: 500;
   font-size: 1.05rem;
-  color: var(--blue-900);
+  color: var(--se-color-blue-900);
   cursor: pointer;
   transition: color 0.2s ease;
 
   &:hover {
-    color: var(--blue-700);
+    color: var(--se-color-blue-700);
 
     .toggle {
-      border-color: var(--blue-900);
-      color: var(--blue-900);
+      border-color: var(--se-color-blue-900);
+      color: var(--se-color-blue-900);
     }
   }
 }
@@ -42,13 +42,13 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 1px solid var(--line-2);
+  border: 1px solid var(--se-color-line-2);
   display: grid;
   place-items: center;
   flex-shrink: 0;
   font-size: 18px;
   line-height: 1;
-  color: var(--slate-600);
+  color: var(--se-color-slate-600);
   transition:
     transform 0.25s ease,
     background 0.25s ease,
@@ -58,9 +58,9 @@
 
 .item.open .toggle {
   transform: rotate(45deg);
-  background: var(--blue-900);
+  background: var(--se-color-blue-900);
   color: white;
-  border-color: var(--blue-900);
+  border-color: var(--se-color-blue-900);
 }
 
 .a {
@@ -73,7 +73,7 @@
   opacity: 0;
 
   p {
-    color: var(--slate-600);
+    color: var(--se-color-slate-600);
     line-height: 1.65;
     margin: 0;
     padding-right: 56px;
