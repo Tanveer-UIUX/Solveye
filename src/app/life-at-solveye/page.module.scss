@@ -5,7 +5,7 @@
 // ---- Shared ----
 .eyebrow {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--se-color-eyebrow);
@@ -13,7 +13,7 @@
 }
 
 .lead {
-  font-size: 1.0625rem;
+  font-size: var(--se-text-lead);
   color: var(--se-color-slate-600);
   line-height: 1.65;
   margin-bottom: 32px;
@@ -21,7 +21,7 @@
 
 .crumb {
   font-family: var(--se-font-mono);
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -37,7 +37,7 @@
   margin-bottom: 56px;
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 12px 0 16px;
@@ -54,7 +54,7 @@
   overflow: hidden;
 
   h1 {
-    font-size: clamp(2.25rem, 4.6vw, 3.5rem);
+    font-size: var(--se-text-fluid-h1);
     letter-spacing: -0.02em;
     line-height: 1.05;
     margin: 16px 0 20px;
@@ -134,7 +134,7 @@
 }
 
 .statNum {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--se-text-fluid-h1-sm);
   font-weight: 700;
   letter-spacing: -0.035em;
   color: var(--se-color-blue-900);
@@ -143,13 +143,13 @@
 }
 
 .statDenom {
-  font-size: 1.2rem;
+  font-size: var(--se-text-lg);
   color: var(--se-color-slate-500);
   font-weight: 400;
 }
 
 .statLabel {
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-500);
   margin-top: 6px;
 }
@@ -177,7 +177,7 @@
 .tlTab {
   padding: 10px 22px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   font-weight: 500;
   color: var(--se-color-slate-600);
   cursor: pointer;
@@ -232,7 +232,7 @@
 
 .tlTime {
   font-family: var(--se-font-mono);
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-500);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -253,7 +253,7 @@
   color: var(--se-color-slate-900);
   font-weight: 600;
   display: block;
-  font-size: 18px;
+  font-size: var(--se-text-md);
   letter-spacing: -0.01em;
   text-transform: none;
   margin-bottom: 2px;
@@ -326,7 +326,7 @@
   }
 
   h4 {
-    font-size: 17px;
+    font-size: var(--se-text-lead);
     font-weight: 600;
     color: var(--se-color-slate-900);
     margin: 0 0 8px;
@@ -334,7 +334,7 @@
   }
 
   p {
-    font-size: 14.5px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.6;
     margin: 0;
@@ -352,7 +352,7 @@
 
 .tag {
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   padding: 4px 9px;
   border-radius: 4px;
   background: var(--se-color-slate-50);
@@ -417,7 +417,7 @@
   }
 
   h3 {
-    font-size: 1.125rem;
+    font-size: var(--se-text-md);
     font-weight: 600;
     color: var(--se-color-slate-900);
     margin: 0;
@@ -425,7 +425,7 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     margin: 0;
     line-height: 1.6;
@@ -434,7 +434,7 @@
 
 .valueNum {
   font-family: var(--se-font-mono);
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-blue-700);
   letter-spacing: 0.08em;
 }
@@ -481,14 +481,14 @@
 
   h3 {
     color: white;
-    font-size: 1.25rem;
+    font-size: var(--se-text-lg);
     margin: 0;
     letter-spacing: -0.01em;
   }
 
   p {
     color: var(--se-color-slate-300);
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     line-height: 1.6;
     margin: 0;
   }
@@ -496,7 +496,7 @@
 
 .ritualWhen {
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--se-color-blue-500);
@@ -576,14 +576,14 @@
   }
 
   h4 {
-    font-size: 16px;
+    font-size: var(--se-text-de);
     margin: 0 0 6px;
     color: var(--se-color-slate-900);
     letter-spacing: -0.01em;
   }
 
   p {
-    font-size: 13.5px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     margin: 0;
     line-height: 1.6;
@@ -619,7 +619,7 @@
   @media (max-width: 900px) { grid-template-columns: 1fr; }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 12px 0 32px;
@@ -636,7 +636,7 @@
 }
 
 .quote {
-  font-size: 1.4rem;
+  font-size: var(--se-text-22);
   line-height: 1.5;
   color: var(--se-color-slate-900);
   letter-spacing: -0.01em;
@@ -647,7 +647,7 @@
 
 .cite {
   font-style: normal;
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   color: var(--se-color-slate-600);
 
   strong {
@@ -669,7 +669,7 @@
   @media (max-width: 768px) { padding: 64px 0; }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     color: white;
@@ -698,7 +698,7 @@
   padding: 14px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 15px;
+  font-size: var(--se-text-15);
   background: white;
   color: var(--se-color-slate-900);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -717,7 +717,7 @@
   padding: 14px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 15px;
+  font-size: var(--se-text-15);
   background: transparent;
   color: white;
   border: 1px solid var(--se-color-slate-700);
@@ -740,7 +740,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   transition: all 0.15s;
   white-space: nowrap;
   border: 1px solid transparent;

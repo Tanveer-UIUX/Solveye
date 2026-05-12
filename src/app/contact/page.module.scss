@@ -5,7 +5,7 @@
 // ---- Shared ----
 .eyebrow {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--se-color-eyebrow);
@@ -13,14 +13,14 @@
 }
 
 .lead {
-  font-size: 1.125rem;
+  font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
   line-height: 1.6;
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -46,7 +46,7 @@
   }
 
   h1 {
-    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-size: var(--se-text-fluid-h1);
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 1.05;
@@ -225,14 +225,14 @@
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: var(--se-text-de);
     font-weight: 600;
     margin-bottom: 8px;
     letter-spacing: -0.01em;
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.55;
     margin-bottom: 12px;
@@ -247,7 +247,7 @@
 
 .channelLink {
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   color: var(--se-color-blue-900);
   border-bottom: 1px solid var(--se-color-line);
   padding-bottom: 1px;
@@ -281,7 +281,7 @@
 
 .tab {
   padding: 10px 16px;
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   font-weight: 500;
   color: var(--se-color-slate-500);
   border-bottom: 2px solid transparent;
@@ -306,7 +306,7 @@
   gap: 16px;
 
   h3 {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-size: var(--se-text-fluid-h4);
     font-weight: 700;
     letter-spacing: -0.025em;
     margin-bottom: 4px;
@@ -314,7 +314,7 @@
 }
 
 .formLead {
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   color: var(--se-color-slate-600);
   line-height: 1.6;
   margin-bottom: 8px;
@@ -336,7 +336,7 @@
   gap: 6px;
 
   label {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     font-weight: 500;
     color: var(--se-color-slate-700);
     letter-spacing: 0.01em;
@@ -349,7 +349,7 @@
     padding: 10px 14px;
     border: 1px solid var(--se-color-slate-300);
     border-radius: var(--se-radius-sm);
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     font-family: inherit;
     color: var(--se-color-slate-900);
     background: white;
@@ -381,7 +381,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
   line-height: 1.5;
 
@@ -406,7 +406,7 @@
   padding: 14px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 15px;
+  font-size: var(--se-text-15);
   background: var(--se-color-blue-900);
   color: white;
   transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
@@ -435,7 +435,7 @@
   border: 1px solid #86efac;
   color: #15803d;
   border-radius: var(--se-radius);
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   line-height: 1.6;
 }
 
@@ -452,7 +452,7 @@
   }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 16px 0 8px;
@@ -460,7 +460,7 @@
 }
 
 .officeLead {
-  font-size: 15px;
+  font-size: var(--se-text-15);
   color: var(--se-color-slate-600);
   margin-bottom: 32px;
 }
@@ -494,7 +494,7 @@
 
 .officeCity {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--se-text-de);
   color: var(--se-color-blue-900);
   margin-bottom: 4px;
   letter-spacing: -0.01em;
@@ -502,7 +502,7 @@
 
 .officeCountry {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--se-color-slate-500);
@@ -510,7 +510,7 @@
 }
 
 .officeAddr {
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
   line-height: 1.55;
 }
@@ -527,7 +527,7 @@
   }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 16px 0 40px;
@@ -556,7 +556,7 @@
   }
 
   h5 {
-    font-size: 0.95rem;
+    font-size: var(--se-text-15);
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--se-color-blue-900);
@@ -564,7 +564,7 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.6;
   }

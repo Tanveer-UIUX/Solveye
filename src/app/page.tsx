@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import StatCounter from '@/components/StatCounter'
+import SubmitResumeModal from '@/components/careers/SubmitResumeModal'
 import s from './page.module.scss'
 
 /* ---- tiny SVG helpers (inline, no extra deps) ---- */
@@ -142,9 +143,10 @@ export default function Home() {
                 specialists.
               </p>
               <div className={s.heroCta}>
-                <Link href="/careers#roles" className={s.btnPrimary}>
-                  Drop Your Resume <span className={s.arrow}>&rarr;</span>
-                </Link>
+                <SubmitResumeModal
+                  label={<>Drop Your Resume <span className={s.arrow}>&rarr;</span></>}
+                  triggerClass={s.btnPrimary}
+                />
                 <Link href="/contact#form" className={s.btnSecondary}>
                   Contact Us
                 </Link>
@@ -436,9 +438,10 @@ export default function Home() {
               </p>
             </div>
             <div className={s.ctaButtons}>
-              <Link href="/contact#demo" className={s.ctaBtnLight}>
-                Drop Your Resume <span className={s.arrow}>&rarr;</span>
-              </Link>
+              <SubmitResumeModal
+                label={<>Drop Your Resume <span className={s.arrow}>&rarr;</span></>}
+                triggerClass={s.ctaBtnLight}
+              />
               <Link href="/contact" className={s.ctaBtnOutline}>
                 Contact Us
               </Link>

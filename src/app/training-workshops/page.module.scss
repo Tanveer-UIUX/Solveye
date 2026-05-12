@@ -5,7 +5,7 @@
 // ---- Shared ----
 .eyebrow {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--se-color-eyebrow);
@@ -13,14 +13,14 @@
 }
 
 .lead {
-  font-size: 1.0625rem;
+  font-size: var(--se-text-lead);
   color: var(--se-color-slate-600);
   line-height: 1.65;
 }
 
 .crumb {
   font-family: var(--se-font-mono);
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -36,7 +36,7 @@
   margin-bottom: 56px;
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 12px 0 16px;
@@ -166,7 +166,7 @@
   overflow: hidden;
 
   h1 {
-    font-size: clamp(2.25rem, 4.6vw, 3.5rem);
+    font-size: var(--se-text-fluid-h1);
     letter-spacing: -0.02em;
     line-height: 1.05;
     margin: 16px 0 20px;
@@ -189,7 +189,7 @@
 }
 
 .statNum {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--se-text-fluid-h1-sm);
   font-weight: 700;
   letter-spacing: -0.035em;
   color: var(--se-color-blue-900);
@@ -198,13 +198,13 @@
 }
 
 .statDenom {
-  font-size: 1.2rem;
+  font-size: var(--se-text-lg);
   color: var(--se-color-slate-500);
   font-weight: 400;
 }
 
 .statLabel {
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-500);
   margin-top: 6px;
 }
@@ -246,7 +246,7 @@
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: var(--se-text-lg);
     font-weight: 600;
     color: var(--se-color-slate-900);
     margin: 0;
@@ -254,7 +254,7 @@
   }
 
   > p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     margin: 0;
     line-height: 1.6;
@@ -266,13 +266,13 @@
   top: 24px;
   right: 28px;
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   color: var(--se-color-slate-400);
 }
 
 .trackCat {
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--se-color-blue-700);
@@ -291,19 +291,19 @@
   grid-template-columns: 22px 1fr auto;
   gap: 10px;
   align-items: center;
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-700);
 }
 
 .modNum {
   font-family: var(--se-font-mono);
-  font-size: 10px;
+  font-size: var(--se-text-2xs);
   color: var(--se-color-slate-400);
 }
 
 .modHr {
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   color: var(--se-color-slate-500);
 }
 
@@ -311,7 +311,7 @@
   display: flex;
   gap: 16px;
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   color: var(--se-color-slate-500);
   padding-top: 16px;
   border-top: 1px solid var(--se-color-line);
@@ -355,14 +355,14 @@
   }
 
   h4 {
-    font-size: 15.5px;
+    font-size: var(--se-text-15);
     margin: 0;
     color: var(--se-color-slate-900);
     letter-spacing: -0.01em;
   }
 
   p {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     margin: 0;
     line-height: 1.6;
@@ -383,7 +383,7 @@
 
 .fmtDur {
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   color: var(--se-color-slate-500);
   letter-spacing: 0.06em;
 }
@@ -461,7 +461,7 @@
   }
 
   h4 {
-    font-size: 15.5px;
+    font-size: var(--se-text-15);
     margin: 0;
     color: var(--se-color-slate-900);
     letter-spacing: -0.01em;
@@ -469,7 +469,7 @@
   }
 
   p {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     margin: 0;
     line-height: 1.6;
@@ -479,7 +479,7 @@
 
 .scCat {
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--se-color-blue-700);
@@ -490,7 +490,7 @@
   align-items: center;
   gap: 6px;
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   color: var(--se-color-slate-700);
   background: var(--se-color-slate-50);
   border: 1px solid var(--se-color-line);
@@ -506,7 +506,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: var(--se-font-mono);
-  font-size: 10.5px;
+  font-size: var(--se-text-mini);
   color: var(--se-color-slate-500);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -561,7 +561,7 @@
 
 .wgDate {
   font-family: var(--se-font-mono);
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -652,7 +652,7 @@
   padding: 22px 26px;
 
   h4 {
-    font-size: 17px;
+    font-size: var(--se-text-lead);
     font-weight: 600;
     color: var(--se-color-slate-900);
     margin: 0 0 8px;
@@ -660,7 +660,7 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.6;
     margin: 0;
@@ -703,7 +703,7 @@
   background: var(--se-color-slate-900);
   color: white;
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
@@ -712,7 +712,7 @@
 
 .stRow {
   border-bottom: 1px solid var(--se-color-line);
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   transition: background 0.15s;
 
   &:last-child { border-bottom: none; }
@@ -722,7 +722,7 @@
     > div::before {
       content: attr(data-label) ': ';
       font-family: var(--se-font-mono);
-      font-size: 10px;
+      font-size: var(--se-text-2xs);
       color: var(--se-color-slate-500);
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -733,7 +733,7 @@
 
 .stDate {
   font-family: var(--se-font-mono);
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-900);
   font-weight: 600;
 }
@@ -745,26 +745,26 @@
 
 .stSub {
   display: block;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   font-weight: 400;
   color: var(--se-color-slate-500);
   margin-top: 2px;
 }
 
 .stTrainer {
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-700);
 }
 
 .stFmt {
   font-family: var(--se-font-mono);
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-600);
 }
 
 .stSeats {
   font-family: var(--se-font-mono);
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-700);
 }
 
@@ -774,7 +774,7 @@
   padding: 7px 14px;
   border: 1px solid var(--se-color-slate-300);
   border-radius: var(--se-radius-sm);
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   font-weight: 500;
   color: var(--se-color-slate-900);
   display: inline-block;
@@ -793,7 +793,7 @@
   padding: 2px 8px;
   border-radius: 4px;
   font-family: var(--se-font-mono);
-  font-size: 11px;
+  font-size: var(--se-text-mini);
 }
 
 .seatsOpen { background: #dcfce7; color: #15803d; }
@@ -813,7 +813,7 @@
   @media (max-width: 768px) { padding: 64px 0; }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 12px 0 16px;
@@ -839,7 +839,7 @@
 }
 
 .impactNum {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: var(--se-text-fluid-h2-lg);
   font-weight: 700;
   letter-spacing: -0.04em;
   color: white;
@@ -848,7 +848,7 @@
 }
 
 .impactLabel {
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-400);
   margin-top: 10px;
   line-height: 1.4;
@@ -875,7 +875,7 @@
   }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 12px 0 0;
@@ -885,7 +885,7 @@
 .faqNote {
   margin-top: 16px;
   color: var(--se-color-slate-600);
-  font-size: 14.5px;
+  font-size: var(--se-text-sm);
 }
 
 .faqItem {
@@ -905,7 +905,7 @@
   cursor: pointer;
   text-align: left;
   font-weight: 600;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   color: var(--se-color-slate-900);
   font-family: inherit;
   padding: 0;
@@ -913,7 +913,7 @@
 }
 
 .plus {
-  font-size: 22px;
+  font-size: var(--se-text-22);
   color: var(--se-color-slate-400);
   flex-shrink: 0;
   transition: transform 0.2s;
@@ -925,7 +925,7 @@
 }
 
 .faqA {
-  font-size: 14.5px;
+  font-size: var(--se-text-sm);
   color: var(--se-color-slate-600);
   line-height: 1.7;
   margin-top: 12px;
@@ -942,7 +942,7 @@
   @media (max-width: 768px) { padding: 64px 0; }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     max-width: 720px;
@@ -969,7 +969,7 @@
   padding: 14px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 15px;
+  font-size: var(--se-text-15);
   background: var(--se-color-blue-900);
   color: white;
   transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
@@ -990,7 +990,7 @@
   padding: 14px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 15px;
+  font-size: var(--se-text-15);
   background: white;
   color: var(--se-color-blue-900);
   border: 1px solid var(--se-color-line);

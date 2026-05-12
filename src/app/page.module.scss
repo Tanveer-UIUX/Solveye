@@ -21,7 +21,7 @@
 
 .eyebrow {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--se-color-eyebrow);
@@ -29,7 +29,7 @@
 }
 
 .lead {
-  font-size: 1.125rem;
+  font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
   line-height: 1.6;
 }
@@ -41,7 +41,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   transition: all 0.15s;
   white-space: nowrap;
   border: 1px solid transparent;
@@ -85,7 +85,7 @@
   gap: 8px;
   padding: 12px 0;
   font-weight: 500;
-  font-size: 15px;
+  font-size: var(--se-text-15);
   color: var(--se-color-blue-900);
   transition: color 0.15s;
 
@@ -123,7 +123,7 @@
 
 .heroContent {
   h1 {
-    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    font-size: var(--se-text-fluid-mega);
     font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 1.02;
@@ -134,7 +134,7 @@
   .lead {
     max-width: 540px;
     margin-bottom: 32px;
-    font-size: 1.2rem;
+    font-size: var(--se-text-lg);
   }
 }
 
@@ -155,7 +155,7 @@
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-500);
   margin-top: 32px;
 
@@ -182,7 +182,7 @@
 }
 
 .statNum {
-  font-size: 1.75rem;
+  font-size: var(--se-text-h-sm);
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1;
@@ -190,7 +190,7 @@
 
 .statLabel {
   margin-top: 2px;
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   color: var(--se-color-slate-500);
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
 }
@@ -208,7 +208,7 @@
 .logosLabel {
   text-align: center;
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--se-color-slate-500);
@@ -228,7 +228,7 @@
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-weight: 500;
     color: var(--se-color-slate-600);
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     letter-spacing: -0.02em;
     cursor: pointer;
     transition: color 0.2s ease, transform 0.2s ease;
@@ -324,14 +324,14 @@
       display: block;
       color: white;
       font-weight: 600;
-      font-size: 14px;
+      font-size: var(--se-text-sm);
       letter-spacing: 0.01em;
       margin-bottom: 2px;
     }
 
     span {
       color: var(--se-color-slate-300);
-      font-size: 12.5px;
+      font-size: var(--se-text-13);
       line-height: 1.45;
     }
   }
@@ -350,7 +350,7 @@
   h2 {
     color: white;
     max-width: 600px;
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-top: 16px;
@@ -372,13 +372,13 @@
   border-top: 1px solid rgba(255 255 255 / 0.1);
 
   .statNum {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: var(--se-text-fluid-h2-lg);
     color: white;
     font-feature-settings: 'tnum';
   }
 
   .statLabel {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-400);
     margin-top: 8px;
     letter-spacing: 0.04em;
@@ -401,7 +401,7 @@
 
   h2 {
     max-width: 560px;
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-top: 16px;
@@ -444,12 +444,12 @@
   }
 
   h3 {
-    font-size: 1.125rem;
+    font-size: var(--se-text-md);
     font-weight: 600;
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     flex: 1;
   }
@@ -466,7 +466,7 @@
 }
 
 .arrowLink {
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   font-weight: 500;
   color: var(--se-color-blue-900);
   display: inline-flex;
@@ -495,7 +495,7 @@
 
 .diffContent {
   h2 {
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-top: 16px;
@@ -539,7 +539,7 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
   }
 }
@@ -577,13 +577,13 @@
 
 .stars {
   color: var(--se-color-amber-500);
-  font-size: 20px;
+  font-size: var(--se-text-lg);
   margin-bottom: 24px;
 }
 
 .quote {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--se-text-xl);
   line-height: 1.4;
   letter-spacing: -0.015em;
   color: var(--se-color-blue-900);
@@ -592,7 +592,7 @@
 
 .cite {
   font-style: normal;
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   color: var(--se-color-slate-600);
   margin-top: 24px;
   display: block;
@@ -617,7 +617,7 @@
   padding-left: 40px;
 
   .statNum {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: var(--se-text-fluid-h2-lg);
     font-weight: 700;
     letter-spacing: -0.04em;
     color: var(--se-color-blue-900);
@@ -625,7 +625,7 @@
   }
 
   .statLabel {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-500);
     margin-top: 8px;
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
@@ -667,13 +667,13 @@
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: var(--se-text-lg);
     font-weight: 600;
     transition: color 0.15s;
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
   }
 }
@@ -700,7 +700,7 @@
   display: flex;
   gap: 12px;
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -729,7 +729,7 @@
 
   h2 {
     color: white;
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-top: 16px;
@@ -760,7 +760,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
   transition: all 0.15s;
@@ -786,7 +786,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
@@ -879,13 +879,13 @@
   }
 
   h5 {
-    font-size: 1rem;
+    font-size: var(--se-text-de);
     font-weight: 600;
     margin-bottom: 6px;
   }
 
   p {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     line-height: 1.5;
   }
@@ -893,7 +893,7 @@
 
 .ritualEm {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   color: var(--se-color-blue-700);
   letter-spacing: 0.1em;
   text-transform: uppercase;

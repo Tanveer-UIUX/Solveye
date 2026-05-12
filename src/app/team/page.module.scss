@@ -4,7 +4,7 @@
 
 .eyebrow {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--se-color-eyebrow);
@@ -13,7 +13,7 @@
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -54,7 +54,7 @@
   }
 
   h1 {
-    font-size: clamp(2.4rem, 4.6vw, 3.6rem);
+    font-size: var(--se-text-fluid-h1);
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.05;
@@ -64,7 +64,7 @@
 
 .lead {
   max-width: 520px;
-  font-size: 1.125rem;
+  font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
   line-height: 1.6;
 }
@@ -194,7 +194,7 @@
   left: 0;
   bottom: -56px;
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--se-color-slate-500);
@@ -229,7 +229,7 @@
 
 .filterLabel {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--se-color-slate-500);
@@ -239,7 +239,7 @@
 .chip {
   padding: 7px 16px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: var(--se-text-13);
   font-weight: 500;
   border: 1px solid var(--se-color-line);
   background: white;
@@ -278,7 +278,7 @@
   margin-bottom: 40px;
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: var(--se-text-fluid-h2-sm);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-top: 12px;
@@ -320,14 +320,14 @@
 }
 
 .leaderName {
-  font-size: 1.125rem;
+  font-size: var(--se-text-md);
   font-weight: 600;
   color: var(--se-color-blue-900);
   letter-spacing: -0.01em;
 }
 
 .leaderTitle {
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
   margin-top: 4px;
 }
@@ -340,7 +340,7 @@
   border-top: 1px solid var(--se-color-line);
 
   h3 {
-    font-size: 1.5rem;
+    font-size: var(--se-text-xl);
     font-weight: 700;
     letter-spacing: -0.025em;
     margin-bottom: 32px;
@@ -382,13 +382,13 @@
 }
 
 .memberName {
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   font-weight: 600;
   color: var(--se-color-blue-900);
 }
 
 .memberTitle {
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   margin-top: 2px;
 }
@@ -423,7 +423,7 @@
 
   h2 {
     color: white;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: var(--se-text-fluid-h3);
     font-weight: 700;
     letter-spacing: -0.025em;
     margin-bottom: 12px;
@@ -454,7 +454,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -477,7 +477,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
@@ -586,7 +586,7 @@
 
 .modalInfo {
   h3 {
-    font-size: 1.375rem;
+    font-size: var(--se-text-22);
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--se-color-blue-900);
@@ -594,7 +594,7 @@
 }
 
 .modalTi {
-  font-size: 14px;
+  font-size: var(--se-text-sm);
   color: var(--se-color-slate-600);
   margin-top: 6px;
 }
@@ -607,7 +607,7 @@
   padding: 7px 12px;
   border: 1px solid var(--se-color-line);
   border-radius: 8px;
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-700);
   transition: border-color 0.15s ease, color 0.15s ease;
 
@@ -625,12 +625,12 @@
   border-top: 1px solid var(--se-color-line);
   border-bottom: 1px solid var(--se-color-line);
   margin: 24px 0;
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
 
   strong {
     display: block;
-    font-size: 11px;
+    font-size: var(--se-text-mini);
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -641,7 +641,7 @@
 }
 
 .modalBio {
-  font-size: 1rem;
+  font-size: var(--se-text-de);
   line-height: 1.7;
   color: var(--se-color-slate-700);
 

@@ -41,7 +41,7 @@
 
   p {
     color: var(--se-color-slate-400);
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     max-width: 320px;
   }
 }
@@ -63,7 +63,7 @@
   -webkit-backdrop-filter: blur(10px) saturate(180%);
   border: 1px solid rgba(255 255 255 / 0.14);
   border-radius: 999px;
-  font-size: 11px;
+  font-size: var(--se-text-mini);
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   color: var(--se-color-slate-300);
   letter-spacing: 0.06em;
@@ -84,7 +84,7 @@
 .col {
   h5 {
     color: white;
-    font-size: 12px;
+    font-size: var(--se-text-xs);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 18px;
@@ -102,7 +102,7 @@
 
   a {
     color: var(--se-color-slate-400);
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     transition: color 0.15s;
 
     &:hover {
@@ -113,7 +113,7 @@
   address {
     font-style: normal;
     color: var(--se-color-slate-400);
-    font-size: 14px;
+    font-size: var(--se-text-sm);
   }
 }
 
@@ -123,7 +123,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 32px;
-  font-size: 13px;
+  font-size: var(--se-text-13);
   color: var(--se-color-slate-500);
   flex-wrap: wrap;
   gap: 16px;

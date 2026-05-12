@@ -23,7 +23,7 @@
   text-align: left;
   font-family: inherit;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: var(--se-text-de);
   color: var(--se-color-blue-900);
   cursor: pointer;
   transition: color 0.2s ease;
@@ -46,7 +46,7 @@
   display: grid;
   place-items: center;
   flex-shrink: 0;
-  font-size: 18px;
+  font-size: var(--se-text-md);
   line-height: 1;
   color: var(--se-color-slate-600);
   transition:

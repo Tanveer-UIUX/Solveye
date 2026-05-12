@@ -22,31 +22,50 @@
 
   // =================================================================
   // 2. TYPOGRAPHY — size scale
-  // Default body size is exposed via THREE aliases per spec:
-  //   --se-text-de   (canonical name on the scale: xs/sm/de/md/lg)
+  // -------------------------------------------------------------
+  // The default body size is exposed via THREE aliases per spec:
+  //   --se-text-de   (canonical name on the scale: xs / sm / de / md / lg)
   //   --se-text-base (semantic alias used in component code)
-  //   --se-text      (shorthand for primary value)
+  //   --se-text     (shorthand for primary value)
   // All three resolve to the same value — change `--se-text-de` once.
+  //
+  // The scale is a t-shirt ladder (xs … 5xl). Number-named tokens
+  // (-13, -15, -22) and semantic tokens (-mini, -lead, -h-sm) fill
+  // legitimate in-between sizes used by existing UI.
   // =================================================================
-  --se-text-xs:   0.75rem;      // 12px
-  --se-text-sm:   0.875rem;     // 14px
+  --se-text-2xs:   0.625rem;    // 10px — micro labels
+  --se-text-mini:  0.6875rem;   // 11px — monospace tags, pills, fine print
+  --se-text-xs:    0.75rem;     // 12px — eyebrows, mono labels
+  --se-text-13:    0.8125rem;   // 13px — secondary body, table rows
+  --se-text-sm:    0.875rem;    // 14px — secondary text, nav links, btn-sm
+  --se-text-15:    0.9375rem;   // 15px — button text, contact rows
 
-  --se-text-de:   1rem;         // 16px — DEFAULT body size
-  --se-text-base: var(--se-text-de);
-  --se-text:      var(--se-text-de);
+  --se-text-de:    1rem;        // 16px — DEFAULT body size
+  --se-text-base:  var(--se-text-de);
+  --se-text:       var(--se-text-de);
 
-  --se-text-md:   1.125rem;     // 18px — lead paragraphs, button-lg
-  --se-text-lg:   1.25rem;      // 20px — card titles, blockquote
-  --se-text-xl:   1.5rem;       // 24px — h4 / section subhead
-  --se-text-2xl:  1.875rem;     // 30px — h3 / section head
-  --se-text-3xl:  2.25rem;      // 36px — h2 floor
-  --se-text-4xl:  3rem;         // 48px — hero h1 floor
-  --se-text-5xl:  3.75rem;      // 60px — hero h1 ceiling
+  --se-text-lead:  1.0625rem;   // 17px — lead paragraphs / .lead
+  --se-text-md:    1.125rem;    // 18px — section lead, button-lg
+  --se-text-lg:    1.25rem;     // 20px — card titles, h4
+  --se-text-22:    1.375rem;    // 22px — quote, small section heading
+  --se-text-xl:    1.5rem;      // 24px — section subhead
+  --se-text-h-sm:  1.75rem;     // 28px — small heading
+  --se-text-2xl:   1.875rem;    // 30px — h3 / section head
+  --se-text-3xl:   2.25rem;     // 36px — h2 floor
+  --se-text-4xl:   3rem;        // 48px — hero h1 floor
+  --se-text-5xl:   3.75rem;     // 60px — hero h1 ceiling
 
-  // Fluid display sizes used in hero + section heads
-  --se-text-fluid-h1: clamp(var(--se-text-4xl), 4.6vw, var(--se-text-5xl));
-  --se-text-fluid-h2: clamp(1.75rem,            3vw,   var(--se-text-3xl));
-  --se-text-fluid-h3: clamp(var(--se-text-lg),  2.2vw, var(--se-text-xl));
+  // -------------------------------------------------------------
+  // Fluid display sizes — used for headings that scale with viewport
+  // -------------------------------------------------------------
+  --se-text-fluid-mega:  clamp(2.5rem,  5vw,   4.25rem); // 40 → 68 — homepage hero
+  --se-text-fluid-h1:    clamp(2.25rem, 4.6vw, 3.5rem);  // 36 → 56 — standard hero
+  --se-text-fluid-h1-sm: clamp(2rem,    4vw,   3rem);    // 32 → 48 — compact hero
+  --se-text-fluid-h2:    clamp(2rem,    3.5vw, 2.75rem); // 32 → 44 — standard section head
+  --se-text-fluid-h2-lg: clamp(2.5rem,  4vw,   3.5rem);  // 40 → 56 — large section head
+  --se-text-fluid-h2-sm: clamp(1.75rem, 3vw,   2.5rem);  // 28 → 40 — small section head
+  --se-text-fluid-h3:    clamp(1.5rem,  2.5vw, 2rem);    // 24 → 32 — h3
+  --se-text-fluid-h4:    clamp(1.25rem, 2vw,   1.5rem);  // 20 → 24 — h4 / blockquote
 
   // =================================================================
   // 3. TYPOGRAPHY — line height

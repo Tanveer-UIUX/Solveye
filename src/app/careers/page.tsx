@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import JobBoard, { type Job } from './JobBoard'
 import AnimatedNumber from '@/components/AnimatedNumber'
+import SubmitResumeModal from '@/components/careers/SubmitResumeModal'
 import s from './page.module.scss'
 
 export const metadata: Metadata = {
@@ -451,11 +452,9 @@ export default function CareersPage() {
                 Philadelphia, Austin, Hyderabad, Manila, and remote.
               </p>
               <div className={s.heroCta}>
-                <a href="#roles" className={s.btnPrimary}>
+                <SubmitResumeModal />
+                <a href="#roles" className={s.btnSecondary}>
                   See open positions
-                </a>
-                <a href="#why" className={s.btnGhost}>
-                  Why Solveye
                 </a>
               </div>
             </div>
@@ -674,9 +673,10 @@ export default function CareersPage() {
               </p>
             </div>
             <div className={s.ctaButtons}>
-              <a href="mailto:talent@solveye.health" className={s.ctaBtnLight}>
-                Send us your resume <span className={s.arrow}>&rarr;</span>
-              </a>
+              <SubmitResumeModal
+                label={<>Send us your resume <span className={s.arrow}>&rarr;</span></>}
+                triggerClass={s.ctaBtnLight}
+              />
               <Link href="/about" className={s.ctaBtnOutline}>
                 Read about our culture
               </Link>

@@ -19,7 +19,7 @@
 // ---- Shared building blocks ----
 .eyebrow {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--se-color-eyebrow);
@@ -27,14 +27,14 @@
 }
 
 .lead {
-  font-size: 1.125rem;
+  font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
   line-height: 1.6;
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -58,7 +58,7 @@
 
   h2 {
     max-width: 560px;
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-top: 16px;
@@ -67,7 +67,7 @@
   .note {
     max-width: 320px;
     color: var(--se-color-slate-600);
-    font-size: 14px;
+    font-size: var(--se-text-sm);
   }
 
   @media (max-width: 768px) {
@@ -108,7 +108,7 @@
   }
 
   .lead {
-    font-size: 1.125rem;
+    font-size: var(--se-text-md);
   }
 }
 
@@ -162,7 +162,7 @@
   margin-bottom: 6px;
 
   strong {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     font-weight: 600;
     color: var(--se-color-blue-900);
     letter-spacing: -0.01em;
@@ -181,13 +181,13 @@
 }
 
 .cardSub {
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   line-height: 1.4;
 }
 
 .cardVal {
-  font-size: 13px;
+  font-size: var(--se-text-13);
   font-weight: 600;
   color: #185ed4;
   margin-top: 3px;
@@ -210,7 +210,7 @@
 
     strong {
       display: block;
-      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-size: var(--se-text-fluid-h2-lg);
       font-weight: 700;
       letter-spacing: -0.04em;
       color: var(--se-color-blue-900);
@@ -221,7 +221,7 @@
 
     .kpiLabel {
       display: block;
-      font-size: 13px;
+      font-size: var(--se-text-13);
       color: var(--se-color-slate-500);
       margin-top: 12px;
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
@@ -245,14 +245,14 @@
   align-items: center;
 
   h2 {
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 16px 0 24px;
   }
 
   p {
-    font-size: 1.0625rem;
+    font-size: var(--se-text-lead);
     line-height: 1.7;
     margin-bottom: 16px;
     color: var(--se-color-slate-700);
@@ -289,20 +289,20 @@
 .tlItem {
   .year {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-blue-700);
     letter-spacing: 0.06em;
     margin-bottom: 10px;
   }
 
   h5 {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     font-weight: 600;
     margin-bottom: 6px;
   }
 
   p {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     line-height: 1.5;
   }
@@ -336,7 +336,7 @@
 
   .label {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    font-size: 12px;
+    font-size: var(--se-text-xs);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--se-color-blue-700);
@@ -344,7 +344,7 @@
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: var(--se-text-xl);
     line-height: 1.25;
     margin-bottom: 16px;
     font-weight: 700;
@@ -357,7 +357,7 @@
   }
 
   .small {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-500);
     margin-top: 12px;
   }
@@ -390,7 +390,7 @@
 
   h2 {
     color: white;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: var(--se-text-fluid-h1-sm);
     font-weight: 700;
     letter-spacing: -0.025em;
     line-height: 1.15;
@@ -399,7 +399,7 @@
   }
 
   .letter {
-    font-size: 1.125rem;
+    font-size: var(--se-text-md);
     line-height: 1.75;
 
     p {
@@ -429,11 +429,11 @@
   .name {
     color: white;
     font-weight: 600;
-    font-size: 15px;
+    font-size: var(--se-text-15);
   }
 
   .title {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-400);
   }
 }
@@ -477,21 +477,21 @@
 
   .pn {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    font-size: 12px;
+    font-size: var(--se-text-xs);
     letter-spacing: 0.12em;
     color: var(--se-color-slate-500);
     margin-bottom: 16px;
   }
 
   h4 {
-    font-size: 1.125rem;
+    font-size: var(--se-text-md);
     font-weight: 600;
     margin-bottom: 12px;
     letter-spacing: -0.015em;
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.6;
   }
@@ -500,7 +500,7 @@
     margin-top: 16px;
     padding-top: 16px;
     border-top: 1px solid var(--se-color-line);
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-500);
     line-height: 1.5;
 
@@ -510,7 +510,7 @@
       color: var(--se-color-slate-700);
       font-weight: 500;
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-      font-size: 11px;
+      font-size: var(--se-text-mini);
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
@@ -527,7 +527,7 @@
   align-items: center;
 
   h2 {
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 16px 0 24px;
@@ -538,7 +538,7 @@
   }
 
   .body {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-700);
     line-height: 1.6;
   }
@@ -576,7 +576,7 @@
 
     strong {
       display: block;
-      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-size: var(--se-text-fluid-h2-lg);
       font-weight: 700;
       letter-spacing: -0.04em;
       color: var(--se-color-blue-900);
@@ -587,7 +587,7 @@
 
     .kpiLabel {
       display: block;
-      font-size: 13px;
+      font-size: var(--se-text-13);
       color: var(--se-color-slate-500);
       margin-top: 12px;
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
@@ -668,7 +668,7 @@
 
   .em {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    font-size: 11px;
+    font-size: var(--se-text-mini);
     color: var(--se-color-blue-700);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -676,13 +676,13 @@
   }
 
   h5 {
-    font-size: 1rem;
+    font-size: var(--se-text-de);
     font-weight: 600;
     margin-bottom: 6px;
   }
 
   p {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     line-height: 1.5;
   }
@@ -716,19 +716,19 @@
 
   .yr {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    font-size: 12px;
+    font-size: var(--se-text-xs);
     color: var(--se-color-slate-500);
     letter-spacing: 0.1em;
   }
 
   h5 {
     margin: 8px 0 4px;
-    font-size: 0.95rem;
+    font-size: var(--se-text-15);
     font-weight: 600;
   }
 
   p {
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     line-height: 1.5;
   }
@@ -751,7 +751,7 @@
 
   h2 {
     color: white;
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 16px 0;
@@ -809,27 +809,27 @@
     place-items: center;
     font-weight: 700;
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    font-size: 13px;
+    font-size: var(--se-text-13);
     margin-bottom: 16px;
     letter-spacing: 0.04em;
   }
 
   h4 {
     color: white;
-    font-size: 1.125rem;
+    font-size: var(--se-text-md);
     font-weight: 600;
     margin-bottom: 8px;
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-300);
     margin-bottom: 14px;
     line-height: 1.5;
   }
 
   .det {
-    font-size: 12px;
+    font-size: var(--se-text-xs);
     color: var(--se-color-slate-400);
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     letter-spacing: 0.04em;
@@ -853,7 +853,7 @@
   h3 {
     color: white;
     margin-bottom: 8px;
-    font-size: 1.25rem;
+    font-size: var(--se-text-lg);
     font-weight: 600;
   }
 
@@ -869,7 +869,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -917,7 +917,7 @@
   }
 
   .city {
-    font-size: 1.25rem;
+    font-size: var(--se-text-lg);
     font-weight: 600;
     color: var(--se-color-blue-900);
     margin-bottom: 4px;
@@ -926,7 +926,7 @@
 
   .country {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    font-size: 12px;
+    font-size: var(--se-text-xs);
     color: var(--se-color-slate-500);
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -934,7 +934,7 @@
   }
 
   .addr {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.55;
     font-style: normal;
@@ -944,7 +944,7 @@
     margin-top: 16px;
     padding-top: 16px;
     border-top: 1px solid var(--se-color-line);
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-700);
     display: flex;
     justify-content: space-between;
@@ -983,7 +983,7 @@
 
   h2 {
     color: white;
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-bottom: 16px;
@@ -1017,7 +1017,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);

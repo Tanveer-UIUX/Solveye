@@ -22,7 +22,7 @@
 // ---- Shared building blocks ----
 .eyebrow {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--se-color-eyebrow);
@@ -30,14 +30,14 @@
 }
 
 .lead {
-  font-size: 1.125rem;
+  font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
   line-height: 1.6;
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-  font-size: 12px;
+  font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
 
   h2 {
     max-width: 640px;
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-top: 16px;
@@ -89,7 +89,7 @@
   }
 
   h1 {
-    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-size: var(--se-text-fluid-h1);
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 1.05;
@@ -99,7 +99,7 @@
   .lead {
     max-width: 540px;
     margin-bottom: 32px;
-    font-size: 1.15rem;
+    font-size: var(--se-text-md);
   }
 }
 
@@ -116,7 +116,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: var(--se-color-blue-900);
   color: white;
   transition: all 0.15s;
@@ -140,7 +140,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
   border: 1px solid var(--se-color-slate-300);
@@ -197,7 +197,7 @@
 
   .num {
     display: block;
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: var(--se-text-fluid-h2-lg);
     font-weight: 700;
     letter-spacing: -0.04em;
     color: var(--se-color-blue-900);
@@ -208,13 +208,13 @@
 
   h4 {
     margin: 12px 0 6px;
-    font-size: 1rem;
+    font-size: var(--se-text-de);
     font-weight: 600;
     letter-spacing: -0.01em;
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.55;
   }
@@ -232,7 +232,7 @@
   }
 
   h2 {
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 16px 0;
@@ -273,7 +273,7 @@
 
   .num {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    font-size: 12px;
+    font-size: var(--se-text-xs);
     letter-spacing: 0.12em;
     color: var(--se-color-blue-700);
     margin-bottom: 16px;
@@ -281,14 +281,14 @@
   }
 
   h4 {
-    font-size: 1.05rem;
+    font-size: var(--se-text-de);
     font-weight: 600;
     margin-bottom: 8px;
     letter-spacing: -0.015em;
   }
 
   p {
-    font-size: 14px;
+    font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     line-height: 1.5;
   }
@@ -296,7 +296,7 @@
   ul {
     margin-top: 14px;
     padding-left: 18px;
-    font-size: 13px;
+    font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     line-height: 1.7;
 
@@ -327,7 +327,7 @@
   }
 
   h2 {
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 16px 0 32px;
@@ -356,7 +356,7 @@
 
   h3 {
     color: white;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: var(--se-text-fluid-h3);
     font-weight: 700;
     letter-spacing: -0.025em;
     margin-bottom: 12px;
@@ -387,7 +387,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -410,7 +410,7 @@
   padding: 16px 28px;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
