@@ -193,18 +193,14 @@ export default function LifeAtSolveyePage() {
         </div>
       </section>
 
-      {/* ===== RITUALS (dark) ===== */}
+      {/* ===== RITUALS (dark glass) ===== */}
       <section className={s.rituals}>
         <div className="container">
-          <div className={s.secHead}>
-            <div>
-              <span className={s.eyebrow}>Rituals</span>
-              <h2>The handful of things we do — every time, without fail.</h2>
-              <p className={s.lead}>
-                Culture is what you actually do, repeatedly. These six rituals show up on every calendar, every quarter.
-              </p>
-            </div>
-          </div>
+          <span className={s.eyebrow}>Rituals</span>
+          <h2>The handful of things we do — every time, without fail.</h2>
+          <p className={s.lead}>
+            Culture is what you actually do, repeatedly. These six rituals show up on every calendar, every quarter.
+          </p>
 
           <div className={s.ritualsGrid}>
             {RITUALS.map((r) => (
@@ -286,19 +282,23 @@ export default function LifeAtSolveyePage() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className={s.cta}>
+      <section className={s.ctaWrap}>
         <div className="container">
-          <h2>If this feels like the rhythm you&rsquo;re looking for —</h2>
-          <p className={s.lead}>
-            We&rsquo;re hiring across ops, engineering, clinical, and go-to-market. Open roles update weekly.
-          </p>
-          <div className={s.ctaButtons}>
-            <Link href="/careers#roles" className={s.btnLight}>
-              See open roles <span className={s.arrow}>&rarr;</span>
-            </Link>
-            <Link href="/training-workshops" className={s.btnOutline}>
-              How we train people
-            </Link>
+          <div className={s.ctaBand}>
+            <div>
+              <h2>If this feels like the rhythm you&rsquo;re looking for —</h2>
+              <p>
+                We&rsquo;re hiring across ops, engineering, clinical, and go-to-market. Open roles update weekly.
+              </p>
+            </div>
+            <div className={s.ctaButtons}>
+              <Link href="/careers#roles" className={s.ctaBtnLight}>
+                See open roles <span className={s.arrow}>&rarr;</span>
+              </Link>
+              <Link href="/training-workshops" className={s.ctaBtnOutline}>
+                How we train people
+              </Link>
+            </div>
           </div>
         </div>
       </section>

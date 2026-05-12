@@ -3,7 +3,7 @@
   top: 0;
   z-index: 50;
   background: rgba(255 255 255 / 0.85);
-  backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(var(--se-space-xs));
   border-bottom: 1px solid var(--se-color-line);
 }
 
@@ -11,10 +11,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 4.25rem;
   max-width: var(--se-container);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 var(--se-space-d1);
 }
 
 // ---- Brand ----
@@ -23,7 +23,7 @@
   align-items: center;
 
   img {
-    height: 32px;
+    height: var(--se-space-d1);
     width: auto;
   }
 }
@@ -31,17 +31,17 @@
 // ---- Links ----
 .links {
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   align-items: center;
 }
 
 .link {
   position: relative;
-  padding: 8px 14px;
+  padding: var(--se-space-3xs) var(--se-space-sm);
   font-size: var(--se-text-sm);
   font-weight: 500;
   color: var(--se-color-slate-700);
-  border-radius: 6px;
+  border-radius: var(--se-space-4xs);
   transition: all 0.15s;
 
   &:hover {
@@ -55,9 +55,9 @@
     &::after {
       content: '';
       position: absolute;
-      left: 14px;
-      right: 14px;
-      bottom: -19px;
+      left: var(--se-space-sm);
+      right: var(--se-space-sm);
+      bottom: -1.1875rem;
       height: 2px;
       background: var(--se-color-blue-900);
     }
@@ -71,17 +71,17 @@
 
 .dropdown {
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + var(--se-space-xs));
   left: 0;
   background: white;
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
   box-shadow: var(--se-shadow-lg);
-  padding: 8px;
-  min-width: 280px;
+  padding: var(--se-space-3xs);
+  min-width: 17.5rem;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-4px);
+  transform: translateY(-0.25rem);
   transition: all 0.15s;
 
   .hasDropdown:hover &,
@@ -94,8 +94,8 @@
 
 .dropItem {
   display: block;
-  padding: 10px 12px;
-  border-radius: 6px;
+  padding: var(--se-space-2xs) var(--se-space-xs);
+  border-radius: var(--se-space-4xs);
   font-size: var(--se-text-sm);
   color: var(--se-color-slate-700);
   transition: background 0.15s;
@@ -114,21 +114,21 @@
   small {
     font-size: var(--se-text-xs);
     color: var(--se-color-slate-500);
-    margin-top: 2px;
+    margin-top: 0.125rem;
   }
 }
 
 // ---- CTA group ----
 .cta {
   display: flex;
-  gap: 10px;
+  gap: var(--se-space-2xs);
   align-items: center;
 }
 
 .btnSecondary {
   display: inline-flex;
   align-items: center;
-  padding: 8px 14px;
+  padding: var(--se-space-3xs) var(--se-space-sm);
   font-size: var(--se-text-13);
   font-weight: 500;
   border: 1px solid var(--se-color-slate-300);
@@ -145,7 +145,7 @@
 .btnPrimary {
   display: inline-flex;
   align-items: center;
-  padding: 8px 14px;
+  padding: var(--se-space-3xs) var(--se-space-sm);
   font-size: var(--se-text-13);
   font-weight: 500;
   border-radius: var(--se-radius-sm);
@@ -165,10 +165,10 @@
   display: none;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: var(--se-space-d2);
+  height: var(--se-space-d2);
   border: 1px solid var(--se-color-line);
-  border-radius: 8px;
+  border-radius: var(--se-space-3xs);
   background: white;
   cursor: pointer;
 }
@@ -177,21 +177,21 @@
 .mobileMenu {
   display: none;
   position: absolute;
-  top: 68px;
+  top: 4.25rem;
   left: 0;
   right: 0;
   background: white;
   border-bottom: 1px solid var(--se-color-line);
-  padding: 16px 32px;
+  padding: var(--se-space) var(--se-space-d1);
   flex-direction: column;
-  gap: 8px;
+  gap: var(--se-space-3xs);
 
   &.open {
     display: flex;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   .links {
     display: none;
   }

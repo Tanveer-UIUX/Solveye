@@ -4,18 +4,18 @@
 
 // ---- Section utilities ----
 .section {
-  padding: 96px 0;
+  padding: var(--se-space-d6) 0;
 
-  @media (max-width: 768px) {
-    padding: 64px 0;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0;
   }
 }
 
 .sectionSm {
-  padding: 64px 0;
+  padding: var(--se-space-d5) 0;
 
-  @media (max-width: 768px) {
-    padding: 40px 0;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d2) 0;
   }
 }
 
@@ -41,7 +41,7 @@
   color: var(--se-color-slate-500);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: var(--se-space-lg);
 
   a {
     transition: color 0.15s;
@@ -53,14 +53,14 @@
 }
 
 .secHead {
-  margin-bottom: 48px;
+  margin-bottom: var(--se-space-d3);
 
   h2 {
-    max-width: 640px;
+    max-width: 40rem;
     font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin-top: 16px;
+    margin-top: var(--se-space);
   }
 }
 
@@ -68,24 +68,24 @@
 // 1. DETAIL HERO
 // =============================================
 .hero {
-  padding: 64px 0 80px;
+  padding: var(--se-space-d5) 0 5rem;
   background: linear-gradient(180deg, var(--se-color-slate-50), white);
   border-bottom: 1px solid var(--se-color-line);
 
-  @media (max-width: 768px) {
-    padding: 48px 0 56px;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d3) 0 var(--se-space-d4);
   }
 }
 
 .heroGrid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 64px;
+  gap: var(--se-space-d5);
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 64rem) {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: var(--se-space-d1);
   }
 
   h1 {
@@ -93,27 +93,27 @@
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 1.05;
-    margin: 16px 0 20px;
+    margin: var(--se-space) 0 var(--se-space-lg);
   }
 
   .lead {
-    max-width: 540px;
-    margin-bottom: 32px;
+    max-width: 33.75rem;
+    margin-bottom: var(--se-space-d1);
     font-size: var(--se-text-md);
   }
 }
 
 .heroCta {
   display: flex;
-  gap: 12px;
+  gap: var(--se-space-xs);
   flex-wrap: wrap;
 }
 
 .btnPrimary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 16px 28px;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: var(--se-text-de);
@@ -128,7 +128,7 @@
     box-shadow: var(--se-shadow);
 
     .arrow {
-      transform: translateX(3px);
+      transform: translateX(0.1875rem);
     }
   }
 }
@@ -136,8 +136,8 @@
 .btnSecondary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 16px 28px;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: var(--se-text-de);
@@ -157,12 +157,14 @@
 }
 
 .heroImg {
+  max-width: 30rem;
+  max-height: 25rem;
   border-radius: var(--se-radius-lg);
   aspect-ratio: 5 / 4;
   background: url('https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&w=900&q=80')
     center / cover;
   box-shadow: var(--se-shadow-lg);
-  min-height: 320px;
+  min-height: 20rem;
 }
 
 // =============================================
@@ -171,19 +173,19 @@
 .benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: var(--se-space);
 
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 37.5rem) {
     grid-template-columns: 1fr;
   }
 }
 
 .benefit {
-  padding: 28px;
+  padding: 1.75rem;
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
   background: white;
@@ -207,7 +209,7 @@
   }
 
   h4 {
-    margin: 12px 0 6px;
+    margin: var(--se-space-xs) 0 var(--se-space-4xs);
     font-size: var(--se-text-de);
     font-weight: 600;
     letter-spacing: -0.01em;
@@ -225,35 +227,35 @@
 // =============================================
 .process {
   background: var(--se-color-slate-50);
-  padding: 96px 0;
+  padding: var(--se-space-d6) 0;
 
-  @media (max-width: 768px) {
-    padding: 64px 0;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0;
   }
 
   h2 {
     font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin: 16px 0;
+    margin: var(--se-space) 0;
   }
 
   .lead {
-    max-width: 640px;
+    max-width: 40rem;
   }
 }
 
 .procGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 48px;
+  gap: var(--se-space);
+  margin-top: var(--se-space-d3);
 
-  @media (max-width: 900px) {
+  @media (max-width: 56.25rem) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 37.5rem) {
     grid-template-columns: 1fr;
   }
 }
@@ -262,7 +264,7 @@
   background: white;
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
-  padding: 28px;
+  padding: 1.75rem;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
@@ -276,14 +278,14 @@
     font-size: var(--se-text-xs);
     letter-spacing: 0.12em;
     color: var(--se-color-blue-700);
-    margin-bottom: 16px;
+    margin-bottom: var(--se-space);
     text-transform: uppercase;
   }
 
   h4 {
     font-size: var(--se-text-de);
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: var(--se-space-3xs);
     letter-spacing: -0.015em;
   }
 
@@ -294,8 +296,8 @@
   }
 
   ul {
-    margin-top: 14px;
-    padding-left: 18px;
+    margin-top: var(--se-space-sm);
+    padding-left: var(--se-space-md);
     font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     line-height: 1.7;
@@ -310,27 +312,27 @@
 // 4. FAQ
 // =============================================
 .faqSection {
-  padding: 96px 0;
+  padding: var(--se-space-d6) 0;
 
-  @media (max-width: 768px) {
-    padding: 64px 0;
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0;
   }
 }
 
 .faqInner {
-  max-width: 880px;
+  max-width: 55rem;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 var(--se-space-d1);
 
-  @media (max-width: 768px) {
-    padding: 0 20px;
+  @media (max-width: 48rem) {
+    padding: 0 var(--se-space-lg);
   }
 
   h2 {
     font-size: var(--se-text-fluid-h2);
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin: 16px 0 32px;
+    margin: var(--se-space) 0 var(--se-space-d1);
   }
 }
 
@@ -348,10 +350,10 @@
     var(--se-color-blue-900);
   color: white;
   border-radius: var(--se-radius-lg);
-  padding: 56px;
+  padding: var(--se-space-d4);
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 48px;
+  gap: var(--se-space-d3);
   align-items: center;
 
   h3 {
@@ -359,7 +361,7 @@
     font-size: var(--se-text-fluid-h3);
     font-weight: 700;
     letter-spacing: -0.025em;
-    margin-bottom: 12px;
+    margin-bottom: var(--se-space-xs);
   }
 
   p {
@@ -367,24 +369,24 @@
     line-height: 1.55;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     grid-template-columns: 1fr;
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 
 .ctaButtons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--se-space-xs);
 }
 
 .ctaBtnLight {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 16px 28px;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: var(--se-text-de);
@@ -398,7 +400,7 @@
     box-shadow: var(--se-shadow);
 
     .arrow {
-      transform: translateX(3px);
+      transform: translateX(0.1875rem);
     }
   }
 }
@@ -407,13 +409,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 28px;
+  padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: 500;
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
   border: 1px solid rgba(255 255 255 / 0.18);
   color: white;
   box-shadow: inset 0 1px 0 rgba(255 255 255 / 0.1);
@@ -429,6 +431,6 @@
     transform: translateY(-1px);
     box-shadow:
       inset 0 1px 0 rgba(255 255 255 / 0.14),
-      0 8px 20px -6px rgba(0 0 0 / 0.3);
+      0 var(--se-space-3xs) var(--se-space-lg) calc(-1 * var(--se-space-4xs)) rgba(0 0 0 / 0.3);
   }
 }

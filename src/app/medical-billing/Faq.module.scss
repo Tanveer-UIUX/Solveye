@@ -16,8 +16,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  padding: 24px 0;
+  gap: var(--se-space-xl);
+  padding: var(--se-space-xl) 0;
   background: none;
   border: none;
   text-align: left;
@@ -39,8 +39,8 @@
 }
 
 .toggle {
-  width: 28px;
-  height: 28px;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: 50%;
   border: 1px solid var(--se-color-line-2);
   display: grid;
@@ -76,12 +76,12 @@
     color: var(--se-color-slate-600);
     line-height: 1.65;
     margin: 0;
-    padding-right: 56px;
+    padding-right: var(--se-space-d4);
   }
 }
 
 .item.open .a {
-  max-height: 500px;
-  padding-bottom: 24px;
+  max-height: 31.25rem;
+  padding-bottom: var(--se-space-xl);
   opacity: 1;
 }
