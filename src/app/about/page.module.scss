@@ -4,7 +4,15 @@
 
 // ---- Section utilities ----
 .section {
+<<<<<<< HEAD
   padding: var(--se-section-xl) 0;
+=======
+  padding: var(--se-space-d6) 0;
+
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0;
+  }
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
 }
 
 .sectionAlt {
@@ -55,8 +63,13 @@
   h2 {
     max-width: 35rem;
     font-size: var(--se-text-fluid-h2);
+<<<<<<< HEAD
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-tight);
+=======
+    font-weight: 700;
+    letter-spacing: -0.03em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin-top: var(--se-space);
   }
 
@@ -75,7 +88,15 @@
 // 1. HERO
 // =============================================
 .hero {
+<<<<<<< HEAD
   padding: var(--se-section-xl) 0 0;
+=======
+  padding: var(--se-space-d6) 0 0;
+
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0 0;
+  }
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
 }
 
 .heroGrid {
@@ -93,9 +114,15 @@
 .heroCopy {
   h1 {
     font-size: clamp(2.25rem, 4vw, 3.75rem);
+<<<<<<< HEAD
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-tight-hero);
     line-height: var(--se-leading-tight-xs);
+=======
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin: var(--se-space) 0 var(--se-space-xl);
   }
 
@@ -240,8 +267,13 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2);
+<<<<<<< HEAD
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-tight);
+=======
+    font-weight: 700;
+    letter-spacing: -0.03em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin: var(--se-space) 0 var(--se-space-xl);
   }
 
@@ -285,13 +317,21 @@
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-13);
     color: var(--se-color-blue-700);
+<<<<<<< HEAD
     letter-spacing: var(--se-tracking-wide);
+=======
+    letter-spacing: 0.06em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin-bottom: var(--se-space-2xs);
   }
 
   h5 {
     font-size: var(--se-text-sm);
+<<<<<<< HEAD
     font-weight: var(--se-weight-semibold);
+=======
+    font-weight: 600;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin-bottom: var(--se-space-4xs);
   }
 
@@ -339,10 +379,17 @@
 
   h3 {
     font-size: var(--se-text-xl);
+<<<<<<< HEAD
     line-height: var(--se-leading-snug);
     margin-bottom: var(--se-space);
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-display);
+=======
+    line-height: 1.25;
+    margin-bottom: var(--se-space);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
   }
 
   p {
@@ -375,7 +422,15 @@
   .inner {
     max-width: 60rem;
     margin: 0 auto;
+<<<<<<< HEAD
     padding: 0 clamp(1.25rem, 2.34375vw + 0.125rem, 2rem);
+=======
+    padding: 0 var(--se-space-d1);
+
+    @media (max-width: 48rem) {
+      padding: 0 var(--se-space-lg);
+    }
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
   }
 
   h2 {
@@ -475,9 +530,15 @@
 
   h4 {
     font-size: var(--se-text-md);
+<<<<<<< HEAD
     font-weight: var(--se-weight-semibold);
     margin-bottom: var(--se-space-xs);
     letter-spacing: var(--se-tracking-narrow-sm);
+=======
+    font-weight: 600;
+    margin-bottom: var(--se-space-xs);
+    letter-spacing: -0.015em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
   }
 
   p {
@@ -518,8 +579,13 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2);
+<<<<<<< HEAD
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-tight);
+=======
+    font-weight: 700;
+    letter-spacing: -0.03em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin: var(--se-space) 0 var(--se-space-xl);
   }
 
@@ -667,7 +733,11 @@
 
   h5 {
     font-size: var(--se-text-de);
+<<<<<<< HEAD
     font-weight: var(--se-weight-semibold);
+=======
+    font-weight: 600;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin-bottom: var(--se-space-4xs);
   }
 
@@ -742,8 +812,13 @@
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
+<<<<<<< HEAD
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-tight);
+=======
+    font-weight: 700;
+    letter-spacing: -0.03em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin: var(--se-space) 0;
   }
 
@@ -801,13 +876,21 @@
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-13);
     margin-bottom: var(--se-space);
+<<<<<<< HEAD
     letter-spacing: var(--se-tracking-wide-md);
+=======
+    letter-spacing: 0.04em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
   }
 
   h4 {
     color: white;
     font-size: var(--se-text-md);
+<<<<<<< HEAD
     font-weight: var(--se-weight-semibold);
+=======
+    font-weight: 600;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin-bottom: var(--se-space-3xs);
   }
 
@@ -815,7 +898,11 @@
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-300);
     margin-bottom: var(--se-space-sm);
+<<<<<<< HEAD
     line-height: var(--se-leading-comfortable);
+=======
+    line-height: 1.5;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
   }
 
   .det {
@@ -911,7 +998,11 @@
     font-weight: var(--se-weight-semibold);
     color: var(--se-color-blue-900);
     margin-bottom: 0.25rem;
+<<<<<<< HEAD
     letter-spacing: var(--se-tracking-narrow-sm);
+=======
+    letter-spacing: -0.015em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
   }
 
   .country {
@@ -947,7 +1038,15 @@
 // 11. CTA
 // =============================================
 .ctaWrap {
+<<<<<<< HEAD
   padding: var(--se-section-xl) 0;
+=======
+  padding: var(--se-space-d6) 0;
+
+  @media (max-width: 48rem) {
+    padding: var(--se-space-d5) 0;
+  }
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
 }
 
 .ctaBand {
@@ -970,8 +1069,13 @@
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
+<<<<<<< HEAD
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-tight);
+=======
+    font-weight: 700;
+    letter-spacing: -0.03em;
+>>>>>>> 00eda4217545e1de97b369ccd787a41e335c2863
     margin-bottom: var(--se-space);
   }
 

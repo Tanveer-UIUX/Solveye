@@ -18,6 +18,7 @@
   letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-xl);
+  margin-bottom: var(--se-space-xl);
 
   a {
     transition: color 0.15s;
@@ -40,11 +41,15 @@
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: var(--se-space-d3);
+  gap: var(--se-space-d3);
   align-items: center;
+  min-height: 32.5rem;
   min-height: 32.5rem;
 
   @media (max-width: 60rem) {
+  @media (max-width: 60rem) {
     grid-template-columns: 1fr;
+    gap: var(--se-space-d1);
     gap: var(--se-space-d1);
     min-height: 0;
   }
@@ -60,6 +65,7 @@
 
 .lead {
   max-width: 32.5rem;
+  max-width: 32.5rem;
   font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
   line-height: var(--se-leading-loose);
@@ -71,8 +77,11 @@
 .hofStage {
   position: relative;
   height: 32.5rem;
+  height: 32.5rem;
   width: 100%;
 
+  @media (max-width: 37.5rem) {
+    height: 26.25rem;
   @media (max-width: 37.5rem) {
     height: 26.25rem;
   }
@@ -80,6 +89,10 @@
 
 .hofDeco {
   position: absolute;
+  right: -3.75rem;
+  top: calc(-1 * var(--se-space-d2));
+  width: 13.75rem;
+  height: 13.75rem;
   right: -3.75rem;
   top: calc(-1 * var(--se-space-d2));
   width: 13.75rem;
@@ -98,17 +111,21 @@
   overflow: hidden;
   background: var(--se-color-slate-100);
   box-shadow: 0 var(--se-space-md) 2.25rem calc(-1 * var(--se-space-md)) rgba(15, 23, 42, 0.28);
+  box-shadow: 0 var(--se-space-md) 2.25rem calc(-1 * var(--se-space-md)) rgba(15, 23, 42, 0.28);
 }
 
 .hof1 {
   left: 0;
   width: 62%;
   height: 28.75rem;
+  height: 28.75rem;
   transform: translate(0, -50%);
   z-index: 4;
 
   @media (max-width: 37.5rem) {
+  @media (max-width: 37.5rem) {
     width: 70%;
+    height: 23.75rem;
     height: 23.75rem;
   }
 }
@@ -117,12 +134,15 @@
   left: 56%;
   width: 32%;
   height: 20rem;
+  height: 20rem;
   transform: translate(0, -50%);
   z-index: 3;
   opacity: 0.95;
 
   @media (max-width: 37.5rem) {
+  @media (max-width: 37.5rem) {
     width: 32%;
+    height: 16.875rem;
     height: 16.875rem;
     left: 60%;
   }
@@ -132,11 +152,13 @@
   left: 86%;
   width: 22%;
   height: 15rem;
+  height: 15rem;
   transform: translate(0, -50%);
   z-index: 2;
   opacity: 0.55;
   filter: saturate(0.85);
 
+  @media (max-width: 37.5rem) {
   @media (max-width: 37.5rem) {
     display: none;
   }
@@ -189,6 +211,7 @@
   position: absolute;
   left: 0;
   bottom: calc(-1 * var(--se-space-d4));
+  bottom: calc(-1 * var(--se-space-d4));
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   letter-spacing: var(--se-tracking-wide-lg);
@@ -196,11 +219,13 @@
   color: var(--se-color-slate-500);
   display: flex;
   gap: var(--se-space-xs);
+  gap: var(--se-space-xs);
   align-items: center;
 }
 
 .hofBar {
   display: inline-block;
+  width: var(--se-space-d1);
   width: var(--se-space-d1);
   height: 1px;
   background: var(--se-color-slate-300);
@@ -218,8 +243,10 @@
 .filters {
   display: flex;
   gap: var(--se-space-3xs);
+  gap: var(--se-space-3xs);
   align-items: center;
   flex-wrap: wrap;
+  padding: var(--se-space-lg) 0;
   padding: var(--se-space-lg) 0;
 }
 
@@ -230,9 +257,12 @@
   letter-spacing: var(--se-tracking-wider);
   color: var(--se-color-slate-500);
   margin-right: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .chip {
+  padding: 0.4375rem var(--se-space);
+  border-radius: 62.4375rem;
   padding: 0.4375rem var(--se-space);
   border-radius: 62.4375rem;
   font-size: var(--se-text-13);
@@ -268,6 +298,7 @@
 
 .secHead {
   margin-bottom: var(--se-space-d2);
+  margin-bottom: var(--se-space-d2);
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
@@ -281,11 +312,14 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--se-space-d1);
+  gap: var(--se-space-d1);
 
+  @media (max-width: 56.25rem) {
   @media (max-width: 56.25rem) {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  @media (max-width: 37.5rem) {
   @media (max-width: 37.5rem) {
     grid-template-columns: 1fr;
   }
@@ -295,9 +329,11 @@
   display: flex;
   flex-direction: column;
   gap: var(--se-space);
+  gap: var(--se-space);
   cursor: pointer;
 
   &:hover .leaderPhoto {
+    transform: translateY(-0.25rem);
     transform: translateY(-0.25rem);
     box-shadow: var(--se-shadow-lg);
   }
@@ -322,12 +358,14 @@
   font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
   margin-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 // =============================================
 // 4. DEPT SECTIONS
 // =============================================
 .deptSection {
+  padding: var(--se-space-d3) 0;
   padding: var(--se-space-d3) 0;
   border-top: 1px solid var(--se-color-line);
 
@@ -344,13 +382,17 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--se-space-xl);
+  gap: var(--se-space-xl);
 
+  @media (max-width: 56.25rem) {
   @media (max-width: 56.25rem) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 30rem) {
+  @media (max-width: 30rem) {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--se-space);
     gap: var(--se-space);
   }
 }
@@ -359,6 +401,7 @@
   cursor: pointer;
 
   &:hover .memberPhoto {
+    transform: translateY(-0.1875rem);
     transform: translateY(-0.1875rem);
     box-shadow: var(--se-shadow);
   }
@@ -369,6 +412,7 @@
   background-size: cover;
   background-position: center top;
   border-radius: var(--se-radius);
+  margin-bottom: var(--se-space-xs);
   margin-bottom: var(--se-space-xs);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -382,6 +426,7 @@
 .memberTitle {
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
+  margin-top: 0.125rem;
   margin-top: 0.125rem;
 }
 
@@ -404,8 +449,10 @@
   color: white;
   border-radius: var(--se-radius-lg);
   padding: var(--se-space-d4);
+  padding: var(--se-space-d4);
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  gap: var(--se-space-d3);
   gap: var(--se-space-d3);
   align-items: center;
 
@@ -423,7 +470,9 @@
   }
 
   @media (max-width: 48rem) {
+  @media (max-width: 48rem) {
     grid-template-columns: 1fr;
+    padding: 2.25rem;
     padding: 2.25rem;
   }
 }
@@ -432,12 +481,15 @@
   display: flex;
   flex-direction: column;
   gap: var(--se-space-xs);
+  gap: var(--se-space-xs);
 }
 
 .ctaBtnLight {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space) 1.75rem;
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
@@ -454,6 +506,7 @@
 
     .arrow {
       transform: translateX(0.1875rem);
+      transform: translateX(0.1875rem);
     }
   }
 }
@@ -463,10 +516,13 @@
   align-items: center;
   justify-content: center;
   padding: var(--se-space) 1.75rem;
+  padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
+  backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
   backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
   -webkit-backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
   border: 1px solid rgba(255 255 255 / 0.18);
@@ -498,10 +554,13 @@
   background: rgba(0 0 0 / 0.5);
   backdrop-filter: blur(0.25rem);
   -webkit-backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.25rem);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--se-space-xl);
   padding: var(--se-space-xl);
 }
 
@@ -510,8 +569,10 @@
   border-radius: var(--se-radius-lg);
   width: 100%;
   max-width: 45rem;
+  max-width: 45rem;
   max-height: 90vh;
   overflow-y: auto;
+  box-shadow: 0 var(--se-space-xl) var(--se-space-d5) calc(-1 * var(--se-space)) rgba(0 0 0 / 0.4);
   box-shadow: 0 var(--se-space-xl) var(--se-space-d5) calc(-1 * var(--se-space)) rgba(0 0 0 / 0.4);
 }
 
@@ -519,9 +580,13 @@
   display: flex;
   justify-content: flex-end;
   padding: var(--se-space) var(--se-space-lg) 0;
+  padding: var(--se-space) var(--se-space-lg) 0;
 }
 
 .modalClose {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--se-space-3xs);
   width: 2.25rem;
   height: 2.25rem;
   border-radius: var(--se-space-3xs);
@@ -540,7 +605,10 @@
 
 .modalBody {
   padding: var(--se-space-3xs) var(--se-space-d1) var(--se-space-d1);
+  padding: var(--se-space-3xs) var(--se-space-d1) var(--se-space-d1);
 
+  @media (max-width: 37.5rem) {
+    padding: var(--se-space-3xs) var(--se-space-lg) var(--se-space-xl);
   @media (max-width: 37.5rem) {
     padding: var(--se-space-3xs) var(--se-space-lg) var(--se-space-xl);
   }
@@ -550,8 +618,13 @@
   display: grid;
   grid-template-columns: 8.75rem 1fr;
   gap: var(--se-space-xl);
+  grid-template-columns: 8.75rem 1fr;
+  gap: var(--se-space-xl);
   align-items: center;
 
+  @media (max-width: 30rem) {
+    grid-template-columns: 6.25rem 1fr;
+    gap: var(--se-space);
   @media (max-width: 30rem) {
     grid-template-columns: 6.25rem 1fr;
     gap: var(--se-space);
@@ -561,11 +634,16 @@
 .modalPhoto {
   width: 8.75rem;
   height: 8.75rem;
+  width: 8.75rem;
+  height: 8.75rem;
   border-radius: var(--se-radius);
   background-size: cover;
   background-position: center top;
   flex-shrink: 0;
 
+  @media (max-width: 30rem) {
+    width: 6.25rem;
+    height: 6.25rem;
   @media (max-width: 30rem) {
     width: 6.25rem;
     height: 6.25rem;
@@ -585,6 +663,7 @@
   font-size: var(--se-text-sm);
   color: var(--se-color-slate-600);
   margin-top: var(--se-space-4xs);
+  margin-top: var(--se-space-4xs);
 }
 
 .liLink {
@@ -593,7 +672,11 @@
   gap: var(--se-space-4xs);
   margin-top: var(--se-space-xs);
   padding: 0.4375rem var(--se-space-xs);
+  gap: var(--se-space-4xs);
+  margin-top: var(--se-space-xs);
+  padding: 0.4375rem var(--se-space-xs);
   border: 1px solid var(--se-color-line);
+  border-radius: var(--se-space-3xs);
   border-radius: var(--se-space-3xs);
   font-size: var(--se-text-13);
   color: var(--se-color-slate-700);
@@ -608,10 +691,13 @@
 .modalMeta {
   display: flex;
   gap: var(--se-space-xl);
+  gap: var(--se-space-xl);
   flex-wrap: wrap;
+  padding: var(--se-space) 0;
   padding: var(--se-space) 0;
   border-top: 1px solid var(--se-color-line);
   border-bottom: 1px solid var(--se-color-line);
+  margin: var(--se-space-xl) 0;
   margin: var(--se-space-xl) 0;
   font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
@@ -634,6 +720,7 @@
   color: var(--se-color-slate-700);
 
   p {
+    margin-bottom: var(--se-space-xs);
     margin-bottom: var(--se-space-xs);
     color: var(--se-color-slate-700);
   }

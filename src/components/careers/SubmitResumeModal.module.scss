@@ -8,6 +8,8 @@
   align-items: center;
   gap: var(--se-space-3xs);
   padding: var(--se-space-xs) var(--se-space-lg);
+  gap: var(--se-space-3xs);
+  padding: var(--se-space-xs) var(--se-space-lg);
   border-radius: var(--se-radius-sm);
   background: var(--se-color-blue-900);
   color: white;
@@ -36,9 +38,12 @@
   background: rgba(11, 18, 32, 0.65);
   backdrop-filter: blur(0.25rem);
   -webkit-backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.25rem);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--se-space-xl);
   padding: var(--se-space-xl);
   animation: fadeIn 0.18s ease;
 }
@@ -55,6 +60,7 @@
   box-shadow: var(--se-shadow-lg), 0 0 0 1px var(--se-color-line);
   width: 100%;
   max-width: 38.75rem;
+  max-width: 38.75rem;
   max-height: 92vh;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -64,6 +70,7 @@
 
 @keyframes slideUp {
   from { transform: translateY(var(--se-space-lg)); opacity: 0; }
+  from { transform: translateY(var(--se-space-lg)); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
 }
 
@@ -72,6 +79,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: var(--se-space);
+  padding: 1.75rem var(--se-space-d1) var(--se-space-xl);
   gap: var(--se-space);
   padding: 1.75rem var(--se-space-d1) var(--se-space-xl);
   border-bottom: 1px solid var(--se-color-line);
@@ -86,6 +95,7 @@
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-display);
     color: var(--se-color-blue-900);
+    margin-top: var(--se-space-3xs);
     margin-top: var(--se-space-3xs);
     line-height: 1.15;
   }
@@ -105,12 +115,15 @@
   place-items: center;
   width: 2.25rem;
   height: 2.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: var(--se-radius-sm);
   background: var(--se-color-slate-100);
   color: var(--se-color-slate-600);
   border: none;
   cursor: pointer;
   flex-shrink: 0;
+  margin-top: 0.25rem;
   margin-top: 0.25rem;
   transition: background 0.15s ease, color 0.15s ease;
 
@@ -126,6 +139,8 @@
   flex-direction: column;
   gap: var(--se-space-md);
   padding: 1.75rem var(--se-space-d1) var(--se-space-d1);
+  gap: var(--se-space-md);
+  padding: 1.75rem var(--se-space-d1) var(--se-space-d1);
 }
 
 // Two-column row
@@ -133,7 +148,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--se-space-sm);
+  gap: var(--se-space-sm);
 
+  @media (max-width: 32.5rem) {
   @media (max-width: 32.5rem) {
     grid-template-columns: 1fr;
   }
@@ -143,6 +160,7 @@
 .field {
   display: flex;
   flex-direction: column;
+  gap: var(--se-space-4xs);
   gap: var(--se-space-4xs);
 
   label {
@@ -154,6 +172,8 @@
 
   input {
     width: 100%;
+    padding: var(--se-space-2xs) var(--se-space-sm);
+    border: 1.0.3125rem solid var(--se-color-line-2);
     padding: var(--se-space-2xs) var(--se-space-sm);
     border: 1.0.3125rem solid var(--se-color-line-2);
     border-radius: var(--se-radius-sm);
@@ -171,6 +191,7 @@
     &:focus {
       border-color: var(--se-color-blue-500);
       box-shadow: 0 0 0 0.1875rem rgba(53, 115, 220, 0.12);
+      box-shadow: 0 0 0 0.1875rem rgba(53, 115, 220, 0.12);
     }
   }
 }
@@ -187,6 +208,8 @@
     width: 100%;
     padding: var(--se-space-2xs) 2.25rem var(--se-space-2xs) var(--se-space-sm);
     border: 1.0.3125rem solid var(--se-color-line-2);
+    padding: var(--se-space-2xs) 2.25rem var(--se-space-2xs) var(--se-space-sm);
+    border: 1.0.3125rem solid var(--se-color-line-2);
     border-radius: var(--se-radius-sm);
     font-family: var(--se-font-sans);
     font-size: var(--se-text-de);
@@ -201,6 +224,7 @@
     &:focus {
       border-color: var(--se-color-blue-500);
       box-shadow: 0 0 0 0.1875rem rgba(53, 115, 220, 0.12);
+      box-shadow: 0 0 0 0.1875rem rgba(53, 115, 220, 0.12);
     }
   }
 
@@ -208,10 +232,14 @@
     content: '';
     position: absolute;
     right: 0.8125rem;
+    right: 0.8125rem;
     top: 50%;
     transform: translateY(-50%);
     width: 0;
     height: 0;
+    border-left: 0.3125rem solid transparent;
+    border-right: 0.3125rem solid transparent;
+    border-top: 0.3125rem solid var(--se-color-slate-500);
     border-left: 0.3125rem solid transparent;
     border-right: 0.3125rem solid transparent;
     border-top: 0.3125rem solid var(--se-color-slate-500);
@@ -224,9 +252,11 @@
   border: 2px dashed var(--se-color-slate-300);
   border-radius: var(--se-radius);
   padding: 1.75rem var(--se-space-xl);
+  padding: 1.75rem var(--se-space-xl);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--se-space-4xs);
   gap: var(--se-space-4xs);
   cursor: pointer;
   text-align: center;
@@ -259,10 +289,14 @@
   width: var(--se-space-d3);
   height: var(--se-space-d3);
   border-radius: var(--se-space-xs);
+  width: var(--se-space-d3);
+  height: var(--se-space-d3);
+  border-radius: var(--se-space-xs);
   background: var(--se-color-blue-100);
   color: var(--se-color-blue-700);
   display: grid;
   place-items: center;
+  margin-bottom: var(--se-space-4xs);
   margin-bottom: var(--se-space-4xs);
 
   .hasFile & {
@@ -294,11 +328,13 @@
   color: var(--se-color-slate-400);
   letter-spacing: 0.02em;
   margin-top: 0.125rem;
+  margin-top: 0.125rem;
 }
 
 .fileName {
   display: flex;
   align-items: center;
+  gap: var(--se-space-4xs);
   gap: var(--se-space-4xs);
   font-size: var(--se-text-sm);
   font-weight: var(--se-weight-semibold);
@@ -311,8 +347,10 @@
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
   padding: var(--se-space-lg);
+  padding: var(--se-space-lg);
   display: flex;
   flex-direction: column;
+  gap: var(--se-space-sm);
   gap: var(--se-space-sm);
 }
 
@@ -334,12 +372,16 @@
 .radioGroup {
   display: flex;
   gap: var(--se-space-2xs);
+  gap: var(--se-space-2xs);
   flex-wrap: wrap;
 }
 
 .radioLabel {
   display: inline-flex;
   align-items: center;
+  gap: var(--se-space-3xs);
+  padding: 0.5625rem var(--se-space-md);
+  border: 1.0.3125rem solid var(--se-color-line-2);
   gap: var(--se-space-3xs);
   padding: 0.5625rem var(--se-space-md);
   border: 1.0.3125rem solid var(--se-color-line-2);
@@ -377,6 +419,8 @@
       display: block;
       width: var(--se-space-3xs);
       height: var(--se-space-3xs);
+      width: var(--se-space-3xs);
+      height: var(--se-space-3xs);
       border-radius: 50%;
       background: var(--se-color-blue-600);
     }
@@ -396,6 +440,8 @@
       display: block;
       width: var(--se-space-3xs);
       height: var(--se-space-3xs);
+      width: var(--se-space-3xs);
+      height: var(--se-space-3xs);
       border-radius: 50%;
       background: var(--se-color-red-500);
     }
@@ -403,6 +449,8 @@
 }
 
 .radioDot {
+  width: var(--se-space);
+  height: var(--se-space);
   width: var(--se-space);
   height: var(--se-space);
   border-radius: 50%;
@@ -430,7 +478,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--se-space-3xs);
+  gap: var(--se-space-3xs);
   width: 100%;
+  padding: var(--se-space-sm) 1.75rem;
   padding: var(--se-space-sm) 1.75rem;
   border-radius: var(--se-radius-sm);
   background: var(--se-color-blue-900);
@@ -453,6 +503,7 @@
 
     .arrow {
       transform: translateX(0.1875rem);
+      transform: translateX(0.1875rem);
     }
   }
 
@@ -470,9 +521,11 @@
 // ---- Success state ----
 .success {
   padding: 3.25rem var(--se-space-d1) var(--se-space-d3);
+  padding: 3.25rem var(--se-space-d1) var(--se-space-d3);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--se-space);
   gap: var(--se-space);
   text-align: center;
 
@@ -495,10 +548,14 @@
     width: auto;
     padding: var(--se-space-xs) var(--se-space-d1);
     margin-top: var(--se-space-3xs);
+    padding: var(--se-space-xs) var(--se-space-d1);
+    margin-top: var(--se-space-3xs);
   }
 }
 
 .successIcon {
+  width: 4.25rem;
+  height: 4.25rem;
   width: 4.25rem;
   height: 4.25rem;
   border-radius: 50%;
@@ -506,5 +563,6 @@
   color: white;
   display: grid;
   place-items: center;
+  box-shadow: 0 var(--se-space-2xs) 1.75rem calc(-1 * var(--se-space-3xs)) rgba(16, 185, 129, 0.45);
   box-shadow: 0 var(--se-space-2xs) 1.75rem calc(-1 * var(--se-space-3xs)) rgba(16, 185, 129, 0.45);
 }
