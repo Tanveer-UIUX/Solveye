@@ -1,4 +1,4 @@
-// =============================================
+﻿// =============================================
 // CONTACT PAGE STYLES
 // =============================================
 
@@ -7,22 +7,22 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-eyebrow);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 }
 
 .lead {
   font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-xl);
 
@@ -39,17 +39,13 @@
 // 1. HERO
 // =============================================
 .hero {
-  padding: var(--se-space-d6) 0 var(--se-space-d3);
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0 var(--se-space-d2);
-  }
+  padding: var(--se-section-xl) 0 clamp(2.5rem, 1.5625vw + 1.75rem, 3rem);
 
   h1 {
     font-size: var(--se-text-fluid-h1);
-    font-weight: 700;
-    letter-spacing: -0.035em;
-    line-height: 1.05;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight-hero);
+    line-height: var(--se-leading-tight-xs);
     margin: var(--se-space) 0 var(--se-space-lg);
   }
 
@@ -188,11 +184,7 @@
 // 2. MAIN GRID
 // =============================================
 .mainGrid {
-  padding-bottom: var(--se-space-d6);
-
-  @media (max-width: 48rem) {
-    padding-bottom: var(--se-space-d5);
-  }
+  padding-bottom: var(--se-section-xl);
 }
 
 .grid {
@@ -226,15 +218,15 @@
 
   h4 {
     font-size: var(--se-text-de);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     margin-bottom: var(--se-space-3xs);
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
-    line-height: 1.55;
+    line-height: var(--se-leading-de);
     margin-bottom: var(--se-space-xs);
   }
 }
@@ -246,7 +238,7 @@
 }
 
 .channelLink {
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-sm);
   color: var(--se-color-blue-900);
   border-bottom: 1px solid var(--se-color-line);
@@ -263,13 +255,9 @@
 .formCard {
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius-lg);
-  padding: var(--se-space-d2);
+  padding: clamp(1.75rem, 1.7647vw + 1.09rem, 2.5rem) clamp(1.25rem, 2.9412vw + 0.147rem, 2.5rem);
   background: white;
   box-shadow: var(--se-shadow);
-
-  @media (max-width: 37.5rem) {
-    padding: 1.75rem var(--se-space-lg);
-  }
 }
 
 .tabs {
@@ -282,7 +270,7 @@
 .tab {
   padding: var(--se-space-2xs) var(--se-space);
   font-size: var(--se-text-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   color: var(--se-color-slate-500);
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
@@ -307,8 +295,8 @@
 
   h3 {
     font-size: var(--se-text-fluid-h4);
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-narrow);
     margin-bottom: 0.25rem;
   }
 }
@@ -316,7 +304,7 @@
 .formLead {
   font-size: var(--se-text-sm);
   color: var(--se-color-slate-600);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
   margin-bottom: var(--se-space-3xs);
 }
 
@@ -337,9 +325,9 @@
 
   label {
     font-size: var(--se-text-13);
-    font-weight: 500;
+    font-weight: var(--se-weight-medium);
     color: var(--se-color-slate-700);
-    letter-spacing: 0.01em;
+    letter-spacing: var(--se-tracking-fine);
   }
 
   input,
@@ -383,7 +371,7 @@
   gap: var(--se-space-2xs);
   font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
-  line-height: 1.5;
+  line-height: var(--se-leading-comfortable);
 
   input[type='checkbox'] {
     margin-top: 0.125rem;
@@ -405,7 +393,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space-sm) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-15);
   background: var(--se-color-blue-900);
   color: white;
@@ -436,25 +424,21 @@
   color: #15803d;
   border-radius: var(--se-radius);
   font-size: var(--se-text-sm);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
 }
 
 // =============================================
 // 3. OFFICES
 // =============================================
 .offices {
-  padding: 4.5rem 0;
+  padding: clamp(3rem, 4.6875vw + 0.75rem, 4.5rem) 0;
   border-top: 1px solid var(--se-color-line);
   background: var(--se-color-slate-50);
 
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d3) 0;
-  }
-
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0 var(--se-space-3xs);
   }
 }
@@ -493,17 +477,17 @@
 }
 
 .officeCity {
-  font-weight: 600;
+  font-weight: var(--se-weight-semibold);
   font-size: var(--se-text-de);
   color: var(--se-color-blue-900);
   margin-bottom: 0.25rem;
-  letter-spacing: -0.01em;
+  letter-spacing: var(--se-tracking-snug);
 }
 
 .officeCountry {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-mini);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--se-tracking-wide-lg);
   text-transform: uppercase;
   color: var(--se-color-slate-500);
   margin-bottom: var(--se-space-xs);
@@ -512,24 +496,20 @@
 .officeAddr {
   font-size: var(--se-text-13);
   color: var(--se-color-slate-600);
-  line-height: 1.55;
+  line-height: var(--se-leading-de);
 }
 
 // =============================================
 // 4. FAQ MINI
 // =============================================
 .faqSection {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-xl) 0;
   background: white;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0;
-  }
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0 var(--se-space-d2);
   }
 }
@@ -557,22 +537,22 @@
 
   h5 {
     font-size: var(--se-text-15);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     margin-bottom: var(--se-space-3xs);
     color: var(--se-color-blue-900);
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
   }
 }
 
 .faqLink {
   color: var(--se-color-blue-600);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 
   &:hover {
     text-decoration: underline;

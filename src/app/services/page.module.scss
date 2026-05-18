@@ -1,4 +1,4 @@
-// =============================================
+﻿// =============================================
 // SERVICES PAGE â€” Section styles (module-scoped)
 // =============================================
 
@@ -7,15 +7,15 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-eyebrow);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 }
 
 .lead {
   font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
 }
 
 // =============================================
@@ -29,8 +29,8 @@
   h1 {
     margin: var(--se-space) 0 var(--se-space-lg);
     font-size: var(--se-text-fluid-h1);
-    font-weight: 700;
-    letter-spacing: -0.035em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight-hero);
   }
 
   .lead {
@@ -69,7 +69,7 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-xl);
 
@@ -120,7 +120,7 @@
 .num {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-slate-500);
   margin-bottom: var(--se-space-xs);
   text-transform: uppercase;
@@ -128,15 +128,15 @@
 
 .svcTitle {
   font-size: var(--se-text-fluid-h2-sm);
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-weight: var(--se-weight-bold);
+  letter-spacing: var(--se-tracking-narrow);
   margin-bottom: var(--se-space);
 }
 
 .svcLead {
   font-size: var(--se-text-lead);
   color: var(--se-color-slate-600);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
   margin-bottom: var(--se-space-xl);
   max-width: 33.75rem;
 }
@@ -158,7 +158,7 @@
     align-items: center;
     gap: var(--se-space-xs);
     font-size: var(--se-text-sm);
-    line-height: 1.5;
+    line-height: var(--se-leading-comfortable);
     color: var(--se-color-slate-700);
 
     &::before {
@@ -191,9 +191,9 @@
     strong {
       display: block;
       font-size: var(--se-text-fluid-h2-lg);
-      font-weight: 700;
+      font-weight: var(--se-weight-bold);
       color: var(--se-color-blue-900);
-      letter-spacing: -0.04em;
+      letter-spacing: var(--se-tracking-tighter);
       line-height: 1;
       margin: 0;
       font-feature-settings: 'tnum';
@@ -205,7 +205,7 @@
       color: var(--se-color-slate-500);
       margin-top: var(--se-space-xs);
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-      letter-spacing: 0.04em;
+      letter-spacing: var(--se-tracking-wide-md);
     }
   }
 }
@@ -228,7 +228,7 @@
   border-radius: var(--se-radius-sm);
   background: var(--se-color-blue-900);
   color: white;
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-15);
   margin-top: var(--se-space-xl);
   transition: all 0.15s;
@@ -249,7 +249,7 @@
   align-items: center;
   gap: var(--se-space-4xs);
   margin-top: var(--se-space);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-15);
   color: var(--se-color-blue-900);
   transition: color 0.15s;
@@ -287,8 +287,8 @@
     color: white;
     max-width: 37.5rem;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin-top: var(--se-space);
     margin-bottom: var(--se-space);
   }
@@ -343,13 +343,13 @@
     color: white;
     margin-bottom: var(--se-space-3xs);
     font-size: var(--se-text-de);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
   }
 
   p {
     font-size: var(--se-text-13);
     color: var(--se-color-slate-300);
-    line-height: 1.5;
+    line-height: var(--se-leading-comfortable);
   }
 }
 
@@ -370,8 +370,8 @@
   h2 {
     max-width: 35rem;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin-top: var(--se-space);
   }
 
@@ -384,11 +384,7 @@
 // 5. CTA BAND (glass treatment, mirrors home)
 // =============================================
 .ctaWrap {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0;
-  }
+  padding: var(--se-section-xl) 0;
 }
 
 .ctaBand {
@@ -411,8 +407,8 @@
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0;
   }
 
@@ -439,7 +435,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
@@ -461,7 +457,7 @@
   justify-content: center;
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(var(--se-space-xs)) saturate(180%);

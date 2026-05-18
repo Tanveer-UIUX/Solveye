@@ -70,22 +70,33 @@
   // =================================================================
   // 3. TYPOGRAPHY — line height
   // =================================================================
-  --se-leading-tight:    1.1;     // h1–h5 default (matches existing base)
-  --se-leading-snug:     1.25;    // section heads
-  --se-leading-de:       1.55;    // DEFAULT body
-  --se-leading-base:     var(--se-leading-de);
-  --se-leading-relaxed:  1.75;    // long-form reading
+  --se-leading-tight:       1.1;   // h1–h5 default
+  --se-leading-tight-xs:   1.05;  // compressed display heads / hero h1
+  --se-leading-snug:       1.25;  // section heads
+  --se-leading-normal:     1.4;   // card text, quote bodies
+  --se-leading-comfortable:1.5;   // comfortable body reading
+  --se-leading-de:         1.55;  // DEFAULT body
+  --se-leading-base:       var(--se-leading-de);
+  --se-leading-loose:      1.6;   // UI text blocks, secondary paragraphs
+  --se-leading-relaxed:    1.75;  // long-form reading
 
   // =================================================================
   // 4. TYPOGRAPHY — letter spacing
   // =================================================================
-  --se-tracking-tight:   -0.03em; // big display type
-  --se-tracking-display: -0.02em; // h1–h5 default (matches existing base)
-  --se-tracking-snug:    -0.01em; // card titles
-  --se-tracking-de:       0;      // DEFAULT body
-  --se-tracking-wide:     0.06em; // uppercase mono tags
-  --se-tracking-wider:    0.1em;  // small-caps eyebrows
-  --se-tracking-widest:   0.12em; // breadcrumbs / uppercase chrome
+  --se-tracking-tighter:    -0.04em;  // very large display, counter h1
+  --se-tracking-tight-hero: -0.035em; // hero / page headings
+  --se-tracking-tight:      -0.03em;  // big display type
+  --se-tracking-narrow:     -0.025em; // medium section heads
+  --se-tracking-display:    -0.02em;  // h1–h5 default
+  --se-tracking-narrow-sm:  -0.015em; // subtle narrow, quote / card title
+  --se-tracking-snug:       -0.01em;  // card titles
+  --se-tracking-de:          0;       // DEFAULT body
+  --se-tracking-fine:        0.01em;  // very slight positive
+  --se-tracking-wide-md:     0.04em;  // stat labels, tag text
+  --se-tracking-wide:        0.06em;  // uppercase mono tags
+  --se-tracking-wide-lg:     0.08em;  // badge / chip chrome
+  --se-tracking-wider:       0.1em;   // small-caps eyebrows
+  --se-tracking-widest:      0.12em;  // breadcrumbs / uppercase chrome
 
   // =================================================================
   // 5. TYPOGRAPHY — weight
@@ -170,7 +181,23 @@
   --se-space-d6:  6rem;      // 96px
 
   // =================================================================
-  // 11. RADIUS
+  // 11. FLUID SECTION SPACING — clamp-based, no media query needed
+  // -----------------------------------------------------------------
+  // Baseline: 48rem floor (768px) → 80rem ceiling (1280px).
+  // Formula:  clamp(mobile, slope·vw + intercept, desktop)
+  //
+  //   --se-section-xl : d5 → d6   (64 → 96px)   6.25vw + 1rem
+  //   --se-section-lg : d2 → d5   (40 → 64px)   4.688vw + 0.25rem
+  //   --se-section-md : d1 → d3   (32 → 48px)   3.125vw + 0.5rem
+  //   --se-section-sm : xl → d2   (24 → 40px)   2.5vw   + 0.25rem
+  // =================================================================
+  --se-section-xl: clamp(4rem, 6.25vw + 1rem, 6rem);
+  --se-section-lg: clamp(2.5rem, 4.6875vw + 0.25rem, 4rem);
+  --se-section-md: clamp(2rem, 3.125vw + 0.5rem, 3rem);
+  --se-section-sm: clamp(1.5rem, 2.5vw + 0.25rem, 2.5rem);
+
+  // =================================================================
+  // 12. RADIUS
   // =================================================================
   --se-radius-sm:   6px;
   --se-radius:      10px;

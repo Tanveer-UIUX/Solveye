@@ -1,14 +1,10 @@
-// =============================================
+﻿// =============================================
 // ABOUT PAGE — Section styles (module-scoped)
 // =============================================
 
 // ---- Section utilities ----
 .section {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0;
-  }
+  padding: var(--se-section-xl) 0;
 }
 
 .sectionAlt {
@@ -21,22 +17,22 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-eyebrow);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 }
 
 .lead {
   font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-xl);
 
@@ -59,8 +55,8 @@
   h2 {
     max-width: 35rem;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin-top: var(--se-space);
   }
 
@@ -79,11 +75,7 @@
 // 1. HERO
 // =============================================
 .hero {
-  padding: var(--se-space-d6) 0 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0 0;
-  }
+  padding: var(--se-section-xl) 0 0;
 }
 
 .heroGrid {
@@ -101,9 +93,9 @@
 .heroCopy {
   h1 {
     font-size: clamp(2.25rem, 4vw, 3.75rem);
-    font-weight: 700;
-    letter-spacing: -0.035em;
-    line-height: 1.05;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight-hero);
+    line-height: var(--se-leading-tight-xs);
     margin: var(--se-space) 0 var(--se-space-xl);
   }
 
@@ -165,9 +157,9 @@
 
   strong {
     font-size: var(--se-text-13);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     color: var(--se-color-blue-900);
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 }
 
@@ -185,12 +177,12 @@
 .cardSub {
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
-  line-height: 1.4;
+  line-height: var(--se-leading-normal);
 }
 
 .cardVal {
   font-size: var(--se-text-13);
-  font-weight: 600;
+  font-weight: var(--se-weight-semibold);
   color: #185ed4;
   margin-top: 0.1875rem;
 }
@@ -213,8 +205,8 @@
     strong {
       display: block;
       font-size: var(--se-text-fluid-h2-lg);
-      font-weight: 700;
-      letter-spacing: -0.04em;
+      font-weight: var(--se-weight-bold);
+      letter-spacing: var(--se-tracking-tighter);
       color: var(--se-color-blue-900);
       line-height: 1;
       margin: 0;
@@ -227,7 +219,7 @@
       color: var(--se-color-slate-500);
       margin-top: var(--se-space-xs);
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-      letter-spacing: 0.04em;
+      letter-spacing: var(--se-tracking-wide-md);
     }
   }
 
@@ -248,8 +240,8 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0 var(--se-space-xl);
   }
 
@@ -293,20 +285,20 @@
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-13);
     color: var(--se-color-blue-700);
-    letter-spacing: 0.06em;
+    letter-spacing: var(--se-tracking-wide);
     margin-bottom: var(--se-space-2xs);
   }
 
   h5 {
     font-size: var(--se-text-sm);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     margin-bottom: var(--se-space-4xs);
   }
 
   p {
     font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
-    line-height: 1.5;
+    line-height: var(--se-leading-comfortable);
   }
 }
 
@@ -339,7 +331,7 @@
   .label {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-xs);
-    letter-spacing: 0.12em;
+    letter-spacing: var(--se-tracking-widest);
     text-transform: uppercase;
     color: var(--se-color-blue-700);
     margin-bottom: var(--se-space);
@@ -347,15 +339,15 @@
 
   h3 {
     font-size: var(--se-text-xl);
-    line-height: 1.25;
+    line-height: var(--se-leading-snug);
     margin-bottom: var(--se-space);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-display);
   }
 
   p {
     color: var(--se-color-slate-600);
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
   }
 
   .small {
@@ -383,18 +375,14 @@
   .inner {
     max-width: 60rem;
     margin: 0 auto;
-    padding: 0 var(--se-space-d1);
-
-    @media (max-width: 48rem) {
-      padding: 0 var(--se-space-lg);
-    }
+    padding: 0 clamp(1.25rem, 2.34375vw + 0.125rem, 2rem);
   }
 
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h1-sm);
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-narrow);
     line-height: 1.15;
     margin: var(--se-space-xl) 0 var(--se-space-d1);
     max-width: 50rem;
@@ -402,7 +390,7 @@
 
   .letter {
     font-size: var(--se-text-md);
-    line-height: 1.75;
+    line-height: var(--se-leading-relaxed);
 
     p {
       color: var(--se-color-slate-300);
@@ -430,7 +418,7 @@
 
   .name {
     color: white;
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     font-size: var(--se-text-15);
   }
 
@@ -480,22 +468,22 @@
   .pn {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-xs);
-    letter-spacing: 0.12em;
+    letter-spacing: var(--se-tracking-widest);
     color: var(--se-color-slate-500);
     margin-bottom: var(--se-space);
   }
 
   h4 {
     font-size: var(--se-text-md);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     margin-bottom: var(--se-space-xs);
-    letter-spacing: -0.015em;
+    letter-spacing: var(--se-tracking-narrow-sm);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
   }
 
   .means {
@@ -504,16 +492,16 @@
     border-top: 1px solid var(--se-color-line);
     font-size: var(--se-text-13);
     color: var(--se-color-slate-500);
-    line-height: 1.5;
+    line-height: var(--se-leading-comfortable);
 
     strong {
       display: block;
       margin-bottom: 0.25rem;
       color: var(--se-color-slate-700);
-      font-weight: 500;
+      font-weight: var(--se-weight-medium);
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
       font-size: var(--se-text-mini);
-      letter-spacing: 0.08em;
+      letter-spacing: var(--se-tracking-wide-lg);
       text-transform: uppercase;
     }
   }
@@ -530,8 +518,8 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0 var(--se-space-xl);
   }
 
@@ -542,7 +530,7 @@
   .body {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-700);
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
   }
 
   @media (max-width: 56.25rem) {
@@ -579,8 +567,8 @@
     strong {
       display: block;
       font-size: var(--se-text-fluid-h2-lg);
-      font-weight: 700;
-      letter-spacing: -0.04em;
+      font-weight: var(--se-weight-bold);
+      letter-spacing: var(--se-tracking-tighter);
       color: var(--se-color-blue-900);
       line-height: 1;
       margin: 0;
@@ -593,8 +581,8 @@
       color: var(--se-color-slate-500);
       margin-top: var(--se-space-xs);
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-      letter-spacing: 0.04em;
-      line-height: 1.4;
+      letter-spacing: var(--se-tracking-wide-md);
+      line-height: var(--se-leading-normal);
     }
   }
 }
@@ -672,21 +660,21 @@
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-mini);
     color: var(--se-color-blue-700);
-    letter-spacing: 0.1em;
+    letter-spacing: var(--se-tracking-wider);
     text-transform: uppercase;
     margin-bottom: var(--se-space-3xs);
   }
 
   h5 {
     font-size: var(--se-text-de);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     margin-bottom: var(--se-space-4xs);
   }
 
   p {
     font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
-    line-height: 1.5;
+    line-height: var(--se-leading-comfortable);
   }
 }
 
@@ -720,19 +708,19 @@
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-xs);
     color: var(--se-color-slate-500);
-    letter-spacing: 0.1em;
+    letter-spacing: var(--se-tracking-wider);
   }
 
   h5 {
     margin: var(--se-space-3xs) 0 0.25rem;
     font-size: var(--se-text-15);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
   }
 
   p {
     font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
-    line-height: 1.5;
+    line-height: var(--se-leading-comfortable);
   }
 }
 
@@ -754,8 +742,8 @@
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0;
   }
 
@@ -809,17 +797,17 @@
     color: white;
     display: grid;
     place-items: center;
-    font-weight: 700;
+    font-weight: var(--se-weight-bold);
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-13);
     margin-bottom: var(--se-space);
-    letter-spacing: 0.04em;
+    letter-spacing: var(--se-tracking-wide-md);
   }
 
   h4 {
     color: white;
     font-size: var(--se-text-md);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     margin-bottom: var(--se-space-3xs);
   }
 
@@ -827,14 +815,14 @@
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-300);
     margin-bottom: var(--se-space-sm);
-    line-height: 1.5;
+    line-height: var(--se-leading-comfortable);
   }
 
   .det {
     font-size: var(--se-text-xs);
     color: var(--se-color-slate-400);
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    letter-spacing: 0.04em;
+    letter-spacing: var(--se-tracking-wide-md);
   }
 }
 
@@ -856,7 +844,7 @@
     color: white;
     margin-bottom: var(--se-space-3xs);
     font-size: var(--se-text-lg);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
   }
 
   p {
@@ -870,7 +858,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
@@ -920,17 +908,17 @@
 
   .city {
     font-size: var(--se-text-lg);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     color: var(--se-color-blue-900);
     margin-bottom: 0.25rem;
-    letter-spacing: -0.015em;
+    letter-spacing: var(--se-tracking-narrow-sm);
   }
 
   .country {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-xs);
     color: var(--se-color-slate-500);
-    letter-spacing: 0.08em;
+    letter-spacing: var(--se-tracking-wide-lg);
     text-transform: uppercase;
     margin-bottom: var(--se-space);
   }
@@ -938,7 +926,7 @@
   .addr {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
-    line-height: 1.55;
+    line-height: var(--se-leading-de);
     font-style: normal;
   }
 
@@ -959,11 +947,7 @@
 // 11. CTA
 // =============================================
 .ctaWrap {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0;
-  }
+  padding: var(--se-section-xl) 0;
 }
 
 .ctaBand {
@@ -986,8 +970,8 @@
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin-bottom: var(--se-space);
   }
 
@@ -1018,7 +1002,7 @@
   justify-content: center;
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(var(--se-space-xs)) saturate(180%);

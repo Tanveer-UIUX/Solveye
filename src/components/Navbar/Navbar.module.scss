@@ -1,4 +1,4 @@
-.nav {
+﻿.nav {
   position: sticky;
   top: 0;
   z-index: 50;
@@ -39,7 +39,7 @@
   position: relative;
   padding: var(--se-space-3xs) var(--se-space-sm);
   font-size: var(--se-text-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   color: var(--se-color-slate-700);
   border-radius: var(--se-space-4xs);
   transition: all 0.15s;
@@ -107,7 +107,7 @@
 
   strong {
     display: block;
-    font-weight: 500;
+    font-weight: var(--se-weight-medium);
     color: var(--se-color-blue-900);
   }
 
@@ -130,7 +130,7 @@
   align-items: center;
   padding: var(--se-space-3xs) var(--se-space-sm);
   font-size: var(--se-text-13);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   border: 1px solid var(--se-color-slate-300);
   border-radius: var(--se-radius-sm);
   background: white;
@@ -147,7 +147,7 @@
   align-items: center;
   padding: var(--se-space-3xs) var(--se-space-sm);
   font-size: var(--se-text-13);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   border-radius: var(--se-radius-sm);
   background: var(--se-color-blue-900);
   color: white;

@@ -1,4 +1,4 @@
-.bar {
+﻿.bar {
   position: sticky;
   top: 4.25rem;
   z-index: 20;
@@ -27,7 +27,7 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-mini);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   color: var(--se-color-slate-500);
   margin-right: 0.25rem;
   white-space: nowrap;
@@ -36,7 +36,7 @@
 .item {
   padding: var(--se-space-3xs) var(--se-space-sm);
   font-size: var(--se-text-13);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   color: var(--se-color-slate-600);
   white-space: nowrap;
   border: 1px solid var(--se-color-line);

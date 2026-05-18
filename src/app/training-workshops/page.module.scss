@@ -1,4 +1,4 @@
-// =============================================
+﻿// =============================================
 // TRAINING & WORKSHOPS PAGE STYLES
 // =============================================
 
@@ -7,9 +7,9 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-eyebrow);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 }
 
 .lead {
@@ -22,7 +22,7 @@
   font-family: var(--se-font-mono);
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-d1);
 
@@ -37,8 +37,8 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space-xs) 0 var(--se-space);
   }
 }
@@ -168,8 +168,8 @@
 
   h1 {
     font-size: var(--se-text-fluid-h1);
-    letter-spacing: -0.02em;
-    line-height: 1.05;
+    letter-spacing: var(--se-tracking-display);
+    line-height: var(--se-leading-tight-xs);
     margin: var(--se-space) 0 var(--se-space-lg);
   }
 
@@ -191,8 +191,8 @@
 
 .statNum {
   font-size: var(--se-text-fluid-h1-sm);
-  font-weight: 700;
-  letter-spacing: -0.035em;
+  font-weight: var(--se-weight-bold);
+  letter-spacing: var(--se-tracking-tight-hero);
   color: var(--se-color-blue-900);
   line-height: 1;
   font-family: var(--font-heading), ui-sans-serif, sans-serif;
@@ -201,7 +201,7 @@
 .statDenom {
   font-size: var(--se-text-lg);
   color: var(--se-color-slate-500);
-  font-weight: 400;
+  font-weight: var(--se-weight-regular);
 }
 
 .statLabel {
@@ -214,9 +214,7 @@
 // 2. TRAINING TRACKS
 // =============================================
 .tracks {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 }
 
 .tracksGrid {
@@ -248,17 +246,17 @@
 
   h3 {
     font-size: var(--se-text-lg);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     color: var(--se-color-slate-900);
     margin: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   > p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     margin: 0;
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
   }
 }
 
@@ -274,7 +272,7 @@
 .trackCat {
   font-family: var(--se-font-mono);
   font-size: var(--se-text-mini);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   color: var(--se-color-blue-700);
 }
@@ -316,7 +314,7 @@
   color: var(--se-color-slate-500);
   padding-top: var(--se-space);
   border-top: 1px solid var(--se-color-line);
-  letter-spacing: 0.04em;
+  letter-spacing: var(--se-tracking-wide-md);
   text-transform: uppercase;
 }
 
@@ -324,10 +322,8 @@
 // 3. FORMATS
 // =============================================
 .formats {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-xl) 0;
   background: var(--se-color-slate-50);
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
 }
 
 .formatsGrid {
@@ -359,14 +355,14 @@
     font-size: var(--se-text-15);
     margin: 0;
     color: var(--se-color-slate-900);
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     margin: 0;
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
     flex: 1;
   }
 }
@@ -386,16 +382,14 @@
   font-family: var(--se-font-mono);
   font-size: var(--se-text-mini);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.06em;
+  letter-spacing: var(--se-tracking-wide);
 }
 
 // =============================================
 // 4. WORKSHOP SERIES
 // =============================================
 .series {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 }
 
 .seriesRail {
@@ -465,7 +459,7 @@
     font-size: var(--se-text-15);
     margin: 0;
     color: var(--se-color-slate-900);
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
     line-height: 1.3;
   }
 
@@ -473,7 +467,7 @@
     font-size: var(--se-text-13);
     color: var(--se-color-slate-600);
     margin: 0;
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
     flex: 1;
   }
 }
@@ -481,7 +475,7 @@
 .scCat {
   font-family: var(--se-font-mono);
   font-size: var(--se-text-mini);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--se-tracking-wide-lg);
   text-transform: uppercase;
   color: var(--se-color-blue-700);
 }
@@ -498,7 +492,7 @@
   border-radius: 0.25rem;
   padding: 0.1875rem var(--se-space-3xs);
   align-self: flex-start;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--se-tracking-wide-md);
   text-transform: uppercase;
 }
 
@@ -509,7 +503,7 @@
   font-family: var(--se-font-mono);
   font-size: var(--se-text-mini);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.06em;
+  letter-spacing: var(--se-tracking-wide);
   text-transform: uppercase;
   padding-top: var(--se-space-xs);
   border-top: 1px dashed var(--se-color-line);
@@ -519,10 +513,8 @@
 // 4b. PAST WORKSHOP GALLERY (timeline)
 // =============================================
 .workshopGallery {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-xl) 0;
   background: var(--se-color-slate-50);
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
 }
 
 .wgTimeline {
@@ -565,7 +557,7 @@
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--se-tracking-wide-lg);
   padding-top: var(--se-space-xs);
   text-align: right;
   padding-right: var(--se-space-xl);
@@ -654,16 +646,16 @@
 
   h4 {
     font-size: var(--se-text-lead);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     color: var(--se-color-slate-900);
     margin: 0 0 var(--se-space-3xs);
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
     margin: 0;
   }
 }
@@ -672,10 +664,8 @@
 // 5. SCHEDULE TABLE
 // =============================================
 .schedule {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-xl) 0;
   background: var(--se-color-slate-50);
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
 }
 
 .scheduleTable {
@@ -705,7 +695,7 @@
   color: white;
   font-family: var(--se-font-mono);
   font-size: var(--se-text-mini);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
 
   @media (max-width: 56.25rem) { display: none; }
@@ -726,7 +716,7 @@
       font-size: var(--se-text-2xs);
       color: var(--se-color-slate-500);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: var(--se-tracking-wide-lg);
       margin-right: var(--se-space-4xs);
     }
   }
@@ -736,18 +726,18 @@
   font-family: var(--se-font-mono);
   font-size: var(--se-text-13);
   color: var(--se-color-slate-900);
-  font-weight: 600;
+  font-weight: var(--se-weight-semibold);
 }
 
 .stTitle {
-  font-weight: 600;
+  font-weight: var(--se-weight-semibold);
   color: var(--se-color-slate-900);
 }
 
 .stSub {
   display: block;
   font-size: var(--se-text-xs);
-  font-weight: 400;
+  font-weight: var(--se-weight-regular);
   color: var(--se-color-slate-500);
   margin-top: 0.125rem;
 }
@@ -776,7 +766,7 @@
   border: 1px solid var(--se-color-slate-300);
   border-radius: var(--se-radius-sm);
   font-size: var(--se-text-xs);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   color: var(--se-color-slate-900);
   display: inline-block;
   cursor: pointer;
@@ -814,15 +804,13 @@
     radial-gradient(circle at 0% 100%, rgba(14, 165, 160, 0.3) 0%, transparent 50%),
     var(--se-color-blue-900);
   color: white;
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0;
   }
 
@@ -869,8 +857,8 @@
 
 .impactNum {
   font-size: var(--se-text-fluid-h2-lg);
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  font-weight: var(--se-weight-bold);
+  letter-spacing: var(--se-tracking-tighter);
   color: white;
   line-height: 1;
   font-family: var(--font-heading), ui-sans-serif, sans-serif;
@@ -880,16 +868,14 @@
   font-size: var(--se-text-13);
   color: var(--se-color-slate-400);
   margin-top: var(--se-space-2xs);
-  line-height: 1.4;
+  line-height: var(--se-leading-normal);
 }
 
 // =============================================
 // 7. FAQ
 // =============================================
 .faq {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 }
 
 .faqGrid {
@@ -905,8 +891,8 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space-xs) 0 0;
   }
 }
@@ -933,7 +919,7 @@
   border: none;
   cursor: pointer;
   text-align: left;
-  font-weight: 600;
+  font-weight: var(--se-weight-semibold);
   font-size: var(--se-text-de);
   color: var(--se-color-slate-900);
   font-family: inherit;
@@ -964,9 +950,7 @@
 // 8. CTA BAND
 // =============================================
 .ctaWrap {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 }
 
 .ctaBand {
@@ -989,8 +973,8 @@
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin-bottom: var(--se-space);
   }
 
@@ -1017,7 +1001,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
@@ -1038,7 +1022,7 @@
   justify-content: center;
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(var(--se-space-xs)) saturate(180%);

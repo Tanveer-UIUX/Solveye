@@ -1,4 +1,4 @@
-// =============================================
+﻿// =============================================
 // TEAM PAGE STYLES
 // =============================================
 
@@ -6,16 +6,16 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-eyebrow);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-xl);
 
@@ -32,12 +32,8 @@
 // 1. HERO
 // =============================================
 .hero {
-  padding: 5rem 0 var(--se-space-d4);
+  padding: clamp(4rem, 3.125vw + 2.5rem, 5rem) 0 clamp(3.5rem, -7.8125vw + 9.75rem, 6rem);
   overflow: hidden;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0 var(--se-space-d6);
-  }
 }
 
 .heroGrid {
@@ -55,9 +51,9 @@
 
   h1 {
     font-size: var(--se-text-fluid-h1);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.05;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-display);
+    line-height: var(--se-leading-tight-xs);
     margin: var(--se-space) 0 var(--se-space-lg);
   }
 }
@@ -66,7 +62,7 @@
   max-width: 32.5rem;
   font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
 }
 
 // =============================================
@@ -195,7 +191,7 @@
   bottom: calc(-1 * var(--se-space-d4));
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--se-tracking-wide-lg);
   text-transform: uppercase;
   color: var(--se-color-slate-500);
   display: flex;
@@ -231,7 +227,7 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-mini);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   color: var(--se-color-slate-500);
   margin-right: 0.25rem;
 }
@@ -240,7 +236,7 @@
   padding: 0.4375rem var(--se-space);
   border-radius: 62.4375rem;
   font-size: var(--se-text-13);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   border: 1px solid var(--se-color-line);
   background: white;
   color: var(--se-color-slate-600);
@@ -267,11 +263,7 @@
 // 3. LEADERSHIP (EXEC)
 // =============================================
 .leadership {
-  padding: var(--se-space-d4) 0 var(--se-space-d6);
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d2) 0 var(--se-space-d5);
-  }
+  padding: clamp(2.5rem, 3.125vw + 1rem, 3.5rem) 0 var(--se-section-xl);
 }
 
 .secHead {
@@ -279,8 +271,8 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin-top: var(--se-space-xs);
   }
 }
@@ -321,9 +313,9 @@
 
 .leaderName {
   font-size: var(--se-text-md);
-  font-weight: 600;
+  font-weight: var(--se-weight-semibold);
   color: var(--se-color-blue-900);
-  letter-spacing: -0.01em;
+  letter-spacing: var(--se-tracking-snug);
 }
 
 .leaderTitle {
@@ -341,8 +333,8 @@
 
   h3 {
     font-size: var(--se-text-xl);
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-narrow);
     margin-bottom: var(--se-space-d1);
     color: var(--se-color-blue-900);
   }
@@ -383,7 +375,7 @@
 
 .memberName {
   font-size: var(--se-text-sm);
-  font-weight: 600;
+  font-weight: var(--se-weight-semibold);
   color: var(--se-color-blue-900);
 }
 
@@ -397,11 +389,7 @@
 // 5. CTA BAND
 // =============================================
 .ctaWrap {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0;
-  }
+  padding: var(--se-section-xl) 0;
 }
 
 .ctaBand {
@@ -424,14 +412,14 @@
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h3);
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-narrow);
     margin-bottom: var(--se-space-xs);
   }
 
   p {
     color: var(--se-color-slate-300);
-    line-height: 1.55;
+    line-height: var(--se-leading-de);
   }
 
   @media (max-width: 48rem) {
@@ -453,7 +441,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
@@ -476,7 +464,7 @@
   justify-content: center;
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
@@ -587,8 +575,8 @@
 .modalInfo {
   h3 {
     font-size: var(--se-text-22);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-display);
     color: var(--se-color-blue-900);
   }
 }
@@ -632,11 +620,11 @@
     display: block;
     font-size: var(--se-text-mini);
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
-    letter-spacing: 0.08em;
+    letter-spacing: var(--se-tracking-wide-lg);
     text-transform: uppercase;
     color: var(--se-color-slate-500);
     margin-bottom: 0.25rem;
-    font-weight: 500;
+    font-weight: var(--se-weight-medium);
   }
 }
 

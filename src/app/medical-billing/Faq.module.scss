@@ -1,4 +1,4 @@
-.list {
+﻿.list {
   display: flex;
   flex-direction: column;
 }
@@ -22,7 +22,7 @@
   border: none;
   text-align: left;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   color: var(--se-color-blue-900);
   cursor: pointer;

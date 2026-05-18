@@ -1,4 +1,4 @@
-// =============================================
+﻿// =============================================
 // JOB BOARD â€” filter bar, list, modals, form
 // =============================================
 
@@ -18,7 +18,7 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-mini);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   color: var(--se-color-slate-500);
 }
 
@@ -30,7 +30,7 @@
   cursor: pointer;
   background: white;
   color: var(--se-color-slate-700);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   transition:
     border-color 0.15s ease,
     background 0.15s ease,
@@ -110,11 +110,11 @@
   }
 
   .title {
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     font-size: var(--se-text-de);
     color: var(--se-color-blue-900);
     margin-bottom: 0.25rem;
-    letter-spacing: -0.015em;
+    letter-spacing: var(--se-tracking-narrow-sm);
   }
 
   .dept {
@@ -131,7 +131,7 @@
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-xs);
     color: var(--se-color-slate-500);
-    letter-spacing: 0.06em;
+    letter-spacing: var(--se-tracking-wide);
     text-transform: uppercase;
   }
 
@@ -227,8 +227,8 @@
   h3 {
     margin: var(--se-space-3xs) 0 0;
     font-size: var(--se-text-xl);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-display);
   }
 
   p {
@@ -242,9 +242,9 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-blue-700);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 }
 
 .modalClose {
@@ -274,9 +274,9 @@
     font-size: var(--se-text-13);
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: var(--se-tracking-wide-lg);
     color: var(--se-color-slate-500);
-    font-weight: 500;
+    font-weight: var(--se-weight-medium);
   }
 
   ul {
@@ -286,7 +286,7 @@
 
     li {
       margin-bottom: var(--se-space-4xs);
-      line-height: 1.55;
+      line-height: var(--se-leading-de);
 
       &::marker {
         color: var(--se-color-blue-400);
@@ -317,13 +317,13 @@
       font-style: normal;
       font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: var(--se-tracking-wide);
       font-size: var(--se-text-mini);
     }
 
     strong {
       color: var(--se-color-blue-900);
-      font-weight: 600;
+      font-weight: var(--se-weight-semibold);
     }
   }
 }
@@ -331,7 +331,7 @@
 .summary {
   color: var(--se-color-slate-700);
   font-size: var(--se-text-lead);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
   margin: 0;
 }
 
@@ -350,7 +350,7 @@
   border-radius: var(--se-radius-sm);
   background: var(--se-color-blue-900);
   color: white;
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-15);
   border: none;
   cursor: pointer;
@@ -383,7 +383,7 @@
   background: white;
   color: var(--se-color-blue-900);
   border: 1px solid var(--se-color-slate-300);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-15);
   cursor: pointer;
   font-family: inherit;
@@ -421,7 +421,7 @@
 
   label {
     font-size: var(--se-text-13);
-    font-weight: 500;
+    font-weight: var(--se-weight-medium);
     color: var(--se-color-slate-700);
   }
 
@@ -453,7 +453,7 @@
   color: #15803d;
   border-radius: var(--se-radius);
   font-size: var(--se-text-sm);
-  line-height: 1.5;
+  line-height: var(--se-leading-comfortable);
   text-align: center;
 
   strong {

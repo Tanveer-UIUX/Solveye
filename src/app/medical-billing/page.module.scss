@@ -1,22 +1,14 @@
-// =============================================
+﻿// =============================================
 // MEDICAL BILLING â€” Service detail page styles
 // =============================================
 
 // ---- Section utilities ----
 .section {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0;
-  }
+  padding: var(--se-section-xl) 0;
 }
 
 .sectionSm {
-  padding: var(--se-space-d5) 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d2) 0;
-  }
+  padding: var(--se-section-lg) 0;
 }
 
 // ---- Shared building blocks ----
@@ -24,22 +16,22 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-eyebrow);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 }
 
 .lead {
   font-size: var(--se-text-md);
   color: var(--se-color-slate-600);
-  line-height: 1.6;
+  line-height: var(--se-leading-loose);
 }
 
 .crumb {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-lg);
 
@@ -58,8 +50,8 @@
   h2 {
     max-width: 40rem;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin-top: var(--se-space);
   }
 }
@@ -68,13 +60,9 @@
 // 1. DETAIL HERO
 // =============================================
 .hero {
-  padding: var(--se-space-d5) 0 5rem;
+  padding: clamp(3rem, 3.125vw + 1.5rem, 4rem) 0 clamp(3.5rem, 4.6875vw + 1.25rem, 5rem);
   background: linear-gradient(180deg, var(--se-color-slate-50), white);
   border-bottom: 1px solid var(--se-color-line);
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d3) 0 var(--se-space-d4);
-  }
 }
 
 .heroGrid {
@@ -90,9 +78,9 @@
 
   h1 {
     font-size: var(--se-text-fluid-h1);
-    font-weight: 700;
-    letter-spacing: -0.035em;
-    line-height: 1.05;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight-hero);
+    line-height: var(--se-leading-tight-xs);
     margin: var(--se-space) 0 var(--se-space-lg);
   }
 
@@ -115,7 +103,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: var(--se-color-blue-900);
   color: white;
@@ -139,7 +127,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
@@ -200,8 +188,8 @@
   .num {
     display: block;
     font-size: var(--se-text-fluid-h2-lg);
-    font-weight: 700;
-    letter-spacing: -0.04em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tighter);
     color: var(--se-color-blue-900);
     font-feature-settings: 'tnum';
     line-height: 1;
@@ -211,14 +199,14 @@
   h4 {
     margin: var(--se-space-xs) 0 var(--se-space-4xs);
     font-size: var(--se-text-de);
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-weight: var(--se-weight-semibold);
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
-    line-height: 1.55;
+    line-height: var(--se-leading-de);
   }
 }
 
@@ -227,16 +215,12 @@
 // =============================================
 .process {
   background: var(--se-color-slate-50);
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0;
-  }
+  padding: var(--se-section-xl) 0;
 
   h2 {
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0;
   }
 
@@ -276,7 +260,7 @@
   .num {
     font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
     font-size: var(--se-text-xs);
-    letter-spacing: 0.12em;
+    letter-spacing: var(--se-tracking-widest);
     color: var(--se-color-blue-700);
     margin-bottom: var(--se-space);
     text-transform: uppercase;
@@ -284,15 +268,15 @@
 
   h4 {
     font-size: var(--se-text-de);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     margin-bottom: var(--se-space-3xs);
-    letter-spacing: -0.015em;
+    letter-spacing: var(--se-tracking-narrow-sm);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
-    line-height: 1.5;
+    line-height: var(--se-leading-comfortable);
   }
 
   ul {
@@ -312,26 +296,18 @@
 // 4. FAQ
 // =============================================
 .faqSection {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) {
-    padding: var(--se-space-d5) 0;
-  }
+  padding: var(--se-section-xl) 0;
 }
 
 .faqInner {
   max-width: 55rem;
   margin: 0 auto;
-  padding: 0 var(--se-space-d1);
-
-  @media (max-width: 48rem) {
-    padding: 0 var(--se-space-lg);
-  }
+  padding: 0 clamp(1.25rem, 2.34375vw + 0.125rem, 2rem);
 
   h2 {
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0 var(--se-space-d1);
   }
 }
@@ -359,14 +335,14 @@
   h3 {
     color: white;
     font-size: var(--se-text-fluid-h3);
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-narrow);
     margin-bottom: var(--se-space-xs);
   }
 
   p {
     color: var(--se-color-slate-300);
-    line-height: 1.55;
+    line-height: var(--se-leading-de);
   }
 
   @media (max-width: 48rem) {
@@ -388,7 +364,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
@@ -411,7 +387,7 @@
   justify-content: center;
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(var(--se-space-xs)) saturate(180%);

@@ -1,4 +1,4 @@
-// =============================================
+﻿// =============================================
 // LIFE AT SOLVEYE PAGE STYLES
 // =============================================
 
@@ -7,9 +7,9 @@
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--se-tracking-widest);
   color: var(--se-color-eyebrow);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
 }
 
 .lead {
@@ -23,7 +23,7 @@
   font-family: var(--se-font-mono);
   font-size: var(--se-text-xs);
   color: var(--se-color-slate-500);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-d1);
 
@@ -38,8 +38,8 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space-xs) 0 var(--se-space);
     max-width: 45rem;
   }
@@ -55,8 +55,8 @@
 
   h1 {
     font-size: var(--se-text-fluid-h1);
-    letter-spacing: -0.02em;
-    line-height: 1.05;
+    letter-spacing: var(--se-tracking-display);
+    line-height: var(--se-leading-tight-xs);
     margin: var(--se-space) 0 var(--se-space-lg);
   }
 
@@ -137,8 +137,8 @@
 
 .statNum {
   font-size: var(--se-text-fluid-h1-sm);
-  font-weight: 700;
-  letter-spacing: -0.035em;
+  font-weight: var(--se-weight-bold);
+  letter-spacing: var(--se-tracking-tight-hero);
   color: var(--se-color-blue-900);
   line-height: 1;
   font-family: var(--font-heading), ui-sans-serif, sans-serif;
@@ -147,7 +147,7 @@
 .statDenom {
   font-size: var(--se-text-lg);
   color: var(--se-color-slate-500);
-  font-weight: 400;
+  font-weight: var(--se-weight-regular);
 }
 
 .statLabel {
@@ -160,10 +160,8 @@
 // 2. TIMELINE (client)
 // =============================================
 .timelineSec {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-xl) 0;
   background: var(--se-color-slate-50);
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
 }
 
 .tlTabs {
@@ -180,7 +178,7 @@
   padding: var(--se-space-2xs) 1.375rem;
   border-radius: 62.4375rem;
   font-size: var(--se-text-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   color: var(--se-color-slate-600);
   cursor: pointer;
   background: none;
@@ -237,7 +235,7 @@
   font-size: var(--se-text-13);
   color: var(--se-color-slate-500);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--se-tracking-wide);
   padding-top: var(--se-space-4xs);
   text-align: right;
   padding-right: var(--se-space-xl);
@@ -253,10 +251,10 @@
 
 .tlTimeNum {
   color: var(--se-color-slate-900);
-  font-weight: 600;
+  font-weight: var(--se-weight-semibold);
   display: block;
   font-size: var(--se-text-md);
-  letter-spacing: -0.01em;
+  letter-spacing: var(--se-tracking-snug);
   text-transform: none;
   margin-bottom: 0.125rem;
   font-family: var(--font-heading), ui-sans-serif, sans-serif;
@@ -329,16 +327,16 @@
 
   h4 {
     font-size: var(--se-text-lead);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     color: var(--se-color-slate-900);
     margin: 0 0 var(--se-space-3xs);
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
     margin: 0;
   }
 
@@ -359,7 +357,7 @@
   border-radius: 0.25rem;
   background: var(--se-color-slate-50);
   color: var(--se-color-slate-600);
-  letter-spacing: 0.04em;
+  letter-spacing: var(--se-tracking-wide-md);
   border: 1px solid var(--se-color-line);
 }
 
@@ -388,9 +386,7 @@
 // 3. VALUES
 // =============================================
 .values {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 }
 
 .valuesGrid {
@@ -420,17 +416,17 @@
 
   h3 {
     font-size: var(--se-text-md);
-    font-weight: 600;
+    font-weight: var(--se-weight-semibold);
     color: var(--se-color-slate-900);
     margin: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     margin: 0;
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
   }
 }
 
@@ -438,7 +434,7 @@
   font-family: var(--se-font-mono);
   font-size: var(--se-text-xs);
   color: var(--se-color-blue-700);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--se-tracking-wide-lg);
 }
 
 // =============================================
@@ -454,15 +450,13 @@
     radial-gradient(circle at 0% 100%, rgba(14, 165, 160, 0.3) 0%, transparent 50%),
     var(--se-color-blue-900);
   color: white;
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space) 0;
   }
 
@@ -514,13 +508,13 @@
     color: white;
     font-size: var(--se-text-lg);
     margin: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     color: var(--se-color-slate-300);
     font-size: var(--se-text-sm);
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
     margin: 0;
   }
 }
@@ -528,7 +522,7 @@
 .ritualWhen {
   font-family: var(--se-font-mono);
   font-size: var(--se-text-mini);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   color: var(--se-color-blue-300);
 }
@@ -537,9 +531,7 @@
 // 5. PHOTO COLLAGE
 // =============================================
 .collage {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 }
 
 .colGrid {
@@ -576,10 +568,8 @@
 // 6. PERKS
 // =============================================
 .perks {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-xl) 0;
   background: var(--se-color-slate-50);
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
 }
 
 .perksGrid {
@@ -610,14 +600,14 @@
     font-size: var(--se-text-de);
     margin: 0 0 var(--se-space-4xs);
     color: var(--se-color-slate-900);
-    letter-spacing: -0.01em;
+    letter-spacing: var(--se-tracking-snug);
   }
 
   p {
     font-size: var(--se-text-sm);
     color: var(--se-color-slate-600);
     margin: 0;
-    line-height: 1.6;
+    line-height: var(--se-leading-loose);
   }
 }
 
@@ -636,9 +626,7 @@
 // 7. TESTIMONIAL
 // =============================================
 .testimonial {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 }
 
 .testiGrid {
@@ -651,8 +639,8 @@
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space-xs) 0 var(--se-space-d1);
   }
 }
@@ -668,10 +656,10 @@
 
 .quote {
   font-size: var(--se-text-22);
-  line-height: 1.5;
+  line-height: var(--se-leading-comfortable);
   color: var(--se-color-slate-900);
-  letter-spacing: -0.01em;
-  font-weight: 500;
+  letter-spacing: var(--se-tracking-snug);
+  font-weight: var(--se-weight-medium);
   margin: 0 0 var(--se-space-xl);
   font-style: normal;
 }
@@ -692,9 +680,7 @@
 // 8. CTA BAND
 // =============================================
 .ctaWrap {
-  padding: var(--se-space-d6) 0;
-
-  @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
+  padding: var(--se-section-xl) 0;
 }
 
 .ctaBand {
@@ -717,8 +703,8 @@
   h2 {
     color: white;
     font-size: var(--se-text-fluid-h2);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
     margin-bottom: var(--se-space);
   }
 
@@ -745,7 +731,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: white;
   color: var(--se-color-blue-900);
@@ -766,7 +752,7 @@
   justify-content: center;
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   background: rgba(255 255 255 / 0.06);
   backdrop-filter: blur(var(--se-space-xs)) saturate(180%);
@@ -800,7 +786,7 @@
   gap: var(--se-space-3xs);
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
-  font-weight: 500;
+  font-weight: var(--se-weight-medium);
   font-size: var(--se-text-de);
   transition: all 0.15s;
   white-space: nowrap;
