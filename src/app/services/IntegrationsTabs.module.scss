@@ -1,9 +1,7 @@
-﻿.tabs {
+.tabs {
   display: flex;
   gap: 0.25rem;
-  gap: 0.25rem;
   border-bottom: 1px solid var(--se-color-line);
-  margin-bottom: var(--se-space-d1);
   margin-bottom: var(--se-space-d1);
   overflow-x: auto;
   scrollbar-width: none;
@@ -14,7 +12,6 @@
 }
 
 .tab {
-  padding: var(--se-space-sm) var(--se-space-lg);
   padding: var(--se-space-sm) var(--se-space-lg);
   font-size: var(--se-text-sm);
   font-weight: var(--se-weight-medium);
@@ -43,11 +40,9 @@
   margin-top: var(--se-space-d1);
 
   @media (max-width: 56.25rem) {
-  @media (max-width: 56.25rem) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: 30rem) {
   @media (max-width: 30rem) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -56,7 +51,6 @@
 .tile {
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
-  padding: var(--se-space-xl) var(--se-space);
   padding: var(--se-space-xl) var(--se-space);
   text-align: center;
   background: white;

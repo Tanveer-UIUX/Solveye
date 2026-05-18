@@ -1,5 +1,5 @@
-﻿// =============================================
-// MEDICAL BILLING â€” Service detail page styles
+// =============================================
+// MEDICAL BILLING — Service detail page styles
 // =============================================
 
 // ---- Section utilities ----
@@ -34,7 +34,6 @@
   letter-spacing: var(--se-tracking-wider);
   text-transform: uppercase;
   margin-bottom: var(--se-space-lg);
-  margin-bottom: var(--se-space-lg);
 
   a {
     transition: color 0.15s;
@@ -47,10 +46,8 @@
 
 .secHead {
   margin-bottom: var(--se-space-d3);
-  margin-bottom: var(--se-space-d3);
 
   h2 {
-    max-width: 40rem;
     max-width: 40rem;
     font-size: var(--se-text-fluid-h2);
     font-weight: var(--se-weight-bold);
@@ -72,13 +69,10 @@
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: var(--se-space-d5);
-  gap: var(--se-space-d5);
   align-items: center;
 
   @media (max-width: 64rem) {
-  @media (max-width: 64rem) {
     grid-template-columns: 1fr;
-    gap: var(--se-space-d1);
     gap: var(--se-space-d1);
   }
 
@@ -101,7 +95,6 @@
 
 .heroCta {
   display: flex;
-  gap: var(--se-space-xs);
   gap: var(--se-space-xs);
   flex-wrap: wrap;
 }
@@ -127,7 +120,6 @@
     box-shadow: var(--se-shadow);
 
     .arrow {
-      transform: translateX(0.1875rem);
       transform: translateX(0.1875rem);
     }
   }
@@ -169,7 +161,6 @@
     center / cover;
   box-shadow: var(--se-shadow-lg);
   min-height: 20rem;
-  min-height: 20rem;
 }
 
 // =============================================
@@ -179,21 +170,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--se-space);
-  gap: var(--se-space);
 
-  @media (max-width: 56.25rem) {
   @media (max-width: 56.25rem) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 37.5rem) {
   @media (max-width: 37.5rem) {
     grid-template-columns: 1fr;
   }
 }
 
 .benefit {
-  padding: 1.75rem;
   padding: 1.75rem;
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
@@ -218,7 +205,6 @@
   }
 
   h4 {
-    margin: var(--se-space-xs) 0 var(--se-space-4xs);
     margin: var(--se-space-xs) 0 var(--se-space-4xs);
     font-size: var(--se-text-de);
     font-weight: var(--se-weight-semibold);
@@ -248,7 +234,6 @@
 
   .lead {
     max-width: 40rem;
-    max-width: 40rem;
   }
 }
 
@@ -261,11 +246,9 @@
   margin-top: var(--se-space-d3);
 
   @media (max-width: 56.25rem) {
-  @media (max-width: 56.25rem) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 37.5rem) {
   @media (max-width: 37.5rem) {
     grid-template-columns: 1fr;
   }
@@ -275,7 +258,6 @@
   background: white;
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius);
-  padding: 1.75rem;
   padding: 1.75rem;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -290,7 +272,6 @@
     font-size: var(--se-text-xs);
     letter-spacing: var(--se-tracking-widest);
     color: var(--se-color-blue-700);
-    margin-bottom: var(--se-space);
     margin-bottom: var(--se-space);
     text-transform: uppercase;
   }
@@ -332,7 +313,6 @@
 
 .faqInner {
   max-width: 55rem;
-  max-width: 55rem;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 2.34375vw + 0.125rem, 2rem);
 
@@ -359,10 +339,8 @@
   color: white;
   border-radius: var(--se-radius-lg);
   padding: var(--se-space-d4);
-  padding: var(--se-space-d4);
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: var(--se-space-d3);
   gap: var(--se-space-d3);
   align-items: center;
 
@@ -380,9 +358,7 @@
   }
 
   @media (max-width: 48rem) {
-  @media (max-width: 48rem) {
     grid-template-columns: 1fr;
-    padding: 2.25rem;
     padding: 2.25rem;
   }
 }
@@ -390,7 +366,6 @@
 .ctaButtons {
   display: flex;
   flex-direction: column;
-  gap: var(--se-space-xs);
   gap: var(--se-space-xs);
 }
 
@@ -416,7 +391,6 @@
 
     .arrow {
       transform: translateX(0.1875rem);
-      transform: translateX(0.1875rem);
     }
   }
 }
@@ -425,7 +399,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--se-space) 1.75rem;
   padding: var(--se-space) 1.75rem;
   border-radius: var(--se-radius-sm);
   font-weight: var(--se-weight-medium);
@@ -450,7 +423,6 @@
     transform: translateY(-1px);
     box-shadow:
       inset 0 1px 0 rgba(255 255 255 / 0.14),
-      0 var(--se-space-3xs) var(--se-space-lg) calc(-1 * var(--se-space-4xs)) rgba(0 0 0 / 0.3);
       0 var(--se-space-3xs) var(--se-space-lg) calc(-1 * var(--se-space-4xs)) rgba(0 0 0 / 0.3);
   }
 }
