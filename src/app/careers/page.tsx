@@ -494,21 +494,21 @@ export default function CareersPage() {
               <div className={`${s.arch} ${s.a1}`}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80"
+                  src="/Picture/careers/header-pic-1.jpg"
                   alt="Solveye team member"
                 />
               </div>
               <div className={`${s.arch} ${s.a2}`}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80"
+                  src="/Picture/careers/header-pic-2.jpg"
                   alt="Solveye team member"
                 />
               </div>
               <div className={`${s.arch} ${s.a3}`}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80"
+                  src="/Picture/careers/header-pic-3.jpg"
                   alt="Solveye team member"
                 />
               </div>
