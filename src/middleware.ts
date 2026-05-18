@@ -28,6 +28,7 @@ export function middleware(req: NextRequest) {
   });
 }
 
+// This tells Next.js to protect every single page on your site
 export const config = {
   matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
 };
