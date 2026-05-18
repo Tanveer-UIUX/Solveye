@@ -41,7 +41,7 @@ const SERVICES: Service[] = [
       { num: '28 days', label: 'Avg days in AR' },
       { num: '+32%', label: 'Net collection lift' },
     ],
-    img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80',
+    img: '/picture/services/medical-billing.jpg',
     cta: { href: '/medical-billing', label: 'See full service detail', style: 'primary' },
   },
   {
@@ -61,7 +61,7 @@ const SERVICES: Service[] = [
       { num: '99.1%', label: 'Coding accuracy (audited)' },
       { num: '≤ 24 hr', label: 'Chart-to-claim turnaround' },
     ],
-    img: 'https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=900&q=80',
+    img: '/picture/services/medical-coding.jpg',
     cta: { href: '/contact', label: 'Talk to a coding lead', style: 'link' },
   },
   {
@@ -81,7 +81,7 @@ const SERVICES: Service[] = [
       { num: '52 days', label: 'Avg payer enrollment' },
       { num: '100%', label: 'CAQH attestations on time' },
     ],
-    img: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80',
+    img: '/picture/services/medical-credentialing.jpg',
     cta: { href: '/contact', label: 'Talk to credentialing', style: 'link' },
   },
   {
@@ -101,7 +101,7 @@ const SERVICES: Service[] = [
       { num: '$3.2M', label: 'Avg yr-1 recovery' },
       { num: '-41%', label: 'Days in AR reduction' },
     ],
-    img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80',
+    img: '/picture/services/accounts-receivable-recovery.jpg',
     cta: { href: '/contact', label: 'Audit my AR', style: 'link' },
   },
   {
@@ -121,7 +121,7 @@ const SERVICES: Service[] = [
       { num: '2.4 hr', label: 'Median auth turnaround' },
       { num: '96%', label: 'First-attempt approval' },
     ],
-    img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80',
+    img: '/picture/services/prior-authorization.jpg',
     cta: { href: '/contact', label: 'Talk to prior auth', style: 'link' },
   },
   {
@@ -141,7 +141,7 @@ const SERVICES: Service[] = [
       { num: '+47%', label: 'Patient self-service pay' },
       { num: '11 days', label: 'Avg time to patient pay' },
     ],
-    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80',
+    img: '/picture/services/patient-statements.jpg',
     cta: { href: '/contact', label: 'See statements demo', style: 'link' },
   },
   {
@@ -161,7 +161,7 @@ const SERVICES: Service[] = [
       { num: '15 min', label: 'Dashboard refresh' },
       { num: '40+', label: 'Pre-built reports' },
     ],
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',
+    img: '/picture/services/practice-analytics.jpg',
     cta: { href: '/contact', label: 'See dashboards', style: 'link' },
   },
   {
@@ -181,7 +181,7 @@ const SERVICES: Service[] = [
       { num: 'SOC 2 II', label: 'Annually re-attested' },
       { num: 'HITRUST', label: 'r2 certified' },
     ],
-    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80',
+    img: '/picture/services/compliance-HIPAA.jpg',
     cta: { href: '/contact', label: 'Compliance overview', style: 'link' },
   },
 ]
