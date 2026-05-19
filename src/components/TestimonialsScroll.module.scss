@@ -14,7 +14,7 @@
 
 /* Each card is slightly narrower than the container so adjacent cards peek */
 .card {
-  flex: 0 0 calc(100% - 5rem);
+  flex: 0 0 calc(50% - 0rem);
   scroll-snap-align: center;
   background: white;
   border: 1px solid var(--se-color-line);
@@ -23,16 +23,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--se-space-xl);
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
-
-  &:hover {
-    border-color: var(--se-color-slate-300);
-    box-shadow: var(--se-shadow-lg);
-    transform: translateY(-2px);
-  }
+  transition: border-color 0.2s ease;
 
   .cite {
     margin-top: auto;

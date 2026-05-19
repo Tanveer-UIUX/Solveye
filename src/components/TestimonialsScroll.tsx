@@ -89,13 +89,13 @@ export default function TestimonialsScroll() {
       </div>
 
       <div className={s.dots} role="tablist" aria-label="Testimonials">
-        {TESTIMONIALS.map((_, i) => (
+        {[0, 2].map((target, i) => (
           <button
             key={i}
             role="tab"
-            aria-selected={i === active}
-            className={`${s.dot} ${i === active ? s.dotActive : ''}`}
-            onClick={() => goTo(i)}
+            aria-selected={i === 0 ? active === 0 : active >= 1}
+            className={`${s.dot} ${(i === 0 ? active === 0 : active >= 1) ? s.dotActive : ''}`}
+            onClick={() => goTo(target)}
             aria-label={`Go to testimonial ${i + 1}`}
           />
         ))}
