@@ -176,13 +176,10 @@
 .heroContent {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--se-radius-lg);
   padding: 2.5rem 2.75rem;
-  box-shadow: 0 8px 40px rgba(108, 180, 238, 0.18);
 
   h1 {
     font-size: var(--se-text-fluid-mega);
