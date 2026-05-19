@@ -164,9 +164,36 @@ export default function Home() {
               <div className={s.heroPhoto} />
             </div>
           </div>
+          <div className={s.statsGrid}>
+            <div>
+              <div className={s.statNum}>
+                <StatCounter end={32}  suffix="%" />
+              </div>
+              <div className={s.statLabel}>Increase in net collection</div>
+            </div>
+            <div>
+              <div className={s.statNum}>
+                <StatCounter end={41}  suffix="%" />
+              </div>
+              <div className={s.statLabel}>Less days in AR</div>
+            </div>
+            <div>
+              <div className={s.statNum}>
+                <StatCounter end={98}  suffix="%" />
+              </div>
+              <div className={s.statLabel}>First-pass acceptance</div>
+            </div>
+            <div>
+              <div className={s.statNum}>
+                <StatCounter end={1200} suffix="+" />
+              </div>
+              <div className={s.statLabel}>Certified specialists</div>
+            </div>
+          </div>
         </div>
+        
       </section>
-
+      
       {/* ===== 2. LOGO STRIP ===== */}
       <section className={s.logos}>
         <div className="container">
@@ -199,72 +226,36 @@ export default function Home() {
             </div>
 
             <ul className={s.trustBadges} aria-label="Compliance certifications">
-              <li className={s.badge}>
-                <span className={s.badgeIcon} aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <polyline points="9 12 11 14 15 10" />
-                  </svg>
-                </span>
-                <div>
-                  <strong>SOC 2 Type II</strong>
-                  <span>Independently audited security controls</span>
-                </div>
-              </li>
+            <li className={s.badge}>
+              <span className={s.badgeIcon} aria-hidden="true">
+                <img src="/Picture/Index/SOC 2.png" alt="SOC 2" width="48" height="48" style={{ objectFit: 'contain' }} />
+              </span>
+              <div>
+                <strong>SOC 2 Type II</strong>
+                <span>Independently audited security controls</span>
+              </div>
+            </li>
 
-              <li className={s.badge}>
-                <span className={s.badgeIcon} aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="11" width="18" height="11" rx="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  </svg>
-                </span>
-                <div>
-                  <strong>HIPAA Compliant</strong>
-                  <span>Patient data privacy &amp; PHI safeguards</span>
-                </div>
-              </li>
+            <li className={s.badge}>
+               <span className={s.badgeIcon} aria-hidden="true">
+                <img src="/Picture/Index/HIPAA-logo.png" alt="Hippa" width="48" height="48" style={{ objectFit: 'contain' }} />
+              </span>
+              <div>
+                <strong>HIPAA Compliant</strong>
+                <span>Patient data privacy &amp; PHI safeguards</span>
+              </div>
+            </li>
 
-              <li className={s.badge}>
-                <span className={s.badgeIcon} aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="8" r="7" />
-                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-                  </svg>
-                </span>
-                <div>
-                  <strong>HITRUST CSF</strong>
-                  <span>Risk-based healthcare security framework</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div className={s.statsGrid}>
-            <div>
-              <div className={s.statNum}>
-                <StatCounter end={32} prefix="+" suffix="%" />
+            <li className={s.badge}>
+              <span className={s.badgeIcon} aria-hidden="true">
+                <img src="/Picture/Index/HITRUST-logo.png" alt="Hitrust" width="48" height="48" style={{ objectFit: 'contain' }} />
+              </span>
+              <div>
+                <strong>HITRUST CSF</strong>
+                <span>Risk-based healthcare security framework</span>
               </div>
-              <div className={s.statLabel}>Net collection rate</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <StatCounter end={41} prefix="-" suffix="%" />
-              </div>
-              <div className={s.statLabel}>Days in AR</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <StatCounter end={98.4} decimals={1} suffix="%" />
-              </div>
-              <div className={s.statLabel}>First-pass acceptance</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <StatCounter end={1200} suffix="+" />
-              </div>
-              <div className={s.statLabel}>Certified specialists</div>
-            </div>
+            </li>
+          </ul>
           </div>
         </div>
       </section>
