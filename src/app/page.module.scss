@@ -4,7 +4,7 @@
 
 // ---- Shared section rhythm ----
 .section {
-  padding: var(--se-section-xl) 0;
+  padding: var(--se-section-lg) 0;
 }
 
 .sectionSm {
@@ -85,6 +85,32 @@
 
   &:hover {
     color: var(--se-color-blue-700);
+
+    .arrow {
+      transform: translateX(0.1875rem);
+    }
+  }
+}
+
+.btnGhostLight {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space-xs) var(--se-space-lg);
+  font-weight: var(--se-weight-medium);
+  font-size: var(--se-text-15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--se-radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.5);
 
     .arrow {
       transform: translateX(0.1875rem);
@@ -464,8 +490,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   gap: var(--se-space-xl);
-  align-items: end;
-  margin-bottom: var(--se-space-d3);
+  align-items: center;
 
   h2 {
     max-width: 35rem;
@@ -581,7 +606,8 @@
 .diffImage {
   background: url('../../public/Picture//Index/Pic3.jpg') center / cover;
   border-radius: var(--se-radius-lg);
-  aspect-ratio: 4 / 5;
+  align-self: stretch;
+  min-height: 100%;
   box-shadow: var(--se-shadow-lg);
 }
 
@@ -633,26 +659,77 @@
 }
 
 // =============================================
-// 6. TESTIMONIAL
+// 6. TESTIMONIALS — slate-50 bg matches .difference; cards scroll horizontally
 // =============================================
+.sectionTestimonials {
+  padding: var(--se-section-lg) 0;
+  background: var(--se-color-slate-50);
+
+  h2 {
+    margin-top: var(--se-space);
+    margin-bottom: var(--se-space-xl);
+  }
+}
+
+.testimonialsScroll {
+  display: flex;
+  gap: var(--se-space-xl);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--se-space);
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.scrollDots {
+  display: flex;
+  justify-content: center;
+  gap: var(--se-space-xs);
+  margin-top: var(--se-space-xl);
+}
+
+.dot {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--se-color-slate-300);
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:first-child {
+    background: var(--se-color-blue-900);
+    transform: scale(1.35);
+  }
+}
+
 .testimonial {
+  flex-shrink: 0;
+  width: min(30rem, 85vw);
+  scroll-snap-align: start;
   background: white;
   border: 1px solid var(--se-color-line);
   border-radius: var(--se-radius-lg);
-  padding: var(--se-space-d4);
-  display: grid;
-  grid-template-columns: 1fr 17.5rem;
-  gap: var(--se-space-d4);
-  grid-template-columns: 1fr 17.5rem;
-  gap: var(--se-space-d4);
-  align-items: center;
+  padding: var(--se-space-d2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--se-space-xl);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 
-  @media (max-width: 48rem) {
-    grid-template-columns: 1fr;
-    padding: var(--se-space-d1);
-    gap: var(--se-space-d1);
-    padding: var(--se-space-d1);
-    gap: var(--se-space-d1);
+  &:hover {
+    border-color: var(--se-color-slate-300);
+    box-shadow: var(--se-shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .cite {
+    margin-top: auto;
   }
 }
 
@@ -673,14 +750,28 @@
 
 .cite {
   font-style: normal;
-  font-size: var(--se-text-sm);
-  color: var(--se-color-slate-600);
-  margin-top: var(--se-space-xl);
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: var(--se-space);
+
+  > span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
 
   strong {
+    display: block;
+    font-size: var(--se-text-sm);
+    font-weight: var(--se-weight-semibold);
     color: var(--se-color-blue-900);
   }
+}
+
+.citeRole {
+  display: block;
+  font-size: var(--se-text-13);
+  color: var(--se-color-slate-500);
 }
 
 .avatar {
@@ -895,52 +986,39 @@
 }
 
 // =============================================
-// OFFICE GALLERY + RITUALS
+// 6. OFFICE GALLERY — dark glass section (matches .industries on services page)
 // =============================================
-.gallery {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: var(--se-space);
-  height: 35rem;
-  gap: var(--se-space);
-  height: 35rem;
+.sectionGallery {
+  --se-color-eyebrow: var(--se-color-blue-100);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(24, 94, 212, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(14, 165, 160, 0.3) 0%, transparent 50%),
+    var(--se-color-blue-900);
+  color: white;
+  padding: var(--se-section-lg) 0;
 
-  > div {
-    border-radius: var(--se-radius);
-    background-size: cover;
-    background-position: center;
-    min-height: 13.75rem;
-  }
-
-  > :nth-child(1) {
-    grid-row: span 2;
-    background-image: url('/Picture/Index/gallery-pic-1.jpg');
-  }
-  > :nth-child(2) {
-    background-image: url('/Picture/Index/gallery-pic-2.jpg');
-  }
-  > :nth-child(3) {
-    background-image: url('/Picture/Index/gallery-pic-3.jpg');
-  }
-  > :nth-child(4) {
-    background-image: url('/Picture/Index/gallery-pic-4.jpg');
-  }
-  > :nth-child(5) {
-    background-image: url('/Picture/Index/gallery-pic-5.jpg');
+  h2 {
+    color: white;
+    max-width: 37.5rem;
+    font-size: var(--se-text-fluid-h2);
+    font-weight: var(--se-weight-bold);
+    letter-spacing: var(--se-tracking-tight);
+    margin-top: var(--se-space);
+    margin-bottom: var(--se-space);
   }
 
-  @media (max-width: 56.25rem) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    height: auto;
-
-    > :nth-child(1) {
-      grid-row: span 1;
-    }
+  .lead {
+    color: var(--se-color-slate-300);
+    max-width: 37.5rem;
+    margin-bottom: var(--se-space-d3);
   }
 }
 
+// =============================================
+// OFFICE GALLERY + RITUALS
+// =============================================
 .rituals {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

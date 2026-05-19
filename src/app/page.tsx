@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import StatCounter from '@/components/StatCounter'
 import SubmitResumeModal from '@/components/careers/SubmitResumeModal'
+import Gallery3D from '@/components/Gallery3D'
+import TestimonialsScroll from '@/components/TestimonialsScroll'
 import s from './page.module.scss'
 
 /* ---- tiny SVG helpers (inline, no extra deps) ---- */
@@ -322,64 +324,32 @@ export default function Home() {
       </section>
 
       {/* ===== 6. OFFICE GALLERY ===== */}
-      <section className={s.section}>
+      <section className={s.sectionGallery}>
         <div className="container">
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Office life &amp; rituals</span>
               <h2>The things that make Solveye, Solveye.</h2>
             </div>
+            <Link href="/life-at-solveye" className={s.btnGhostLight}>
+              Life at Solveye <span className={s.arrow}>&rarr;</span>
+            </Link>
           </div>
 
-          <div className={s.gallery}>
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-          </div>
-
-          <div className={s.rituals}>
-            {[
-              { em: 'Monday', title: 'All-hands', desc: '30 minutes, every Monday, every hub. Numbers, stories, and one shoutout.' },
-              { em: 'Quarterly', title: 'Pod awards', desc: 'The cleanest pod, the fastest credentialer, the best teach — voted by peers.' },
-              { em: 'Annually', title: 'SolveCon', desc: 'Three days, one city, the whole company. Last year: New Orleans.' },
-              { em: 'Every hire', title: 'Buddy week', desc: 'New hires shadow a senior pod member for a full week before touching live charts.' },
-            ].map((r) => (
-              <article key={r.title} className={s.ritual}>
-                <div className={s.ritualEm}>{r.em}</div>
-                <h5>{r.title}</h5>
-                <p>{r.desc}</p>
-              </article>
-            ))}
-          </div>
+          <Gallery3D />
         </div>
       </section>
 
-      {/* ===== 7. TESTIMONIAL ===== */}
-      <section className={s.sectionSm}>
+      {/* ===== 7. TESTIMONIALS ===== */}
+      <section className={s.sectionTestimonials}>
         <div className="container">
-          <div className={s.testimonial}>
+          <div className={s.secHead}>
             <div>
-              <div className={s.stars}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <blockquote className={s.quote}>
-                &ldquo;We moved from a multi-vendor mess to one team. Days in AR
-                dropped from 54 to 28 in a single quarter, and we finally have a
-                real-time view of what payers owe us.&rdquo;
-              </blockquote>
-              <cite className={s.cite}>
-                <span className={s.avatar} />
-                <strong>Dr.&nbsp;Priya Mehta</strong> &middot; CFO, Apex
-                Cardiology Group &middot; 38&nbsp;providers
-              </cite>
-            </div>
-            <div className={s.statBlock}>
-              <div className={s.statNum}>$3.2M</div>
-              <div className={s.statLabel}>Recovered in year one</div>
-              <div className={s.statNum}>26 days</div>
-              <div className={s.statLabel}>Reduction in AR aging</div>
+              <span className={s.eyebrow}>What clients say</span>
+              <h2>Trusted by practices across 38 states.</h2>
             </div>
           </div>
+          <TestimonialsScroll />
         </div>
       </section>
 

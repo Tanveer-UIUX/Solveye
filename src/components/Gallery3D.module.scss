@@ -1,0 +1,226 @@
+/* ═══════════════════════════════════════════════════════════════
+   GALLERY 3D — Pure CSS interactive curved gallery
+   Techniques: CSS 3D transforms · :has() selector · checkbox hack
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Wrapper ──────────────────────────────────────────────────── */
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Hidden checkbox toggles (state management, no JS) ────────── */
+.toggle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   1. GALLERY STAGE — 3D perspective container
+   ══════════════════════════════════════════════════════════════ */
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  perspective: 1100px;
+  perspective-origin: 50% 48%;
+  padding: 2.5rem 0 3rem;
+  overflow: hidden;
+}
+
+/* ── Card (label = click target for checkbox hack) ────────────── */
+.item {
+  flex-shrink: 0;
+  width: 11.5rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  /* Smooth transition out of hover state */
+  transition:
+    transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity   0.35s ease,
+    filter    0.35s ease;
+}
+
+/*
+ * CONCAVE ARC — edges are closer/larger, center is further/smaller.
+ * Visualise looking at the inside of a panoramic cylinder.
+ * rotateY: outer items angle toward the viewer
+ * scale:   outer items appear taller, center items shorter
+ */
+
+.item:nth-child(1) { transform: rotateY(34deg) scale(1); z-index: 2; }
+.item:nth-child(2) { transform: rotateY(19deg) scale(0.9); z-index: 3; }
+.item:nth-child(3) { transform: rotateY(6deg)  scale(0.82); z-index: 4; }
+.item:nth-child(4) { transform: rotateY(-6deg)   scale(0.86); z-index: 4; }
+.item:nth-child(5) { transform: rotateY(-19deg)  scale(0.90); z-index: 3; }
+.item:nth-child(6) { transform: rotateY(-34deg)  scale(1); z-index: 2; }
+
+
+/* ── Photo card ───────────────────────────────────────────────── */
+.photo {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.18);
+  transition: box-shadow 0.4s ease;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   2. HOVER INTERACTION — flatten, lift, tilt shake
+   ══════════════════════════════════════════════════════════════ */
+
+/* Override any nth-child 3D placement: flatten card to face viewer */
+.item:hover {
+  transform: rotateY(0deg) scale(1) !important;
+  z-index: 10;
+}
+
+/* Trigger tilt-shake on the photo card */
+.item:hover .photo {
+  animation: tiltShake 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+  box-shadow: 0 22px 32px rgba(0, 0, 0, 0.32);
+}
+
+/* :has() — dim + desaturate all siblings when one card is hovered */
+.gallery:has(.item:hover) .item:not(:hover) {
+  opacity: 0.48;
+  filter: brightness(0.68) saturate(0.7);
+}
+
+/* ── Gentle tilt-shake keyframes ──────────────────────────────── */
+@keyframes tiltShake {
+  0%   { transform: rotate(0deg)     translateY(0px)   scale(1);     }
+  14%  { transform: rotate(-2.8deg)  translateY(-7px)  scale(1.025); }
+  32%  { transform: rotate(2.8deg)   translateY(-13px) scale(1.045); }
+  50%  { transform: rotate(-1.8deg)  translateY(-16px) scale(1.055); }
+  68%  { transform: rotate(1.2deg)   translateY(-17px) scale(1.06);  }
+  84%  { transform: rotate(-0.6deg)  translateY(-18px) scale(1.065); }
+  100% { transform: rotate(0deg)     translateY(-18px) scale(1.07);  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   3. LIGHTBOX MODAL — checkbox hack (no JavaScript)
+   #gmN:checked ~ .mN  triggers the corresponding modal
+   ══════════════════════════════════════════════════════════════ */
+
+/* Modal hidden by default */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Show the correct modal when its checkbox is checked */
+:global(#gm1):checked ~ .m1,
+:global(#gm2):checked ~ .m2,
+:global(#gm3):checked ~ .m3,
+:global(#gm4):checked ~ .m4,
+:global(#gm5):checked ~ .m5,
+:global(#gm6):checked ~ .m6,
+:global(#gm7):checked ~ .m7,
+:global(#gm8):checked ~ .m8 {
+  display: flex;
+  animation: fadeIn 0.28s ease forwards;
+}
+
+/* ── Dark blurred backdrop (label — clicking closes modal) ─────── */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.84);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  cursor: pointer;
+}
+
+/* ── Lightbox content wrapper ─────────────────────────────────── */
+.lightbox {
+  position: relative;
+  z-index: 1;
+  animation: zoomIn 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ── Full-size image ──────────────────────────────────────────── */
+.lightboxImg {
+  width: min(88vw, 42rem);
+  aspect-ratio: 2 / 3;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Close button (label — clicking unchecks the checkbox) ────── */
+.close {
+  position: absolute;
+  top: -1.1rem;
+  right: -1.1rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: white;
+  color: #1e293b;
+  font-size: 1.3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s;
+  z-index: 2;
+  user-select: none;
+
+  &:hover {
+    transform: scale(1.18) rotate(90deg);
+    background: #f1f5f9;
+  }
+}
+
+/* ── Modal entry animations ───────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8);  opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 56.25rem) {
+  .item {
+    width: 9rem;
+    margin: 0 0.2rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  /* Hide outermost 4 cards on small screens */
+  .item:nth-child(1),
+  .item:nth-child(2),
+  .item:nth-child(7),
+  .item:nth-child(8) {
+    display: none;
+  }
+
+  /* Flatten remaining cards on mobile */
+  .item:nth-child(3),
+  .item:nth-child(4),
+  .item:nth-child(5),
+  .item:nth-child(6) {
+    transform: rotateY(0deg) scale(1) !important;
+    margin: 0 0.3rem;
+  }
+}

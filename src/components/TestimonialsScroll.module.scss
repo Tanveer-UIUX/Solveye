@@ -1,0 +1,118 @@
+.scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-block: 0.5rem; /* vertical room so hover shadow isn't clipped */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Each card is slightly narrower than the container so adjacent cards peek */
+.card {
+  flex: 0 0 calc(100% - 5rem);
+  scroll-snap-align: center;
+  background: white;
+  border: 1px solid var(--se-color-line);
+  border-radius: var(--se-radius-lg);
+  padding: var(--se-space-d2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--se-space-xl);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--se-color-slate-300);
+    box-shadow: var(--se-shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .cite {
+    margin-top: auto;
+  }
+}
+
+.stars {
+  color: var(--se-color-amber-500);
+  font-size: var(--se-text-lg);
+}
+
+.quote {
+  margin: 0;
+  font-size: var(--se-text-xl);
+  line-height: var(--se-leading-normal);
+  letter-spacing: var(--se-tracking-narrow-sm);
+  color: var(--se-color-blue-900);
+  font-weight: var(--se-weight-medium);
+}
+
+.cite {
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  gap: var(--se-space);
+
+  > span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  strong {
+    display: block;
+    font-size: var(--se-text-sm);
+    font-weight: var(--se-weight-semibold);
+    color: var(--se-color-blue-900);
+  }
+}
+
+.citeRole {
+  display: block;
+  font-size: var(--se-text-13);
+  color: var(--se-color-slate-500);
+}
+
+.avatar {
+  flex-shrink: 0;
+  display: inline-block;
+  width: var(--se-space-d4);
+  height: var(--se-space-d4);
+  border-radius: 50%;
+  background: url('/Picture/Index/avatar.jpg') center / cover;
+}
+
+/* ── Dots ─────────────────────────────────────── */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--se-space-xs);
+  margin-top: var(--se-space-xl);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--se-color-slate-300);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--se-color-blue-600);
+    outline-offset: 2px;
+  }
+}
+
+.dotActive {
+  background: var(--se-color-blue-900);
+  transform: scale(1.4);
+}
