@@ -47,20 +47,24 @@ export default function TestimonialsScroll() {
     setActive(i)
   }, [])
 
-  /* Update the active dot as the user swipes manually */
+  /* Update the active dot as the user swipes manually.
+     Track all intersecting cards and pick the leftmost — prevents the
+     second card overwriting active=0 when two 50%-width cards are both visible. */
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
+    const intersecting = new Set<number>()
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const i = Array.from(el.children).indexOf(
-              entry.target as HTMLElement,
-            )
-            if (i !== -1) setActive(i)
-          }
+          const i = Array.from(el.children).indexOf(
+            entry.target as HTMLElement,
+          )
+          if (i === -1) return
+          if (entry.isIntersecting) intersecting.add(i)
+          else intersecting.delete(i)
         })
+        if (intersecting.size > 0) setActive(Math.min(...intersecting))
       },
       { root: el, threshold: 0.5 },
     )
