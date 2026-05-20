@@ -103,28 +103,6 @@ const PRINCIPLES = [
   },
 ]
 
-const RITUALS = [
-  {
-    em: 'Monday',
-    title: 'All-hands',
-    desc: '30 minutes, every Monday, every hub. Numbers, stories, and one shoutout.',
-  },
-  {
-    em: 'Quarterly',
-    title: 'Pod awards',
-    desc: 'The cleanest pod, the fastest credentialer, the best teach — voted by peers.',
-  },
-  {
-    em: 'Annually',
-    title: 'SolveCon',
-    desc: 'Three days, one city, the whole company. Last year: New Orleans.',
-  },
-  {
-    em: 'Every hire',
-    title: 'Buddy week',
-    desc: 'New hires shadow a senior pod member for a full week before touching live charts.',
-  },
-]
 
 const AWARDS = [
   {
@@ -227,24 +205,7 @@ const LOCATIONS = [
     addr: ['Mindspace IT Park, Building 12', 'Hyderabad, Telangana 500081'],
     meta: ['684 employees', 'Opened 2019'],
   },
-  {
-    city: 'Manila',
-    country: 'Philippines · Delivery Hub',
-    addr: ['BGC Corporate Center, Tower 2', 'Bonifacio Global City 1634'],
-    meta: ['303 employees', 'Opened 2022'],
-  },
-  {
-    city: 'Remote',
-    country: 'Pan-US · Distributed Roles',
-    addr: ['Distributed across 28 US states.', 'Engineering, sales, customer success.'],
-    meta: ['~100 employees', 'Since 2020'],
-  },
-  {
-    city: '2026: Mexico City',
-    country: 'Mexico · Coming Soon',
-    addr: ['Polanco, opening Q3 2026.', 'Spanish-bilingual patient services.'],
-    meta: ['40 hires planned', 'Q3 2026'],
-  },
+ 
 ]
 
 export default function AboutPage() {
@@ -332,7 +293,7 @@ export default function AboutPage() {
       </section>
 
       {/* ===== 2. ORIGIN + TIMELINE ===== */}
-      <section className={s.section}>
+      <section className={s.sectionAlt}>
         <div className="container">
           <div className={s.originGrid}>
             <div className={s.originImg} />
@@ -378,7 +339,7 @@ export default function AboutPage() {
       </section>
 
       {/* ===== 3. MISSION / VISION / VALUES ===== */}
-      <section className={s.sectionAlt}>
+      <section className={s.section}>
         <div className="container">
           <div className={s.secHead}>
             <div>
@@ -485,11 +446,12 @@ export default function AboutPage() {
             <div>
               <span className={s.eyebrow}>How we work</span>
               <h2>Nine principles that shape every Solveye day.</h2>
-            </div>
-            <div className={s.note}>
+              <div className={s.note}>
               These aren&rsquo;t poster slogans. They&rsquo;re how we make
               hiring decisions, run reviews, and structure compensation.
+            </div>            
             </div>
+            
           </div>
 
           <div className={s.principles}>
@@ -556,38 +518,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ===== 7. OFFICE GALLERY + RITUALS ===== */}
-      <section className={s.section}>
-        <div className="container">
-          <div className={s.secHead}>
-            <div>
-              <span className={s.eyebrow}>Office life &amp; rituals</span>
-              <h2>The things that make Solveye, Solveye.</h2>
-            </div>
-          </div>
-
-          <div className={s.gallery}>
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-          </div>
-
-          <div className={s.rituals}>
-            {RITUALS.map((r) => (
-              <article key={r.title} className={s.ritual}>
-                <div className={s.em}>{r.em}</div>
-                <h5>{r.title}</h5>
-                <p>{r.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ===== 8. AWARDS ===== */}
-      <section className={s.sectionAlt}>
+      <section className={s.section}>
         <div className="container">
           <div className={s.secHead}>
             <div>
@@ -646,17 +578,17 @@ export default function AboutPage() {
       </section>
 
       {/* ===== 10. LOCATIONS ===== */}
-      <section className={s.section}>
+      <section className={s.sectionLocations}>
         <div className="container">
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Where we work</span>
               <h2>Four hubs. Twenty-four-hour coverage.</h2>
-            </div>
-            <div className={s.note}>
-              Pods are anchored in one hub but supported around the clock.
-              Coding charts handed off at 8pm ET in Philadelphia are coded by
-              morning, US time.
+              <div className={s.note}>
+                Pods are anchored in one hub but supported around the clock.
+                Coding charts handed off at 8pm ET in Philadelphia are coded by
+                morning, US time.
+              </div>
             </div>
           </div>
 

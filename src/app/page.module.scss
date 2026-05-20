@@ -495,6 +495,7 @@
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-tight);
     margin-top: var(--se-space);
+    margin-bottom: var(--se-space-xl);
   }
 
   @media (max-width: 48rem) {
@@ -660,7 +661,6 @@
 // =============================================
 .sectionTestimonials {
   padding: var(--se-section-lg) 0;
-  background: var(--se-color-slate-50);
 
   h2 {
     margin-top: var(--se-space);
@@ -812,10 +812,16 @@
 // =============================================
 // 7. INSIGHTS
 // =============================================
+.sectionInsights {
+  padding: var(--se-section-lg) 0;
+  background: var(--se-color-slate-50);
+}
+
 .insightGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--se-space-xl);
+  
 
   @media (max-width: 64rem) {
     grid-template-columns: repeat(2, 1fr);

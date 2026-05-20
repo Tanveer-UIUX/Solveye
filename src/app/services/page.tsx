@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Subnav from './Subnav'
-import IntegrationsTabs from './IntegrationsTabs'
 import AnimatedNumber from '@/components/AnimatedNumber'
 import s from './page.module.scss'
 
@@ -503,19 +502,6 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ===== INTEGRATIONS (tabbed) ===== */}
-      <section className={s.integrations}>
-        <div className="container">
-          <div className={s.secHead}>
-            <div>
-              <span className={s.eyebrow}>Integrations</span>
-              <h2>Native to the EHR you already run.</h2>
-            </div>
-          </div>
-          <IntegrationsTabs />
         </div>
       </section>
 

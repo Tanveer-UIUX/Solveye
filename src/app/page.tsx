@@ -354,7 +354,7 @@ export default function Home() {
       </section>
 
       {/* ===== 7. INSIGHTS ===== */}
-      <section className={s.section}>
+      <section className={s.sectionInsights}>
         <div className="container">
           <div className={s.secHead}>
             <div>

@@ -4,7 +4,7 @@
 
 // ---- Section utilities ----
 .section {
-  padding: var(--se-section-xl) 0;
+  padding: var(--se-section-lg) 0;
 }
 
 .sectionAlt {
@@ -53,15 +53,13 @@
   margin-bottom: var(--se-space-d3);
 
   h2 {
-    max-width: 35rem;
     font-size: var(--se-text-fluid-h2);
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-tight);
-    margin-top: var(--se-space);
+    margin: var(--se-space) 0 var(--se-space-xl);
   }
 
   .note {
-    max-width: 20rem;
     color: var(--se-color-slate-600);
     font-size: var(--se-text-sm);
   }
@@ -260,7 +258,7 @@
 
 .originImg {
   border-radius: var(--se-radius-lg);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 5 / 5;
   background: url('/picture/about/origin.jpg')
     center / cover;
   box-shadow: var(--se-shadow-lg);
@@ -395,6 +393,7 @@
     p {
       color: var(--se-color-slate-300);
       margin-bottom: var(--se-space-md);
+      text-align: justify;
     }
   }
 }
@@ -884,10 +883,16 @@
 // =============================================
 // 10. LOCATIONS
 // =============================================
+.sectionLocations {
+  padding: var(--se-section-lg) 0;
+  background: var(--se-color-slate-50);
+}
+
 .locations {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--se-space-xl);
+  
 
   @media (max-width: 56.25rem) {
     grid-template-columns: 1fr;
@@ -948,7 +953,7 @@
 // 11. CTA
 // =============================================
 .ctaWrap {
-  padding: var(--se-section-xl) 0;
+  padding: var(--se-section-lg) 0;
 }
 
 .ctaBand {
