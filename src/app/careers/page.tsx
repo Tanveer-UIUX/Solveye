@@ -570,16 +570,14 @@ export default function CareersPage() {
       {/* ===== 3. BENEFITS ===== */}
       <section className={s.sectionAlt}>
         <div className="container">
-          <div className={s.secHead}>
-            <div>
-              <span className={s.eyebrow}>Benefits &amp; perks</span>
-              <h2>The whole package, not just the headline.</h2>
-            </div>
-            <div className={s.note}>
+          <div className={s.hpIntro}>
+            <span className={s.eyebrow}>Benefits &amp; perks</span>
+            <h2>The whole package, not just the headline.</h2>
+            <p className={s.lead}>
               Benefits vary slightly by location and employment type. Below is
               the US full-time package; international hubs are equivalent in
               local market.
-            </div>
+            </p>
           </div>
 
           <div className={s.benGrid}>

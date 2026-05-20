@@ -491,6 +491,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--se-space);
+  margin-top: var(--se-space-d2);
 
   @media (max-width: 64rem) {
     grid-template-columns: repeat(2, 1fr);
