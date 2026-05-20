@@ -51,6 +51,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--se-space-d5);
   align-items: center;
+  padding-bottom: var(--se-section-lg);
 
   @media (max-width: 60rem) {
     grid-template-columns: 1fr;
@@ -162,7 +163,7 @@
 // 1. HERO
 // =============================================
 .hero {
-  padding: 5rem 0 5rem;
+  padding: 5rem 0 var(--se-space-d3);
   background: linear-gradient(180deg, #fff, var(--se-color-slate-50));
   overflow: hidden;
 
@@ -222,7 +223,7 @@
 // 2. TRAINING TRACKS
 // =============================================
 .tracks {
-  padding: var(--se-section-xl) 0;
+  padding: var(--se-section-lg);
 }
 
 .tracksGrid {
@@ -330,7 +331,7 @@
 // 3. FORMATS
 // =============================================
 .formats {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-lg);
   background: var(--se-color-slate-50);
 
   @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
@@ -399,7 +400,7 @@
 // 4. WORKSHOP SERIES
 // =============================================
 .series {
-  padding: var(--se-section-xl) 0;
+  padding: var(--se-section-lg);
 }
 
 .seriesRail {
@@ -523,7 +524,7 @@
 // 4b. PAST WORKSHOP GALLERY (timeline)
 // =============================================
 .workshopGallery {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-lg);
   background: var(--se-color-slate-50);
 
   @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
@@ -676,7 +677,7 @@
 // 5. SCHEDULE TABLE
 // =============================================
 .schedule {
-  padding: var(--se-space-d6) 0;
+  padding: var(--se-section-lg);
   background: var(--se-color-slate-50);
 
   @media (max-width: 48rem) { padding: var(--se-space-d5) 0; }
@@ -818,7 +819,7 @@
     radial-gradient(circle at 0% 100%, rgba(14, 165, 160, 0.3) 0%, transparent 50%),
     var(--se-color-blue-900);
   color: white;
-  padding: var(--se-section-xl) 0;
+  padding: var(--se-section-lg);
 
   h2 {
     color: white;
@@ -889,7 +890,8 @@
 // 7. FAQ
 // =============================================
 .faq {
-  padding: var(--se-section-xl) 0;
+  padding: var(--se-section-lg);
+  background: var(--se-color-slate-50);
 }
 
 .faqGrid {
@@ -964,7 +966,7 @@
 // 8. CTA BAND
 // =============================================
 .ctaWrap {
-  padding: var(--se-section-xl) 0;
+  padding: var(--se-section-lg);
 }
 
 .ctaBand {
