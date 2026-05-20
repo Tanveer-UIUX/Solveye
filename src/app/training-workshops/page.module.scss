@@ -179,10 +179,17 @@
 .strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--se-space-d1);
-  margin-top: var(--se-space-d4);
-  padding-top: var(--se-space-d1);
+  padding-top: var(--se-space-d3);
+  padding-bottom: var(--se-space-d3);
   border-top: 1px solid var(--se-color-line);
+
+  > div {
+    padding: 0 var(--se-space-d1);
+
+    & + div {
+      border-left: 1px solid var(--se-color-line);
+    }
+  }
 
   @media (max-width: 48rem) {
     grid-template-columns: repeat(2, 1fr);
@@ -190,24 +197,25 @@
 }
 
 .statNum {
-  font-size: var(--se-text-fluid-h1-sm);
+  font-size: var(--se-text-fluid-h2-lg);
   font-weight: var(--se-weight-bold);
-  letter-spacing: var(--se-tracking-tight-hero);
+  letter-spacing: var(--se-tracking-tighter);
   color: var(--se-color-blue-900);
   line-height: 1;
-  font-family: var(--font-heading), ui-sans-serif, sans-serif;
+  font-feature-settings: 'tnum';
 }
 
 .statDenom {
-  font-size: var(--se-text-lg);
-  color: var(--se-color-slate-500);
+  font-size: var(--se-text-de);
+  color: var(--se-color-slate-400);
   font-weight: var(--se-weight-regular);
 }
 
 .statLabel {
   font-size: var(--se-text-13);
   color: var(--se-color-slate-500);
-  margin-top: var(--se-space-4xs);
+  margin-top: var(--se-space-3xs);
+  letter-spacing: var(--se-tracking-wide-md);
 }
 
 // =============================================

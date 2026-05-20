@@ -537,7 +537,7 @@ export default function CareersPage() {
       </section>
 
       {/* ===== 2. WHY JOIN ===== */}
-      <section id="why" className={s.section}>
+      <section id="why" className={s.sectionLight}>
         <div className="container">
           <div className={s.whyGrid}>
             <div className={s.whyImg} />
@@ -638,7 +638,7 @@ export default function CareersPage() {
       </section>
 
       {/* ===== 6. VOICES / TESTIMONIALS ===== */}
-      <section className={s.section}>
+      <section className={s.sectionLight}>
         <div className="container">
           <div className={s.secHead}>
             <div>

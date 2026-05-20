@@ -73,7 +73,7 @@
 // 1. HERO
 // =============================================
 .hero {
-  padding: var(--se-section-xl) 0 0;
+  padding: var(--se-section-lg) 0 0;
 }
 
 .heroGrid {
@@ -81,6 +81,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--se-space-d5);
   align-items: center;
+  padding-bottom: var(--se-section-lg);
 
   @media (max-width: 64rem) {
     grid-template-columns: 1fr;
@@ -188,17 +189,16 @@
 .strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--se-space-d1);
-  padding: var(--se-space-d4) 0;
-  margin-top: var(--se-space-d4);
+  padding-top: var(--se-space-d3);
+  padding-bottom: var(--se-space-d3);
   border-top: 1px solid var(--se-color-line);
-  border-bottom: 1px solid var(--se-color-line);
 
   > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    min-height: 7.5rem;
+    padding: 0 var(--se-space-d1);
+
+    & + div {
+      border-left: 1px solid var(--se-color-line);
+    }
 
     strong {
       display: block;
@@ -215,15 +215,13 @@
       display: block;
       font-size: var(--se-text-13);
       color: var(--se-color-slate-500);
-      margin-top: var(--se-space-xs);
-      font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
+      margin-top: var(--se-space-3xs);
       letter-spacing: var(--se-tracking-wide-md);
     }
   }
 
   @media (max-width: 48rem) {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--se-space-xl);
   }
 }
 
@@ -542,7 +540,7 @@
   background: url('/picture/about/backoffice.jpg')
     center / cover;
   border-radius: var(--se-radius-lg);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4.2 / 5;
   box-shadow: var(--se-shadow-lg);
   min-height: 25rem;
 }

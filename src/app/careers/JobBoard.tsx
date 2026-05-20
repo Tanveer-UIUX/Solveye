@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import type { ReactNode, FormEvent, DragEvent, ChangeEvent } from 'react'
+import type { ReactNode, DragEvent, ChangeEvent } from 'react'
 import s from './JobBoard.module.scss'
 
 export interface Job {
@@ -142,7 +142,6 @@ export default function JobBoard({ jobs }: JobBoardProps) {
             jobTitle={selected.title}
             submitted={submitted}
             onSubmit={() => setSubmitted(true)}
-            onBack={() => setView('detail')}
             onClose={closeModal}
           />
         )}
@@ -304,18 +303,18 @@ function ApplyForm({
   jobTitle,
   submitted,
   onSubmit,
-  onBack,
   onClose,
 }: {
   jobTitle: string
   submitted: boolean
   onSubmit: () => void
-  onBack: () => void
   onClose: () => void
 }) {
   const [file, setFile] = useState<File | null>(null)
   const [dragging, setDragging] = useState(false)
   const [consent, setConsent] = useState<'yes' | 'no' | ''>('')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   function handleFile(f: File | null) {
@@ -333,10 +332,26 @@ function ApplyForm({
     handleFile(e.target.files?.[0] ?? null)
   }
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (consent !== 'yes') return
-    onSubmit()
+    setError('')
+    setLoading(true)
+    try {
+      const fd = new FormData(e.currentTarget)
+      fd.set('consent', consent)
+      fd.set('jobRole', jobTitle)
+      if (file) fd.set('file', file)
+
+      const res = await fetch('/api/apply', { method: 'POST', body: fd })
+      const data = await res.json()
+      if (!res.ok) { setError(data.error ?? 'Submission failed.'); return }
+      onSubmit()
+    } catch {
+      setError('Network error. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const CloseIcon = () => (
@@ -457,12 +472,14 @@ function ApplyForm({
               </div>
             </div>
 
+            {error && <p className={s.consentWarning}>{error}</p>}
+
             <div className={s.modalActions}>
-              <button type="submit" className={s.btnPrimary} disabled={consent !== 'yes'}>
-                Submit application <span className={s.arrow}>&rarr;</span>
+              <button type="submit" className={s.btnPrimary} disabled={consent !== 'yes' || loading}>
+                {loading ? 'Submitting…' : <>Submit application <span className={s.arrow}>&rarr;</span></>}
               </button>
-              <button type="button" className={s.btnSecondary} onClick={onBack}>
-                Back to role
+              <button type="button" className={s.btnSecondary} onClick={onClose} disabled={loading}>
+                Cancel
               </button>
             </div>
 

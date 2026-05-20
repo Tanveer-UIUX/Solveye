@@ -44,6 +44,8 @@ export default function SubmitResumeModal({ label = 'Submit Resume', triggerClas
   const [form, setForm] = useState<FormState>(INITIAL)
   const [dragging, setDragging] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => { setMounted(true) }, [])
@@ -82,10 +84,31 @@ export default function SubmitResumeModal({ label = 'Submit Resume', triggerClas
     handleFile(e.dataTransfer.files[0] ?? null)
   }
 
-  function onSubmit(e: { preventDefault(): void }) {
+  async function onSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
     if (form.consent !== 'yes') return
-    setSubmitted(true)
+    setError('')
+    setLoading(true)
+    try {
+      const fd = new FormData()
+      fd.append('firstName', form.firstName)
+      fd.append('lastName',  form.lastName)
+      fd.append('email',     form.email)
+      fd.append('phone',     form.phone)
+      fd.append('linkedin',  form.linkedin)
+      fd.append('jobTitle',  form.jobTitle)
+      fd.append('consent',   form.consent)
+      if (form.file) fd.append('file', form.file)
+
+      const res = await fetch('/api/resume', { method: 'POST', body: fd })
+      const data = await res.json()
+      if (!res.ok) { setError(data.error ?? 'Submission failed.'); return }
+      setSubmitted(true)
+    } catch {
+      setError('Network error. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const canSubmit =
@@ -225,11 +248,13 @@ export default function SubmitResumeModal({ label = 'Submit Resume', triggerClas
                     </div>
                   </div>
 
+                  {error && <p className={s.consentWarning}>{error}</p>}
+
                   <div className={s.modalActions}>
-                    <button type="submit" className={s.btnPrimary} disabled={!canSubmit}>
-                      Submit resume <span className={s.arrow}>&rarr;</span>
+                    <button type="submit" className={s.btnPrimary} disabled={!canSubmit || loading}>
+                      {loading ? 'Submitting…' : <> Submit resume <span className={s.arrow}>&rarr;</span></>}
                     </button>
-                    <button type="button" className={s.btnSecondary} onClick={close}>
+                    <button type="button" className={s.btnSecondary} onClick={close} disabled={loading}>
                       Cancel
                     </button>
                   </div>
