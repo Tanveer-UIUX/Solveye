@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import type { ReactNode, FormEvent } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import type { ReactNode, FormEvent, DragEvent, ChangeEvent } from 'react'
 import s from './JobBoard.module.scss'
 
 export interface Job {
@@ -23,6 +23,12 @@ interface JobBoardProps {
 }
 
 const DEPTS = ['All', 'Operations', 'Engineering', 'Customer Success', 'People'] as const
+
+const ACCEPTED_TYPES = [
+  'application/pdf',
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+]
 
 export default function JobBoard({ jobs }: JobBoardProps) {
   const [dept, setDept] = useState<string>('All')
@@ -187,7 +193,9 @@ function Modal({
         role="dialog"
         aria-modal="true"
       >
-        {children}
+        <div className={s.modalScroll}>
+          {children}
+        </div>
       </div>
     </div>
   )
@@ -305,10 +313,38 @@ function ApplyForm({
   onBack: () => void
   onClose: () => void
 }) {
+  const [file, setFile] = useState<File | null>(null)
+  const [dragging, setDragging] = useState(false)
+  const [consent, setConsent] = useState<'yes' | 'no' | ''>('')
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  function handleFile(f: File | null) {
+    if (!f) return
+    if (ACCEPTED_TYPES.includes(f.type)) setFile(f)
+  }
+
+  function onDrop(e: DragEvent<HTMLDivElement>) {
+    e.preventDefault()
+    setDragging(false)
+    handleFile(e.dataTransfer.files[0] ?? null)
+  }
+
+  function onChange(e: ChangeEvent<HTMLInputElement>) {
+    handleFile(e.target.files?.[0] ?? null)
+  }
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (consent !== 'yes') return
     onSubmit()
   }
+
+  const CloseIcon = () => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  )
 
   return (
     <>
@@ -318,24 +354,8 @@ function ApplyForm({
           <h3>Tell us about yourself.</h3>
           <p>A human reads every application. We&rsquo;ll reply within 5 business days.</p>
         </div>
-        <button
-          type="button"
-          className={s.modalClose}
-          onClick={onClose}
-          aria-label="Close"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
+        <button type="button" className={s.modalClose} onClick={onClose} aria-label="Close">
+          <CloseIcon />
         </button>
       </div>
 
@@ -343,16 +363,14 @@ function ApplyForm({
         {submitted ? (
           <div className={s.success}>
             <strong>&#10003; Application received</strong>
-            We&rsquo;ll be in touch within 5 business days at the email you
-            provided.
+            We&rsquo;ll be in touch within 5 business days at the email you provided.
             <div className={s.modalActions} style={{ justifyContent: 'center', marginTop: 16 }}>
-              <button type="button" className={s.btnSecondary} onClick={onClose}>
-                Close
-              </button>
+              <button type="button" className={s.btnSecondary} onClick={onClose}>Close</button>
             </div>
           </div>
         ) : (
           <form className={s.form} onSubmit={handleSubmit}>
+
             <div className={s.formRow}>
               <div className={s.field}>
                 <label htmlFor="apply-first">First name</label>
@@ -363,27 +381,91 @@ function ApplyForm({
                 <input id="apply-last" name="last" required />
               </div>
             </div>
-            <div className={s.field}>
-              <label htmlFor="apply-email">Email</label>
-              <input id="apply-email" name="email" type="email" required />
+
+            <div className={s.formRow}>
+              <div className={s.field}>
+                <label htmlFor="apply-email">Email</label>
+                <input id="apply-email" name="email" type="email" required />
+              </div>
+              <div className={s.field}>
+                <label htmlFor="apply-phone">Contact number</label>
+                <input id="apply-phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" required />
+              </div>
             </div>
+
             <div className={s.field}>
-              <label htmlFor="apply-link">LinkedIn or portfolio</label>
-              <input id="apply-link" name="linkedin" placeholder="https://..." />
+              <label htmlFor="apply-link">LinkedIn profile</label>
+              <input id="apply-link" name="linkedin" placeholder="https://linkedin.com/in/…" />
             </div>
+
+            <div className={s.field}>
+              <label htmlFor="apply-title">Current job title</label>
+              <input id="apply-title" name="title" placeholder="e.g. Senior Medical Biller" required />
+            </div>
+
             <div className={s.field}>
               <label htmlFor="apply-why">What draws you to Solveye?</label>
               <textarea id="apply-why" name="why" rows={4} required />
             </div>
 
+            <div
+              className={`${s.dropZone} ${dragging ? s.dragging : ''} ${file ? s.hasFile : ''}`}
+              onDragOver={e => { e.preventDefault(); setDragging(true) }}
+              onDragLeave={() => setDragging(false)}
+              onDrop={onDrop}
+              onClick={() => fileInputRef.current?.click()}
+              role="button"
+              tabIndex={0}
+              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') fileInputRef.current?.click() }}
+              aria-label="Upload resume — PDF, DOC or DOCX"
+            >
+              <input ref={fileInputRef} type="file" accept=".pdf,.doc,.docx" className={s.fileInput} onChange={onChange} />
+              <div className={s.dropIcon}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+              </div>
+              {file ? (
+                <div className={s.fileName}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  {file.name}
+                </div>
+              ) : (
+                <>
+                  <div className={s.dropTitle}>Drag &amp; drop your resume here</div>
+                  <div className={s.dropSub}>or <span className={s.browse}>click to browse</span></div>
+                  <div className={s.dropHint}>PDF, DOC, DOCX — max 10 MB</div>
+                </>
+              )}
+            </div>
+
+            <div className={s.consent}>
+              <p className={s.consentText}>
+                I consent to Solveye collecting and storing my personal data for recruitment purposes, in accordance with the{' '}
+                <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+              </p>
+              <div className={s.radioGroup}>
+                <label className={`${s.radioLabel} ${consent === 'yes' ? s.radioSelected : ''}`}>
+                  <input type="radio" name="apply-consent" value="yes" checked={consent === 'yes'} onChange={() => setConsent('yes')} />
+                  <span className={s.radioDot} />
+                  Yes, I agree
+                </label>
+              </div>
+            </div>
+
             <div className={s.modalActions}>
-              <button type="submit" className={s.btnPrimary}>
+              <button type="submit" className={s.btnPrimary} disabled={consent !== 'yes'}>
                 Submit application <span className={s.arrow}>&rarr;</span>
               </button>
               <button type="button" className={s.btnSecondary} onClick={onBack}>
                 Back to role
               </button>
             </div>
+
           </form>
         )}
       </div>

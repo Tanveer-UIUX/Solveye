@@ -1,13 +1,11 @@
 // =============================================
-// SUBMIT RESUME MODAL
+// SUBMIT RESUME MODAL — architecture mirrors JobBoard apply form
 // =============================================
 
 // ---- Trigger button ----
 .trigger {
   display: inline-flex;
   align-items: center;
-  gap: var(--se-space-3xs);
-  padding: var(--se-space-xs) var(--se-space-lg);
   gap: var(--se-space-3xs);
   padding: var(--se-space-xs) var(--se-space-lg);
   border-radius: var(--se-radius-sm);
@@ -30,21 +28,19 @@
   }
 }
 
-// ---- Overlay ----
+// ---- Overlay — blue-tinted, subtle blur (matches JobBoard) ----
 .overlay {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(11, 18, 32, 0.65);
-  backdrop-filter: blur(0.25rem);
-  -webkit-backdrop-filter: blur(0.25rem);
-  backdrop-filter: blur(0.25rem);
-  -webkit-backdrop-filter: blur(0.25rem);
+  background: rgba(11, 46, 104, 0.55);
+  backdrop-filter: blur(var(--se-space-4xs));
+  -webkit-backdrop-filter: blur(var(--se-space-4xs));
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--se-space-xl);
-  animation: fadeIn 0.18s ease;
+  animation: fadeIn 0.2s ease;
 }
 
 @keyframes fadeIn {
@@ -52,74 +48,75 @@
   to   { opacity: 1; }
 }
 
-// ---- Modal container ----
+// ---- Modal panel — 35rem max-width, rise animation (matches JobBoard modalApply) ----
 .modal {
   background: white;
   border-radius: var(--se-radius-lg);
-  box-shadow: var(--se-shadow-lg), 0 0 0 1px var(--se-color-line);
   width: 100%;
-  max-width: 38.75rem;
-  max-height: 92vh;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--se-color-slate-200) transparent;
-  animation: slideUp 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes slideUp {
-  from { transform: translateY(var(--se-space-lg)); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
-}
-
-// ---- Header ----
-.header {
+  max-width: 45rem;
+  max-height: 90vh;
+  overflow: hidden;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--se-space);
-  padding: 1.75rem var(--se-space-d1) var(--se-space-xl);
-  gap: var(--se-space);
-  padding: 1.75rem var(--se-space-d1) var(--se-space-xl);
-  border-bottom: 1px solid var(--se-color-line);
-  position: sticky;
-  top: 0;
-  background: white;
-  z-index: 1;
-  border-radius: var(--se-radius-lg) var(--se-radius-lg) 0 0;
+  flex-direction: column;
+  box-shadow: var(--se-shadow-lg);
+  animation: rise 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 
-  h2 {
+.modalScroll {
+  overflow-y: auto;
+  flex: 1;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(var(--se-space-xs)); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// ---- Modal header (matches JobBoard .modalHeader) ----
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.75rem var(--se-space-d1) var(--se-space);
+  gap: var(--se-space);
+
+  h3 {
+    margin: var(--se-space-3xs) 0 0;
     font-size: var(--se-text-xl);
     font-weight: var(--se-weight-bold);
     letter-spacing: var(--se-tracking-display);
     color: var(--se-color-blue-900);
-    margin-top: var(--se-space-3xs);
-    line-height: 1.15;
+  }
+
+  p {
+    color: var(--se-color-slate-600);
+    margin-top: var(--se-space-4xs);
+    font-size: var(--se-text-sm);
   }
 }
 
-.eyebrow {
+// ---- Eyebrow (matches JobBoard .modalEyebrow) ----
+.modalEyebrow {
   font-family: var(--font-eyebrow), ui-sans-serif, sans-serif;
   font-size: var(--se-text-xs);
   text-transform: uppercase;
   letter-spacing: var(--se-tracking-widest);
-  color: var(--se-color-blue-500);
+  color: var(--se-color-blue-700);
   font-weight: var(--se-weight-medium);
 }
 
-.closeBtn {
+// ---- Close button (matches JobBoard .modalClose) ----
+.modalClose {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--se-space-3xs);
   display: grid;
   place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: var(--se-radius-sm);
+  color: var(--se-color-slate-500);
   background: var(--se-color-slate-100);
-  color: var(--se-color-slate-600);
   border: none;
-  cursor: pointer;
   flex-shrink: 0;
-  margin-top: 0.25rem;
+  cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
 
   &:hover {
@@ -128,62 +125,61 @@
   }
 }
 
-// ---- Form ----
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--se-space-md);
-  padding: 1.75rem var(--se-space-d1) var(--se-space-d1);
-  gap: var(--se-space-md);
-  padding: 1.75rem var(--se-space-d1) var(--se-space-d1);
+// ---- Modal body (matches JobBoard .modalBody) ----
+.modalBody {
+  padding: 0 var(--se-space-d1) var(--se-space-d1);
 }
 
-// Two-column row
-.row2 {
+// ---- Form (matches JobBoard .form) ----
+.form {
+  display: grid;
+  gap: var(--se-space);
+}
+
+// Two-column row (matches JobBoard .formRow)
+.formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--se-space-sm);
+  gap: var(--se-space);
 
-  @media (max-width: 32.5rem) {
+  @media (max-width: 30rem) {
     grid-template-columns: 1fr;
   }
 }
 
-// Field
+// ---- Field (matches JobBoard .field) ----
 .field {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--se-space-4xs);
 
   label {
-    font-size: var(--se-text-sm);
+    font-size: var(--se-text-13);
     font-weight: var(--se-weight-medium);
-    color: var(--se-color-blue-900);
-    letter-spacing: var(--se-tracking-snug);
+    color: var(--se-color-slate-700);
   }
 
-  input {
-    width: 100%;
+  input,
+  textarea {
     padding: var(--se-space-2xs) var(--se-space-sm);
-    border: 1.0.3125rem solid var(--se-color-line-2);
-    padding: var(--se-space-2xs) var(--se-space-sm);
-    border: 1.0.3125rem solid var(--se-color-line-2);
+    border: 1px solid var(--se-color-line-2);
     border-radius: var(--se-radius-sm);
-    font-family: var(--se-font-sans);
-    font-size: var(--se-text-de);
-    color: var(--se-color-blue-900);
     background: white;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    outline: none;
+    font-size: var(--se-text-15);
+    font-family: inherit;
+    color: var(--se-color-blue-900);
+    resize: vertical;
 
     &::placeholder {
       color: var(--se-color-slate-400);
     }
+  }
 
-    &:focus {
-      border-color: var(--se-color-blue-500);
-      box-shadow: 0 0 0 0.1875rem rgba(53, 115, 220, 0.12);
-    }
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--se-color-blue-900);
+    box-shadow: 0 0 0 0.1875rem rgba(11, 46, 104, 0.08);
   }
 }
 
@@ -191,19 +187,17 @@
   color: var(--se-color-red-500);
 }
 
-// Select wrapper
+// ---- Select wrapper ----
 .selectWrap {
   position: relative;
 
   select {
     width: 100%;
     padding: var(--se-space-2xs) 2.25rem var(--se-space-2xs) var(--se-space-sm);
-    border: 1.0.3125rem solid var(--se-color-line-2);
-    padding: var(--se-space-2xs) 2.25rem var(--se-space-2xs) var(--se-space-sm);
-    border: 1.0.3125rem solid var(--se-color-line-2);
+    border: 1px solid var(--se-color-line-2);
     border-radius: var(--se-radius-sm);
-    font-family: var(--se-font-sans);
-    font-size: var(--se-text-de);
+    font-family: inherit;
+    font-size: var(--se-text-15);
     color: var(--se-color-blue-900);
     background: white;
     outline: none;
@@ -213,8 +207,8 @@
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
 
     &:focus {
-      border-color: var(--se-color-blue-500);
-      box-shadow: 0 0 0 0.1875rem rgba(53, 115, 220, 0.12);
+      border-color: var(--se-color-blue-900);
+      box-shadow: 0 0 0 0.1875rem rgba(11, 46, 104, 0.08);
     }
   }
 
@@ -226,9 +220,6 @@
     transform: translateY(-50%);
     width: 0;
     height: 0;
-    border-left: 0.3125rem solid transparent;
-    border-right: 0.3125rem solid transparent;
-    border-top: 0.3125rem solid var(--se-color-slate-500);
     border-left: 0.3125rem solid transparent;
     border-right: 0.3125rem solid transparent;
     border-top: 0.3125rem solid var(--se-color-slate-500);
@@ -252,7 +243,7 @@
 
   &:hover,
   &:focus-visible {
-    border-color: var(--se-color-blue-500);
+    border-color: var(--se-color-blue-900);
     background: var(--se-color-blue-50);
     outline: none;
   }
@@ -273,9 +264,6 @@
 }
 
 .dropIcon {
-  width: var(--se-space-d3);
-  height: var(--se-space-d3);
-  border-radius: var(--se-space-xs);
   width: var(--se-space-d3);
   height: var(--se-space-d3);
   border-radius: var(--se-space-xs);
@@ -362,10 +350,7 @@
   align-items: center;
   gap: var(--se-space-3xs);
   padding: 0.5625rem var(--se-space-md);
-  border: 1.0.3125rem solid var(--se-color-line-2);
-  gap: var(--se-space-3xs);
-  padding: 0.5625rem var(--se-space-md);
-  border: 1.0.3125rem solid var(--se-color-line-2);
+  border: 1px solid var(--se-color-line-2);
   border-radius: var(--se-radius-pill);
   font-size: var(--se-text-sm);
   font-weight: var(--se-weight-medium);
@@ -400,8 +385,6 @@
       display: block;
       width: var(--se-space-3xs);
       height: var(--se-space-3xs);
-      width: var(--se-space-3xs);
-      height: var(--se-space-3xs);
       border-radius: 50%;
       background: var(--se-color-blue-600);
     }
@@ -421,8 +404,6 @@
       display: block;
       width: var(--se-space-3xs);
       height: var(--se-space-3xs);
-      width: var(--se-space-3xs);
-      height: var(--se-space-3xs);
       border-radius: 50%;
       background: var(--se-color-red-500);
     }
@@ -430,8 +411,6 @@
 }
 
 .radioDot {
-  width: var(--se-space);
-  height: var(--se-space);
   width: var(--se-space);
   height: var(--se-space);
   border-radius: 50%;
@@ -453,91 +432,85 @@
   margin: 0;
 }
 
-// ---- Submit button ----
-.submitBtn {
+// ---- Modal actions row (matches JobBoard .modalActions) ----
+.modalActions {
+  margin-top: var(--se-space-d1);
+  display: flex;
+  gap: var(--se-space-xs);
+  flex-wrap: wrap;
+}
+
+// ---- Buttons (match JobBoard btnPrimary / btnSecondary exactly) ----
+.btnPrimary {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: var(--se-space-3xs);
-  width: 100%;
-  padding: var(--se-space-sm) 1.75rem;
+  padding: var(--se-space-sm) var(--se-space-xl);
   border-radius: var(--se-radius-sm);
   background: var(--se-color-blue-900);
   color: white;
-  font-family: var(--se-font-sans);
-  font-weight: var(--se-weight-semibold);
-  font-size: var(--se-text-de);
+  font-weight: var(--se-weight-medium);
+  font-size: var(--se-text-15);
   border: none;
   cursor: pointer;
-  transition:
-    background 0.15s ease,
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    opacity 0.15s ease;
+  font-family: inherit;
+  transition: all 0.15s;
 
   &:hover:not(:disabled) {
     background: var(--se-color-blue-600);
     transform: translateY(-1px);
     box-shadow: var(--se-shadow);
 
-    .arrow {
-      transform: translateX(0.1875rem);
-    }
+    .arrow { transform: translateX(0.1875rem); }
   }
 
   &:disabled {
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--se-space-3xs);
+  padding: var(--se-space-sm) var(--se-space-xl);
+  border-radius: var(--se-radius-sm);
+  background: white;
+  color: var(--se-color-blue-900);
+  border: 1px solid var(--se-color-slate-300);
+  font-weight: var(--se-weight-medium);
+  font-size: var(--se-text-15);
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: var(--se-color-blue-900);
   }
 }
 
 .arrow {
   display: inline-block;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s;
 }
 
-// ---- Success state ----
+// ---- Success state (matches JobBoard .success) ----
 .success {
-  padding: 3.25rem var(--se-space-d1) var(--se-space-d3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--se-space);
+  padding: var(--se-space-xl);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #15803d;
+  border-radius: var(--se-radius);
+  font-size: var(--se-text-sm);
+  line-height: var(--se-leading-comfortable);
   text-align: center;
 
-  h3 {
-    font-size: var(--se-text-xl);
-    font-weight: var(--se-weight-bold);
-    color: var(--se-color-blue-900);
-    letter-spacing: var(--se-tracking-display);
-    margin: 0;
-  }
-
-  p {
+  strong {
+    display: block;
+    color: #15803d;
     font-size: var(--se-text-de);
-    color: var(--se-color-slate-600);
-    max-width: 23.75rem;
-    line-height: var(--se-leading-loose);
+    margin-bottom: var(--se-space-4xs);
   }
-
-  .submitBtn {
-    width: auto;
-    padding: var(--se-space-xs) var(--se-space-d1);
-    margin-top: var(--se-space-3xs);
-    padding: var(--se-space-xs) var(--se-space-d1);
-    margin-top: var(--se-space-3xs);
-  }
-}
-
-.successIcon {
-  width: 4.25rem;
-  height: 4.25rem;
-  width: 4.25rem;
-  height: 4.25rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--se-color-green-500), var(--se-color-teal-500));
-  color: white;
-  display: grid;
-  place-items: center;
-  box-shadow: 0 var(--se-space-2xs) 1.75rem calc(-1 * var(--se-space-3xs)) rgba(16, 185, 129, 0.45);
 }
