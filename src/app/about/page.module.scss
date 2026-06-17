@@ -117,7 +117,7 @@
   border-radius: var(--se-radius-lg);
   aspect-ratio: 4 / 3;
   background:
-    url('/picture/about/hero-img.jpg')
+    url('/Picture/about/hero-img.jpg')
     center / cover no-repeat;
   box-shadow: 0 var(--se-space-xl) var(--se-space-d5) calc(-1 * var(--se-space-xl)) rgba(15, 23, 42, 0.22);
   overflow: visible;
@@ -257,7 +257,7 @@
 .originImg {
   border-radius: var(--se-radius-lg);
   aspect-ratio: 5 / 5;
-  background: url('/picture/about/origin.jpg')
+  background: url('/Picture/about/origin.jpg')
     center / cover;
   box-shadow: var(--se-shadow-lg);
   min-height: 25rem;
@@ -408,7 +408,7 @@
     width: var(--se-space-d4);
     height: var(--se-space-d4);
     border-radius: 50%;
-    background: url('/picture/about/maya.jpg')
+    background: url('/Picture/about/maya.jpg')
       center / cover;
     flex-shrink: 0;
   }
@@ -537,7 +537,7 @@
 }
 
 .deiImg {
-  background: url('/picture/about/backoffice.jpg')
+  background: url('/Picture/about/backoffice.jpg')
     center / cover;
   border-radius: var(--se-radius-lg);
   aspect-ratio: 4.2 / 5;

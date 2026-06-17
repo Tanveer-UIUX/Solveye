@@ -44,7 +44,7 @@ const SERVICES: Service[] = [
       { num: '28 days', label: 'Avg days in AR' },
       { num: '+32%', label: 'Net collection lift' },
     ],
-    img: '/picture/services/medical-billing.jpg',
+    img: '/Picture/services/medical-billing.jpg',
     cta: { href: '/services', label: 'See full service detail', style: 'primary' },
   },
   {
@@ -64,7 +64,7 @@ const SERVICES: Service[] = [
       { num: '99.1%', label: 'Coding accuracy (audited)' },
       { num: '≤ 24 hr', label: 'Chart-to-claim turnaround' },
     ],
-    img: '/picture/services/medical-coding.jpg',
+    img: '/Picture/services/medical-coding.jpg',
     cta: { href: '/contact', label: 'Talk to a coding lead', style: 'link' },
   },
   {
@@ -84,7 +84,7 @@ const SERVICES: Service[] = [
       { num: '52 days', label: 'Avg payer enrollment' },
       { num: '100%', label: 'CAQH attestations on time' },
     ],
-    img: '/picture/services/medical-credentialing.jpg',
+    img: '/Picture/services/medical-credentialing.jpg',
     cta: { href: '/contact', label: 'Talk to credentialing', style: 'link' },
   },
   {
@@ -104,7 +104,7 @@ const SERVICES: Service[] = [
       { num: '$3.2M', label: 'Avg yr-1 recovery' },
       { num: '-41%', label: 'Days in AR reduction' },
     ],
-    img: '/picture/services/accounts-receivable-recovery.jpg',
+    img: '/Picture/services/accounts-receivable-recovery.jpg',
     cta: { href: '/contact', label: 'Audit my AR', style: 'link' },
   },
   {
@@ -124,7 +124,7 @@ const SERVICES: Service[] = [
       { num: '2.4 hr', label: 'Median auth turnaround' },
       { num: '96%', label: 'First-attempt approval' },
     ],
-    img: '/picture/services/prior-authorization.jpg',
+    img: '/Picture/services/prior-authorization.jpg',
     cta: { href: '/contact', label: 'Talk to prior auth', style: 'link' },
   },
   {
@@ -144,7 +144,7 @@ const SERVICES: Service[] = [
       { num: '+47%', label: 'Patient self-service pay' },
       { num: '11 days', label: 'Avg time to patient pay' },
     ],
-    img: '/picture/services/patient-statements.jpg',
+    img: '/Picture/services/patient-statements.jpg',
     cta: { href: '/contact', label: 'See statements demo', style: 'link' },
   },
   {
@@ -164,7 +164,7 @@ const SERVICES: Service[] = [
       { num: '15 min', label: 'Dashboard refresh' },
       { num: '40+', label: 'Pre-built reports' },
     ],
-    img: '/picture/services/practice-analytics.jpg',
+    img: '/Picture/services/practice-analytics.jpg',
     cta: { href: '/contact', label: 'See dashboards', style: 'link' },
   },
   {
@@ -184,7 +184,7 @@ const SERVICES: Service[] = [
       { num: 'SOC 2 II', label: 'Annually re-attested' },
       { num: 'HITRUST', label: 'r2 certified' },
     ],
-    img: '/picture/services/compliance-HIPAA.jpg',
+    img: '/Picture/services/compliance-HIPAA.jpg',
     cta: { href: '/contact', label: 'Compliance overview', style: 'link' },
   },
 ]

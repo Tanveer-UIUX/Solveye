@@ -114,21 +114,21 @@ const DIFF_ITEMS = [
 
 const INSIGHTS = [
   {
-    img: '/picture/index/denial-taxonomy.jpg',
+    img: '/Picture/Index/denial-taxonomy.jpg',
     tag: 'Playbook',
     time: '8 min read',
     title: 'The 2026 denial taxonomy: 14 codes that move the needle most.',
     desc: 'A working categorization our AR team uses to triage denials by recoverability and effort.',
   },
   {
-    img: '/picture/index/HITRUST.png',
+    img: '/Picture/Index/HITRUST.png',
     tag: 'Compliance',
     time: '12 min read',
     title: 'HIPAA, SOC 2, HITRUST: which one actually matters for your vendor.',
     desc: 'Three frameworks, three different promises. Here\u2019s how to read what your BPO is selling you.',
   },
   {
-    img: '/picture/index/credentialing.jpg',
+    img: '/Picture/Index/credentialing.jpg',
     tag: 'Case study',
     time: '6 min read',
     title: 'How Coastal Ortho cut credentialing from 184 to 52 days.',
