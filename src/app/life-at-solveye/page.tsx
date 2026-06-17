@@ -7,7 +7,11 @@ import s from './page.module.scss'
 export const metadata: Metadata = {
   title: 'Life at Solveye — Culture & a Typical Week',
   description:
-    'Life at Solveye is a rhythm — daily standups, weekly demos, quarterly retros. 92% of teammates would recommend it. Here\'s what a week actually looks like.',
+    "Inside Solveye's healthcare BPO culture: pod teams, no-meeting focus blocks, weekly demos & 92% team satisfaction. See what a day and first year really look like.",
+  alternates: {
+    canonical: 'https://www.solveye.com/life-at-solveye',
+  },
+  robots: 'index,follow',
 }
 
 const VALUES = [

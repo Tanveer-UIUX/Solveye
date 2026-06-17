@@ -6,7 +6,11 @@ import s from './page.module.scss'
 export const metadata: Metadata = {
   title: 'About — Solveye',
   description:
-    "Solveye is rebuilding the back office of healthcare, one pod at a time. 1,200+ specialists serving 480+ customers across 38 states.",
+    "Learn how Solveye's pod-based RCM model serves 480+ practices across 38 states. 1,200+ HIPAA-certified billing & coding specialists since 2014.",
+  alternates: {
+    canonical: 'https://www.solveye.com/about',
+  },
+  robots: 'index,follow',
 }
 
 const TIMELINE = [

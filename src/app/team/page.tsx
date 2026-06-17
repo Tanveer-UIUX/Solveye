@@ -48,7 +48,11 @@ const DEPT_SECTIONS: DeptSection[] = [
 export const metadata: Metadata = {
   title: 'Team — Solveye',
   description:
-    'Meet the operators, clinicians, and engineers who built Solveye — the leadership team and department heads behind the platform.',
+    'Meet the operators, clinicians & engineers behind Solveye\'s healthcare RCM platform — leadership across medical billing, coding, engineering & customer success.',
+  alternates: {
+    canonical: 'https://www.solveye.com/team',
+  },
+  robots: 'index,follow',
 }
 
 export default function TeamPage() {

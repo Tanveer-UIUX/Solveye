@@ -8,7 +8,11 @@ import s from './page.module.scss'
 export const metadata: Metadata = {
   title: 'Careers — Solveye',
   description:
-    "Build a career, not just a CV. We're hiring billers, coders, engineers, AR specialists, and customer success leaders across Philadelphia, Austin, Hyderabad, Manila, and remote.",
+    "Join Solveye's healthcare RCM team. Open roles in medical billing, coding, AR recovery, engineering & customer success — Philadelphia, Austin, Hyderabad, Manila & remote.",
+  alternates: {
+    canonical: 'https://www.solveye.com/careers',
+  },
+  robots: 'index,follow',
 }
 
 const REASONS = [

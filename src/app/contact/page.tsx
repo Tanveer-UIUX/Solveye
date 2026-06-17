@@ -6,7 +6,11 @@ import s from './page.module.scss'
 export const metadata: Metadata = {
   title: 'Contact — Solveye',
   description:
-    'Reach out to Solveye for a demo, free AR audit, or general inquiry. Real humans, same-day replies.',
+    'Contact Solveye for a free AR audit, medical billing demo, or RCM inquiry. HIPAA-compliant. Real humans respond within one business day.',
+  alternates: {
+    canonical: 'https://www.solveye.com/contact',
+  },
+  robots: 'index,follow',
 }
 
 const CHANNELS = [

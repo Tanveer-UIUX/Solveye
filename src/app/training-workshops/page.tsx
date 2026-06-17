@@ -8,7 +8,11 @@ import s from './page.module.scss'
 export const metadata: Metadata = {
   title: 'Training & Workshops — Solveye',
   description:
-    'Every Solveye specialist completes 96+ hours of structured training their first year. Six tracks, live in-person workshops, open enrollment — here\'s how it works.',
+    'Solveye specialists complete 96+ hours of RCM training in year one. Six certification tracks, live workshops & open enrollment for billers, coders & AR specialists.',
+  alternates: {
+    canonical: 'https://www.solveye.com/training-workshops',
+  },
+  robots: 'index,follow',
 }
 
 const TRACKS = [

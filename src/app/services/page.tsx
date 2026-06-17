@@ -7,7 +7,11 @@ import s from './page.module.scss'
 export const metadata: Metadata = {
   title: 'Services — Solveye',
   description:
-    'Eight services. One pod. From eligibility to appeals, Solveye runs the operational backbone of healthcare practices.',
+    'Full-cycle healthcare RCM services: medical billing, coding, credentialing, AR recovery, prior auth & analytics — delivered by specialist pods for clinics & hospitals.',
+  alternates: {
+    canonical: 'https://www.solveye.com/services',
+  },
+  robots: 'index,follow',
 }
 
 interface Service {
