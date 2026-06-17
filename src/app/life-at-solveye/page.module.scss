@@ -194,9 +194,12 @@
   background: none;
   border: none;
   font-family: inherit;
-  transition: background 0.18s ease, color 0.18s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 
-  &:hover { color: var(--se-color-slate-900); }
+  &:hover {
+    color: var(--se-color-blue-900);
+    background: var(--se-color-slate-100);
+  }
 }
 
 .tlTabActive {

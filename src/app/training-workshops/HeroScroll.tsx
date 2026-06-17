@@ -1,6 +1,4 @@
-'use client'
-import { useState } from 'react'
-import s from './page.module.scss'
+import HeroScrollClient from './HeroScrollClient'
 
 const COL1 = [
   'https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=500&q=80',
@@ -21,47 +19,5 @@ const COL2 = [
 ]
 
 export default function HeroScroll() {
-  const [paused, setPaused] = useState(false)
-
-  return (
-    <div className={s.hsVisual}>
-      <div className={`${s.hsTrack} ${paused ? s.hsPaused : ''}`}>
-        <div className={s.hsCol}>
-          {[...COL1, ...COL1].map((url, i) => (
-            <div
-              key={i}
-              className={s.hsCard}
-              style={{ backgroundImage: `url('${url}')` }}
-            />
-          ))}
-        </div>
-        <div className={`${s.hsCol} ${s.hsColOffset}`}>
-          {[...COL2, ...COL2].map((url, i) => (
-            <div
-              key={i}
-              className={s.hsCard}
-              style={{ backgroundImage: `url('${url}')` }}
-            />
-          ))}
-        </div>
-      </div>
-
-      <button
-        className={s.hsPauseBtn}
-        onClick={() => setPaused((p) => !p)}
-        aria-label={paused ? 'Play' : 'Pause'}
-      >
-        {paused ? (
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <polygon points="5,3 19,12 5,21" />
-          </svg>
-        ) : (
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <rect x="6" y="4" width="4" height="16" rx="1" />
-            <rect x="14" y="4" width="4" height="16" rx="1" />
-          </svg>
-        )}
-      </button>
-    </div>
-  )
+  return <HeroScrollClient col1={COL1} col2={COL2} />
 }

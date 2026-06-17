@@ -244,7 +244,7 @@
 .heroPhoto {
   position: absolute;
   inset: 0;
-  background-image: url('../../public/Picture/Index/Pic2.jpg');
+  background-image: url('/Picture/Index/Pic2.jpg');
   background-size: cover;
   background-position: center;
   border-radius: var(--se-radius-lg);
@@ -602,7 +602,7 @@
 }
 
 .diffImage {
-  background: url('../../public/Picture//Index/Pic3.jpg') center / cover;
+  background: url('/Picture/Index/Pic3.jpg') center / cover;
   border-radius: var(--se-radius-lg);
   align-self: stretch;
   min-height: 100%;

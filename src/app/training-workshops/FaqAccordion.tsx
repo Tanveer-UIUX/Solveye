@@ -1,16 +1,14 @@
-'use client'
-
-import { useState } from 'react'
 import s from './page.module.scss'
+import FaqAccordionClient, { type FaqItem } from './FaqAccordionClient'
 
-const ITEMS = [
+const ITEMS: FaqItem[] = [
   {
     q: 'Is training on company time, or my time?',
-    a: 'Always on company time. Every hour of training — classroom, self-paced, even certification exam prep — is logged as work hours. If a manager pushes back on this, escalate to People Ops; it\'s policy.',
+    a: "Always on company time. Every hour of training — classroom, self-paced, even certification exam prep — is logged as work hours. If a manager pushes back on this, escalate to People Ops; it's policy.",
   },
   {
     q: 'Who pays for external certifications?',
-    a: 'Solveye pays in full for any certification on our approved list (CPC, CRCR, AAPC specialty certs, AWS Cloud Practitioner, Looker LookML, plus ~20 others). You commit to staying 12 months post-cert — if you leave earlier, you\'d reimburse a prorated amount, which we\'ve actually only enforced twice in 6 years.',
+    a: "Solveye pays in full for any certification on our approved list (CPC, CRCR, AAPC specialty certs, AWS Cloud Practitioner, Looker LookML, plus ~20 others). You commit to staying 12 months post-cert — if you leave earlier, you'd reimburse a prorated amount, which we've actually only enforced twice in 6 years.",
   },
   {
     q: 'Can I take a track that\'s not for my role?',
@@ -18,11 +16,11 @@ const ITEMS = [
   },
   {
     q: 'What if I fail a certification exam?',
-    a: 'Nothing happens. You get a second attempt, paid. We track first-attempt pass rates only to improve the prep program, not as a performance signal. If you fail twice we have a 1:1 to figure out what\'s blocking you — sometimes it\'s the format, sometimes it\'s just the wrong cert.',
+    a: "Nothing happens. You get a second attempt, paid. We track first-attempt pass rates only to improve the prep program, not as a performance signal. If you fail twice we have a 1:1 to figure out what's blocking you — sometimes it's the format, sometimes it's just the wrong cert.",
   },
   {
     q: 'Do trainers come from outside?',
-    a: 'Mostly internal. 14 of our specialists/leads are certified trainers and they teach about 80% of sessions. We bring in outside experts for new technology rollouts (e.g., AI/ML, new payer integrations) and for industry certifications we don\'t internally credential.',
+    a: "Mostly internal. 14 of our specialists/leads are certified trainers and they teach about 80% of sessions. We bring in outside experts for new technology rollouts (e.g., AI/ML, new payer integrations) and for industry certifications we don't internally credential.",
   },
   {
     q: 'Is the training recorded?',
@@ -31,8 +29,6 @@ const ITEMS = [
 ]
 
 export default function FaqAccordion() {
-  const [open, setOpen] = useState<number>(0)
-
   return (
     <section className={s.faq}>
       <div className="container">
@@ -44,24 +40,7 @@ export default function FaqAccordion() {
               Got something not covered? Drop a note in #ask-l-and-d on Slack — usually answered the same day.
             </p>
           </div>
-          <div>
-            {ITEMS.map((item, i) => (
-              <div
-                key={i}
-                className={`${s.faqItem} ${open === i ? s.faqOpen : ''}`}
-              >
-                <button
-                  className={s.faqQ}
-                  onClick={() => setOpen(open === i ? -1 : i)}
-                  aria-expanded={open === i}
-                >
-                  <span>{item.q}</span>
-                  <span className={s.plus}>{open === i ? '−' : '+'}</span>
-                </button>
-                {open === i && <p className={s.faqA}>{item.a}</p>}
-              </div>
-            ))}
-          </div>
+          <FaqAccordionClient items={ITEMS} />
         </div>
       </div>
     </section>

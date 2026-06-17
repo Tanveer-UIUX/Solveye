@@ -1,20 +1,6 @@
-'use client'
+import IntegrationsTabsClient, { type IntegrationsTab } from './IntegrationsTabsClient'
 
-import { useState } from 'react'
-import s from './IntegrationsTabs.module.scss'
-
-interface Tile {
-  mark: string
-  label: string
-}
-
-interface Tab {
-  id: string
-  label: string
-  tiles: Tile[]
-}
-
-const TABS: Tab[] = [
+const TABS: IntegrationsTab[] = [
   {
     id: 'ehr',
     label: 'EHR / EMR',
@@ -72,33 +58,5 @@ const TABS: Tab[] = [
 ]
 
 export default function IntegrationsTabs() {
-  const [active, setActive] = useState(TABS[0].id)
-  const tab = TABS.find((t) => t.id === active) ?? TABS[0]
-
-  return (
-    <div>
-      <div className={s.tabs} role="tablist">
-        {TABS.map((t) => (
-          <button
-            key={t.id}
-            role="tab"
-            aria-selected={active === t.id}
-            className={`${s.tab} ${active === t.id ? s.active : ''}`}
-            onClick={() => setActive(t.id)}
-          >
-            {t.label}
-          </button>
-        ))}
-      </div>
-
-      <div className={s.grid} role="tabpanel">
-        {tab.tiles.map((tile, i) => (
-          <div key={`${tab.id}-${i}`} className={s.tile}>
-            <span className={s.mark}>{tile.mark}</span>
-            {tile.label}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+  return <IntegrationsTabsClient tabs={TABS} />
 }

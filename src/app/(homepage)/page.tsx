@@ -1,9 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import StatCounter from '@/components/StatCounter'
 import SubmitResumeModal from '@/components/careers/SubmitResumeModal'
 import Gallery3D from '@/components/Gallery3D'
 import TestimonialsScroll from '@/components/TestimonialsScroll'
 import s from './page.module.scss'
+
+export const metadata: Metadata = {
+  title: 'Home — Solveye',
+  description:
+    'Medical billing, RCM & credentialing services for clinics, hospitals & health systems. HIPAA & SOC 2 certified. 98% first-pass rate across 480+ practices in 38 states.',
+  alternates: {
+    canonical: 'https://www.solveye.com',
+  },
+  robots: 'index,follow',
+}
 
 /* ---- tiny SVG helpers (inline, no extra deps) ---- */
 const ChevronIcon = () => (
