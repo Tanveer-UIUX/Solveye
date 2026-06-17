@@ -45,7 +45,7 @@ const SERVICES: Service[] = [
       { num: '+32%', label: 'Net collection lift' },
     ],
     img: '/picture/services/medical-billing.jpg',
-    cta: { href: '/medical-billing', label: 'See full service detail', style: 'primary' },
+    cta: { href: '/services', label: 'See full service detail', style: 'primary' },
   },
   {
     id: 'coding',
@@ -525,7 +525,7 @@ export default function ServicesPage() {
               <Link href="/contact#demo" className={s.ctaBtnLight}>
                 Start the audit <span className={s.arrow}>&rarr;</span>
               </Link>
-              <Link href="/medical-billing" className={s.ctaBtnOutline}>
+              <Link href="/services" className={s.ctaBtnOutline}>
                 See billing in detail
               </Link>
             </div>

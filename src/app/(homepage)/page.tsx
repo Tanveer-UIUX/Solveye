@@ -25,7 +25,7 @@ const ChevronIcon = () => (
 
 const SERVICES = [
   {
-    href: '/medical-billing',
+    href: '/services',
     title: 'Medical Billing',
     desc: 'Claim creation, scrubbing, submission, posting, and denials — handled end-to-end with full transparency.',
     icon: (

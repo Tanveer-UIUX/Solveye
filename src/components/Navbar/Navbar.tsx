@@ -28,7 +28,7 @@ export default function Navbar() {
               Services &#9662;
             </Link>
             <div className={s.dropdown}>
-              <Link href="/medical-billing" className={s.dropItem}>
+              <Link href="/services#billing" className={s.dropItem}>
                 <strong>Medical Billing</strong>
                 <small>End-to-end RCM for clinics &amp; hospitals</small>
               </Link>

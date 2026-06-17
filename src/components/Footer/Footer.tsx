@@ -26,7 +26,7 @@ export default function Footer() {
           <div className={s.col}>
             <h5>Services</h5>
             <ul>
-              <li><Link href="/medical-billing">Medical Billing</Link></li>
+              <li><Link href="/services">Medical Billing</Link></li>
               <li><Link href="/services#coding">Medical Coding</Link></li>
               <li><Link href="/services#credentialing">Credentialing</Link></li>
               <li><Link href="/services#ar">AR Recovery</Link></li>
