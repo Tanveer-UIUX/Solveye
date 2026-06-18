@@ -188,9 +188,9 @@ export default function ContactPage() {
 
                 {/* ─── Headset icon ─── */}
                 <circle cx="76" cy="322" r="30" fill="#10b981" />
-                <path d="M64 318 C64 308 71 301 80 301 C89 301 96 308 96 318" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                <rect x="62" y="316" width="8" height="13" rx="4" fill="white" />
-                <rect x="90" y="316" width="8" height="13" rx="4" fill="white" />
+                <path d="M60 325 C60 315 67 308 76 308 C85 308 92 315 92 325" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                <rect x="58" y="323" width="8" height="13" rx="4" fill="white" />
+                <rect x="86" y="323" width="8" height="13" rx="4" fill="white" />
 
                 {/* ─── Decorative dots ─── */}
                 <circle cx="434" cy="293" r="5.5" fill="#185ed4" opacity="0.22" />
