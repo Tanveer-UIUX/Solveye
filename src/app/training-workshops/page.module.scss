@@ -585,9 +585,10 @@
 }
 
 .wgNode {
-  display: grid;
-  place-items: center;
-  padding-top: var(--se-space);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
   z-index: 1;
 
   @media (max-width: 48rem) {
