@@ -100,7 +100,7 @@ export default function ContactPage() {
                 <Link href="/">Home</Link> / Contact
               </div>
               <span className={s.eyebrow}>Talk to Solveye</span>
-              <h1>Real humans. Fast replies.</h1>
+              <h1>Real Humans. Fast Replies.</h1>
               <p className={s.lead}>
                 Whether you want a 30-minute demo, a free 90-day AR audit, or just have a question
                 about HIPAA — pick a channel below and we&rsquo;ll get back to you within one
@@ -238,7 +238,7 @@ export default function ContactPage() {
       <section className={s.offices}>
         <div className="container">
           <span className={s.eyebrow}>Visit us</span>
-          <h2>Our offices.</h2>
+          <h2>Our Offices.</h2>
           <p className={s.officeLead}>
             Pop in for coffee — we mean it. Let your CSM or sales contact know you&rsquo;re coming.
           </p>
@@ -265,7 +265,7 @@ export default function ContactPage() {
       <section className={s.faqSection}>
         <div className="container">
           <span className={s.eyebrow}>Common questions</span>
-          <h2>Before you reach out.</h2>
+          <h2>Before You Reach Out.</h2>
           <div className={s.faqGrid}>
             {FAQ.map((item) => (
               <div key={item.q} className={s.faqItem}>

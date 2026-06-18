@@ -135,7 +135,7 @@ export default function Timeline() {
         <div className={s.secHead}>
           <div>
             <span className={s.eyebrow}>A typical day, week &amp; year</span>
-            <h2>If you joined tomorrow, here&rsquo;s the cadence you&rsquo;d settle into.</h2>
+            <h2>If You Joined Tomorrow, Here&rsquo;s The Cadence You&rsquo;d Settle Into.</h2>
           </div>
         </div>
         <TimelineClient tabs={TABS} />

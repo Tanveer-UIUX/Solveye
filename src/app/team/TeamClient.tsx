@@ -118,7 +118,7 @@ export default function TeamClient({ team, filters, deptSections }: Props) {
           <div className="container">
             <div className={s.secHead}>
               <span className={s.eyebrow}>Executive</span>
-              <h2>Founders &amp; C-suite</h2>
+              <h2>Founders &amp; C-Suite</h2>
             </div>
             <div className={s.leaderGrid}>
               {execMembers.map(m => (
@@ -148,7 +148,7 @@ export default function TeamClient({ team, filters, deptSections }: Props) {
         <div className="container">
           <div className={s.ctaBand}>
             <div>
-              <h2>Want to add your name to this list?</h2>
+              <h2>Want To Add Your Name To This List?</h2>
               <p>We&rsquo;re hiring across operations, engineering, customer success, and people roles in five locations.</p>
             </div>
             <div className={s.ctaButtons}>

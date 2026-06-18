@@ -35,7 +35,7 @@ export default function FaqAccordion() {
         <div className={s.faqGrid}>
           <div>
             <span className={s.eyebrow}>FAQ</span>
-            <h2>Common questions.</h2>
+            <h2>Common Questions.</h2>
             <p className={s.faqNote}>
               Got something not covered? Drop a note in #ask-l-and-d on Slack — usually answered the same day.
             </p>

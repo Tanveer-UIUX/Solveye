@@ -418,8 +418,8 @@ export default function ServicesPage() {
               </div>
               <span className={s.eyebrow}>Eight services. One pod.</span>
               <h1>
-                Everything that turns documentation into deposits — under one
-                roof.
+                Everything That Turns Documentation Into Deposits — Under One
+                Roof.
               </h1>
               <p className={s.lead}>
                 From eligibility to appeals, Solveye runs the operational
@@ -492,7 +492,7 @@ export default function ServicesPage() {
       <section className={s.industries}>
         <div className="container">
           <span className={s.eyebrow}>Specialties we know cold</span>
-          <h2>30+ specialties. One operating model.</h2>
+          <h2>30+ Specialties. One Operating Model.</h2>
           <p className={s.lead}>
             Each Solveye pod is staffed with coders and billers who already know
             your specialty&rsquo;s payer behavior, modifier traps, and
@@ -515,7 +515,7 @@ export default function ServicesPage() {
           <div className={s.ctaBand}>
             <div>
               <span className={s.eyebrow}>Free 30-day audit</span>
-              <h2>Send us 90 days of claim data. We&rsquo;ll send back a recovery model.</h2>
+              <h2>Send Us 90 Days Of Claim Data. We&rsquo;ll Send Back A Recovery Model.</h2>
               <p>
                 No fluff. No 60-page deck. Just a clear view of where dollars
                 are leaking and how a Solveye pod would plug them.

@@ -146,8 +146,8 @@ export default function Home() {
             <div className={s.heroContent}>
               <span className={s.eyebrow}>Healthcare BPO + IT Services</span>
               <h1>
-                Build a healthier{' '}
-                <span className={s.accent}>revenue cycle.</span>
+                Build A Healthier{' '}
+                <span className={s.accent}>Revenue Cycle.</span>
               </h1>
               <p className={s.lead}>
                 Solveye gives clinics, hospitals, and health systems an
@@ -230,7 +230,7 @@ export default function Home() {
           <div className={s.statsHead}>
             <div className={s.statsIntro}>
               <span className={s.eyebrow}>By the numbers</span>
-              <h2>The numbers behind the work.</h2>
+              <h2>The Numbers Behind The Work.</h2>
               <p className={s.lead}>
                 A modern RCM partner is judged by what shows up in the bank
                 account. Here&rsquo;s what our customers see, on average, after
@@ -279,7 +279,7 @@ export default function Home() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>What we do</span>
-              <h2>A complete back-office, run as one team.</h2>
+              <h2>A Complete Back-Office, Run As One Team.</h2>
             </div>
             <Link href="/services" className={s.btnGhost}>
               All services <span className={s.arrow}>&rarr;</span>
@@ -307,7 +307,7 @@ export default function Home() {
           <div className={s.diffGrid}>
             <div className={s.diffContent}>
               <span className={s.eyebrow}>The Solveye difference</span>
-              <h2>Specialists, not seats. Outcomes, not effort.</h2>
+              <h2>Specialists, Not Seats. Outcomes, Not Effort.</h2>
               <p className={s.lead}>
                 Most BPOs sell labor by the hour. We&rsquo;re staffed and
                 incentivized differently — every account gets a named pod with a
@@ -340,7 +340,7 @@ export default function Home() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Office life &amp; rituals</span>
-              <h2>The things that make Solveye, Solveye.</h2>
+              <h2>The Things That Make Solveye, Solveye.</h2>
             </div>
             <Link href="/life-at-solveye" className={s.btnGhostLight}>
               Life at Solveye <span className={s.arrow}>&rarr;</span>
@@ -357,7 +357,7 @@ export default function Home() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>What clients say</span>
-              <h2>Trusted by practices across 38 states.</h2>
+              <h2>Trusted By Practices Across 38 States.</h2>
             </div>
           </div>
           <TestimonialsScroll />
@@ -370,7 +370,7 @@ export default function Home() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Insights</span>
-              <h2>Sharp thinking on RCM, compliance, and operations.</h2>
+              <h2>Sharp Thinking On RCM, Compliance, And Operations.</h2>
             </div>
             <Link href="#" className={s.btnGhost}>
               All articles <span className={s.arrow}>&rarr;</span>
@@ -402,7 +402,7 @@ export default function Home() {
           <div className={s.ctaBand}>
             <div>
               <span className={s.eyebrow}>Ready when you are</span>
-              <h2>See what 30 days with Solveye looks like.</h2>
+              <h2>See What 30 Days With Solveye Looks Like.</h2>
               <p>
                 We&rsquo;ll audit a slice of your AR, model the recovery
                 opportunity, and walk through how a Solveye pod would integrate

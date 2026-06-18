@@ -227,7 +227,7 @@ export default function AboutPage() {
               </div>
               <span className={s.eyebrow}>About Solveye</span>
               <h1>
-                We&rsquo;re rebuilding the back office of healthcare, one pod at a time.
+                We&rsquo;re Rebuilding The Back Office Of Healthcare, One Pod At A Time.
               </h1>
               <p className={s.lead}>
                 Solveye is a healthcare BPO and IT services company that runs the
@@ -304,8 +304,8 @@ export default function AboutPage() {
             <div>
               <span className={s.eyebrow}>Origin</span>
               <h2>
-                Built by operators who&rsquo;d run the back office and knew it
-                could be better.
+                Built By Operators Who&rsquo;d Run The Back Office And Knew It
+                Could Be Better.
               </h2>
               <p>
                 Solveye started in 2014 in a small office above a pharmacy in
@@ -398,8 +398,8 @@ export default function AboutPage() {
         <div className={s.inner}>
           <span className={s.eyebrow}>A letter from our CEO</span>
           <h2>
-            &ldquo;The companies that own this decade will be the ones that
-            take operational quality seriously.&rdquo;
+            &ldquo;The Companies That Own This Decade Will Be The Ones That
+            Take Operational Quality Seriously.&rdquo;
           </h2>
           <div className={s.letter}>
             <p>
@@ -449,7 +449,7 @@ export default function AboutPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>How we work</span>
-              <h2>Nine principles that shape every Solveye day.</h2>
+              <h2>Nine Principles That Shape Every Solveye Day.</h2>
               <div className={s.note}>
               These aren&rsquo;t poster slogans. They&rsquo;re how we make
               hiring decisions, run reviews, and structure compensation.
@@ -481,8 +481,8 @@ export default function AboutPage() {
             <div>
               <span className={s.eyebrow}>Diversity, equity &amp; inclusion</span>
               <h2>
-                Healthcare&rsquo;s back office should look like the patients it
-                serves.
+                Healthcare&rsquo;s Back Office Should Look Like The Patients It
+                Serves.
               </h2>
               <p className={s.lead}>
                 Solveye&rsquo;s strength comes from a workforce that spans 14
@@ -528,7 +528,7 @@ export default function AboutPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Awards &amp; recognition</span>
-              <h2>Recognition we&rsquo;re a little proud of.</h2>
+              <h2>Recognition We&rsquo;re A Little Proud Of.</h2>
             </div>
           </div>
 
@@ -548,7 +548,7 @@ export default function AboutPage() {
       <section id="compliance" className={s.compliance}>
         <div className="container">
           <span className={s.eyebrow}>Compliance &amp; certifications</span>
-          <h2>Built for the audits we hope you never have to do.</h2>
+          <h2>Built For The Audits We Hope You Never Have To Do.</h2>
           <p className={s.lead}>
             Compliance isn&rsquo;t a department at Solveye — it&rsquo;s an
             operating principle. We re-attest annually, share evidence on
@@ -587,7 +587,7 @@ export default function AboutPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Where we work</span>
-              <h2>Four hubs. Twenty-four-hour coverage.</h2>
+              <h2>Four Hubs. Twenty-Four-Hour Coverage.</h2>
               <div className={s.note}>
                 Pods are anchored in one hub but supported around the clock.
                 Coding charts handed off at 8pm ET in Philadelphia are coded by
@@ -625,7 +625,7 @@ export default function AboutPage() {
         <div className="container">
           <div className={s.ctaBand}>
             <div>
-              <h2>Want to work somewhere that actually means it?</h2>
+              <h2>Want To Work Somewhere That Actually Means It?</h2>
               <p>
                 We&rsquo;re hiring billers, coders, AR analysts, engineers, and
                 customer success leaders across all five locations.

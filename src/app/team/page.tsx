@@ -70,8 +70,8 @@ export default function TeamPage() {
             <div>
               <span className={s.eyebrow}>Leadership &amp; department heads</span>
               <h1>
-                The people who<br />
-                actually run Solveye.
+                The People Who<br />
+                Actually Run Solveye.
               </h1>
               <p className={s.lead}>
                 A mix of operators, clinicians, and engineers — most spent the first decade of their

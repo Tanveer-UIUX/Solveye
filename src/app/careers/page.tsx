@@ -453,9 +453,9 @@ export default function CareersPage() {
             <div>
               <span className={s.eyebrow}>Careers at Solveye</span>
               <h1>
-                Ready to make
+                Ready To Make
                 <br />
-                an impact?
+                An Impact?
               </h1>
               <p className={s.lead}>
                 Join our team and embark on a journey full of learning,
@@ -547,7 +547,7 @@ export default function CareersPage() {
             <div className={s.whyImg} />
             <div>
               <span className={s.eyebrow}>Why join us</span>
-              <h2>Five reasons people stay seven years.</h2>
+              <h2>Five Reasons People Stay Seven Years.</h2>
               <p>
                 Median tenure at Solveye is 4.2 years — twice the BPO industry
                 average. Here&rsquo;s what people tell us in exit interviews
@@ -576,7 +576,7 @@ export default function CareersPage() {
         <div className="container">
           <div className={s.hpIntro}>
             <span className={s.eyebrow}>Benefits &amp; perks</span>
-            <h2>The whole package, not just the headline.</h2>
+            <h2>The Whole Package, Not Just The Headline.</h2>
             <p className={s.lead}>
               Benefits vary slightly by location and employment type. Below is
               the US full-time package; international hubs are equivalent in
@@ -602,7 +602,7 @@ export default function CareersPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Open roles</span>
-              <h2>{JOBS.length} open roles right now.</h2>
+              <h2>{JOBS.length} Open Roles Right Now.</h2>
             </div>
           </div>
 
@@ -615,7 +615,7 @@ export default function CareersPage() {
         <div className="container">
           <div className={s.hpIntro}>
             <span className={s.eyebrow}>Hiring process</span>
-            <h2>Five steps. Roughly three weeks. No surprises.</h2>
+            <h2>Five Steps. Roughly Three Weeks. No Surprises.</h2>
             <p className={s.lead}>
               We tell you the steps, the rough timeline, and what we&rsquo;re
               looking for in each one. If we go silent, we&rsquo;re failing —
@@ -645,7 +645,7 @@ export default function CareersPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Voices from the team</span>
-              <h2>In their own words.</h2>
+              <h2>In Their Own Words.</h2>
             </div>
           </div>
 
@@ -675,7 +675,7 @@ export default function CareersPage() {
         <div className="container">
           <div className={s.ctaBand}>
             <div>
-              <h2>Don&rsquo;t see the right role?</h2>
+              <h2>Don&rsquo;t See The Right Role?</h2>
               <p>
                 Send us a note anyway. We&rsquo;re always open to talented
                 coders, billers, and engineers — even if the listing isn&rsquo;t

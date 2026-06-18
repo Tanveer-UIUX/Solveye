@@ -247,7 +247,7 @@ export default function TrainingWorkshopsPage() {
                 <Link href="/">Home</Link> / Training &amp; Workshops
               </div>
               <span className={s.eyebrow}>Learning &amp; development</span>
-              <h1>Trained on Tuesday. Confident by Friday.</h1>
+              <h1>Trained On Tuesday. Confident By Friday.</h1>
               <p className={s.lead}>
                 In healthcare RCM, a missed payer rule isn&rsquo;t a typo — it&rsquo;s a denied claim and a patient who
                 gets billed twice. So we train continuously. Every Solveye specialist completes 96+ hours of structured
@@ -290,7 +290,7 @@ export default function TrainingWorkshopsPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Curriculum</span>
-              <h2>Six tracks. Built for the work people actually do.</h2>
+              <h2>Six Tracks. Built For The Work People Actually Do.</h2>
               <p className={s.lead}>
                 Every specialist completes their core track. Anyone can take any other track on company time.
               </p>
@@ -329,7 +329,7 @@ export default function TrainingWorkshopsPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Formats · 100% on-site at the Solveye office</span>
-              <h2>Live, in-person, face-to-face. That&rsquo;s the whole format philosophy.</h2>
+              <h2>Live, In-Person, Face-To-Face. That&rsquo;s The Whole Format Philosophy.</h2>
               <p className={s.lead}>
                 All workshops run from the Solveye office — no recordings, no async modules, no LMS. We&rsquo;ve
                 measured it: the friction of being in the room together is exactly where high-impact learning happens.
@@ -356,7 +356,7 @@ export default function TrainingWorkshopsPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Workshop series · Skills spotlights</span>
-              <h2>Short, intensive workshops — hosted throughout the year at our Solveye office.</h2>
+              <h2>Short, Intensive Workshops — Hosted Throughout The Year At Our Solveye Office.</h2>
               <p className={s.lead}>
                 No year-long curriculum. No drawn-out modules. Just focused 1–2 day intensives that drop into the
                 calendar when a topic is hot and a trainer is sharp. Open to anyone, attended on company time.
@@ -387,7 +387,7 @@ export default function TrainingWorkshopsPage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Around the office</span>
-              <h2>Workshops that shaped how we train.</h2>
+              <h2>Workshops That Shaped How We Train.</h2>
               <p className={s.lead}>
                 A look back at recent intensives — the rooms, the people, and what came out of them.
               </p>
@@ -426,7 +426,7 @@ export default function TrainingWorkshopsPage() {
       <section className={s.impact}>
         <div className="container">
           <span className={s.eyebrow}>What changes when training is taken seriously</span>
-          <h2>Numbers from the last 12 months.</h2>
+          <h2>Numbers From The Last 12 Months.</h2>
           <p className={s.lead}>
             Measurable shifts that came out of how we train — not anecdotes.
           </p>
@@ -459,7 +459,7 @@ export default function TrainingWorkshopsPage() {
         <div className="container">
           <div className={s.ctaBand}>
             <div>
-              <h2>Want to know what training looks like for a specific role?</h2>
+              <h2>Want To Know What Training Looks Like For A Specific Role?</h2>
               <p>Hop on a call with our L&amp;D team. 20 minutes, no pitch.</p>
             </div>
             <div className={s.ctaButtons}>

@@ -125,7 +125,7 @@ export default function LifeAtSolveyePage() {
                 <Link href="/">Home</Link> / Life at Solveye
               </div>
               <span className={s.eyebrow}>Culture &amp; rhythm</span>
-              <h1>Life at Solveye isn&rsquo;t a vibe. It&rsquo;s a rhythm.</h1>
+              <h1>Life At Solveye Isn&rsquo;t A Vibe. It&rsquo;s A Rhythm.</h1>
               <p className={s.lead}>
                 We move in cycles — daily standups that actually clear blockers, weekly demos that show real work,
                 quarterly retros that close loops. Most teammates can describe their week before it starts. That&rsquo;s
@@ -181,7 +181,7 @@ export default function LifeAtSolveyePage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>What we hire for</span>
-              <h2>Four operating principles, written in plain English.</h2>
+              <h2>Four Operating Principles, Written In Plain English.</h2>
             </div>
           </div>
 
@@ -201,7 +201,7 @@ export default function LifeAtSolveyePage() {
       <section className={s.rituals}>
         <div className="container">
           <span className={s.eyebrow}>Rituals</span>
-          <h2>The handful of things we do — every time, without fail.</h2>
+          <h2>The Handful Of Things We Do — Every Time, Without Fail.</h2>
           <p className={s.lead}>
             Culture is what you actually do, repeatedly. These six rituals show up on every calendar, every quarter.
           </p>
@@ -224,7 +224,7 @@ export default function LifeAtSolveyePage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Around the office</span>
-              <h2>A few moments from the last quarter.</h2>
+              <h2>A Few Moments From The Last Quarter.</h2>
             </div>
           </div>
           <div className={s.colGrid}>
@@ -245,7 +245,7 @@ export default function LifeAtSolveyePage() {
           <div className={s.secHead}>
             <div>
               <span className={s.eyebrow}>Practical stuff</span>
-              <h2>The benefits we lead with — because they actually matter.</h2>
+              <h2>The Benefits We Lead With — Because They Actually Matter.</h2>
             </div>
           </div>
 
@@ -269,7 +269,7 @@ export default function LifeAtSolveyePage() {
           <div className={s.testiGrid}>
             <div>
               <span className={s.eyebrow}>In their words</span>
-              <h2>Real voices.</h2>
+              <h2>Real Voices.</h2>
               <blockquote className={s.quote}>
                 &ldquo;I came in expecting a typical BPO. What I got was a place where my pod lead asked me — on day
                 three — what I thought about a workflow change. I&rsquo;d been there 72 hours. The change shipped two
@@ -290,7 +290,7 @@ export default function LifeAtSolveyePage() {
         <div className="container">
           <div className={s.ctaBand}>
             <div>
-              <h2>If this feels like the rhythm you&rsquo;re looking for —</h2>
+              <h2>If This Feels Like The Rhythm You&rsquo;re Looking For —</h2>
               <p>
                 We&rsquo;re hiring across ops, engineering, clinical, and go-to-market. Open roles update weekly.
               </p>
