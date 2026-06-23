@@ -24,6 +24,13 @@ const ChevronIcon = () => (
   </svg>
 )
 
+const KPI_STRIP = [
+  { end: 32,   suffix: '%', label: 'Increase in net collection' },
+  { end: 41,   suffix: '%', label: 'Less days in AR' },
+  { end: 98,   suffix: '%', label: 'First-pass acceptance' },
+  { end: 1200, suffix: '+', label: 'Certified specialists' },
+]
+
 const SERVICES = [
   {
     href: '/services',
@@ -187,30 +194,14 @@ export default function Home() {
             </div>
           </div>
           <div className={s.statsGrid}>
-            <div>
-              <div className={s.statNum}>
-                <StatCounter end={32}  suffix="%" />
+            {KPI_STRIP.map((kpi) => (
+              <div key={kpi.label} className={s.statItem}>
+                <div className={s.statNum}>
+                  <StatCounter end={kpi.end} suffix={kpi.suffix} />
+                </div>
+                <div className={s.statLabel}>{kpi.label}</div>
               </div>
-              <div className={s.statLabel}>Increase in net collection</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <StatCounter end={41}  suffix="%" />
-              </div>
-              <div className={s.statLabel}>Less days in AR</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <StatCounter end={98}  suffix="%" />
-              </div>
-              <div className={s.statLabel}>First-pass acceptance</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <StatCounter end={1200} suffix="+" />
-              </div>
-              <div className={s.statLabel}>Certified specialists</div>
-            </div>
+            ))}
           </div>
         </div>
         
@@ -252,7 +243,7 @@ export default function Home() {
               <span className={s.badgeIcon} aria-hidden="true">
                 <Image src="/Picture/Index/SOC 2.png" alt="SOC 2" width={48} height={48} style={{ objectFit: 'contain' }} />
               </span>
-              <div>
+              <div className={s.badgeText}>
                 <strong>SOC 2 Type II</strong>
                 <span>Independently audited security controls</span>
               </div>
@@ -262,7 +253,7 @@ export default function Home() {
                <span className={s.badgeIcon} aria-hidden="true">
                 <Image src="/Picture/Index/HIPAA-logo.png" alt="HIPAA" width={48} height={48} style={{ objectFit: 'contain' }} />
               </span>
-              <div>
+              <div className={s.badgeText}>
                 <strong>HIPAA Compliant</strong>
                 <span>Patient data privacy &amp; PHI safeguards</span>
               </div>
@@ -272,7 +263,7 @@ export default function Home() {
               <span className={s.badgeIcon} aria-hidden="true">
                 <Image src="/Picture/Index/HITRUST-logo.png" alt="HITRUST" width={48} height={48} style={{ objectFit: 'contain' }} />
               </span>
-              <div>
+              <div className={s.badgeText}>
                 <strong>HITRUST CSF</strong>
                 <span>Risk-based healthcare security framework</span>
               </div>
@@ -286,7 +277,7 @@ export default function Home() {
       <section className={s.section}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>What we do</span>
               <h2>A Complete Back-Office, Run As One Team.</h2>
             </div>
@@ -330,7 +321,7 @@ export default function Home() {
                     <span className={s.check}>
                       <ChevronIcon />
                     </span>
-                    <div>
+                    <div className={s.diffItemText}>
                       <strong>{item.title}</strong>
                       <p>{item.desc}</p>
                     </div>
@@ -347,7 +338,7 @@ export default function Home() {
       <section className={s.sectionGallery}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Office life &amp; rituals</span>
               <h2>The Things That Make Solveye, Solveye.</h2>
             </div>
@@ -364,7 +355,7 @@ export default function Home() {
       <section className={s.sectionTestimonials}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>What clients say</span>
               <h2>Trusted By Practices Across 38 States.</h2>
             </div>
@@ -377,7 +368,7 @@ export default function Home() {
       <section className={s.sectionInsights}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Insights</span>
               <h2>Sharp Thinking On RCM, Compliance, And Operations.</h2>
             </div>
@@ -413,7 +404,7 @@ export default function Home() {
       <section className={s.section}>
         <div className="container">
           <div className={s.ctaBand}>
-            <div>
+            <div className={s.ctaContent}>
               <span className={s.eyebrow}>Ready when you are</span>
               <h2>See What 30 Days With Solveye Looks Like.</h2>
               <p>
