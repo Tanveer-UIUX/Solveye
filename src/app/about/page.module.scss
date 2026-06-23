@@ -437,6 +437,8 @@
 }
 
 .principle {
+  display: flex;
+  flex-direction: column;
   padding: var(--se-space-d2);
   border-right: 1px solid var(--se-color-line);
   border-bottom: 1px solid var(--se-color-line);
@@ -479,7 +481,7 @@
   }
 
   .means {
-    margin-top: var(--se-space);
+    margin-top: auto;
     padding-top: var(--se-space);
     border-top: 1px solid var(--se-color-line);
     font-size: var(--se-text-13);
