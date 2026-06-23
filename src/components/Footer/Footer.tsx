@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import s from './Footer.module.scss'
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className={s.brandCol}>
             <Link href="/" className={s.brand}>
-              <img src="/logo/SolvEye-Logo.png" alt="SolvEye" />
+              <Image src="/logo/SolvEye-Logo.png" alt="SolvEye" width={140} height={36} />
             </Link>
             <p>
               Healthcare BPO and IT services that move the needle on revenue,

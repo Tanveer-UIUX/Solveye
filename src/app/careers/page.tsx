@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import JobBoard, { type Job } from './JobBoard'
+import Image from 'next/image'
 import AnimatedNumber from '@/components/AnimatedNumber'
 import SubmitResumeModal from '@/components/careers/SubmitResumeModal'
 import s from './page.module.scss'
@@ -496,25 +497,13 @@ export default function CareersPage() {
               </div>
 
               <div className={`${s.arch} ${s.a1}`}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/Picture/careers/header-pic-1.jpg"
-                  alt="Solveye team member"
-                />
+                <Image fill src="/Picture/careers/header-pic-1.jpg" alt="Solveye team member" style={{ objectFit: 'cover' }} />
               </div>
               <div className={`${s.arch} ${s.a2}`}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/Picture/careers/header-pic-2.jpg"
-                  alt="Solveye team member"
-                />
+                <Image fill src="/Picture/careers/header-pic-2.jpg" alt="Solveye team member" style={{ objectFit: 'cover' }} />
               </div>
               <div className={`${s.arch} ${s.a3}`}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/Picture/careers/header-pic-3.jpg"
-                  alt="Solveye team member"
-                />
+                <Image fill src="/Picture/careers/header-pic-3.jpg" alt="Solveye team member" style={{ objectFit: 'cover' }} />
               </div>
             </div>
           </div>

@@ -46,10 +46,6 @@
 }
 
 .secHead {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--se-space-xl);
-  align-items: end;
   margin-bottom: var(--se-space-d3);
 
   h2 {
@@ -62,10 +58,6 @@
   .note {
     color: var(--se-color-slate-600);
     font-size: var(--se-text-sm);
-  }
-
-  @media (max-width: 48rem) {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -116,11 +108,8 @@
   max-height: 25rem;
   border-radius: var(--se-radius-lg);
   aspect-ratio: 4 / 3;
-  background:
-    url('/Picture/about/hero-img.jpg')
-    center / cover no-repeat;
   box-shadow: 0 var(--se-space-xl) var(--se-space-d5) calc(-1 * var(--se-space-xl)) rgba(15, 23, 42, 0.22);
-  overflow: visible;
+  overflow: hidden;
 }
 
 // ---- Floating cards ----
@@ -193,10 +182,10 @@
   padding-bottom: var(--se-space-d3);
   border-top: 1px solid var(--se-color-line);
 
-  > div {
+  .stripItem {
     padding: 0 var(--se-space-d1);
 
-    & + div {
+    & + .stripItem {
       border-left: 1px solid var(--se-color-line);
     }
 
@@ -255,10 +244,10 @@
 }
 
 .originImg {
+  position: relative;
+  overflow: hidden;
   border-radius: var(--se-radius-lg);
   aspect-ratio: 5 / 5;
-  background: url('/Picture/about/origin.jpg')
-    center / cover;
   box-shadow: var(--se-shadow-lg);
   min-height: 25rem;
 }
@@ -413,6 +402,12 @@
     flex-shrink: 0;
   }
 
+  .signText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
   .name {
     color: white;
     font-weight: var(--se-weight-semibold);
@@ -537,8 +532,8 @@
 }
 
 .deiImg {
-  background: url('/Picture/about/backoffice.jpg')
-    center / cover;
+  position: relative;
+  overflow: hidden;
   border-radius: var(--se-radius-lg);
   aspect-ratio: 4.2 / 5;
   box-shadow: var(--se-shadow-lg);
@@ -551,7 +546,7 @@
   gap: var(--se-space);
   margin-top: var(--se-space-d1);
 
-  > div {
+  .statItem {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -561,7 +556,7 @@
     padding: var(--se-space-lg);
     background: white;
 
-    strong {
+    span {
       display: block;
       font-size: var(--se-text-fluid-h2-lg);
       font-weight: var(--se-weight-bold);
@@ -834,7 +829,7 @@
   flex-wrap: wrap;
   align-items: center;
 
-  > div {
+  .compText {
     max-width: 33.75rem;
   }
 

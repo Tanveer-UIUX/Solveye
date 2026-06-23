@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import AnimatedNumber from '@/components/AnimatedNumber'
 import s from './page.module.scss'
 
@@ -12,6 +13,20 @@ export const metadata: Metadata = {
   },
   robots: 'index,follow',
 }
+
+const KPI_STRIP = [
+  { value: '2014',   label: 'Founded' },
+  { value: '1,247',  label: 'Team members' },
+  { value: '480+',   label: 'Active customers' },
+  { value: '38',     label: 'US states served' },
+]
+
+const DEI_STATS = [
+  { value: '52%',  label: 'Women across the company' },
+  { value: '44%',  label: 'Women in leadership (Director+)' },
+  { value: '100%', label: 'Pay equity audit pass, 4 years running' },
+  { value: '7',    label: 'Active employee resource groups' },
+]
 
 const TIMELINE = [
   {
@@ -204,10 +219,10 @@ const LOCATIONS = [
     meta: ['112 employees', 'Opened 2020'],
   },
   {
-    city: 'Hyderabad',
-    country: 'India · Delivery Hub',
-    addr: ['Mindspace IT Park, Building 12', 'Hyderabad, Telangana 500081'],
-    meta: ['684 employees', 'Opened 2019'],
+    city: 'Lahore',
+    country: 'Pakistan · Delivery Hub',
+    addr: ['Coding Crafts, 50 C DHA Phase 6', 'Lahore, Punjab 54000'],
+    meta: ['68 employees', 'Opened 2019'],
   },
  
 ]
@@ -219,12 +234,10 @@ export default function AboutPage() {
       <section className={s.hero}>
         <div className="container">
           <div className={s.heroGrid}>
-
-            {/* Left: copy */}
             <div className={s.heroCopy}>
-              <div className={s.crumb}>
+              <nav className={s.crumb}>
                 <Link href="/">Home</Link> / About
-              </div>
+              </nav>
               <span className={s.eyebrow}>About Solveye</span>
               <h1>
                 We&rsquo;re Rebuilding The Back Office Of Healthcare, One Pod At A Time.
@@ -238,37 +251,15 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Right: photo composition with floating cards */}
             <div className={s.heroMedia}>
               <div className={s.heroPhoto}>
-                {/* Top-right floating card — AI Insight */}
-                <div className={s.floatCardRight}>
-                  <div className={s.cardHead}>
-                    <span className={s.cardIcon}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#185ed4">
-                        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
-                      </svg>
-                    </span>
-                    <strong>AI Insight</strong>
-                  </div>
-                  <div className={s.cardSub}>Best Productivity Today:</div>
-                  <div className={s.cardVal}>Wednesday</div>
-                </div>
-
-                {/* Bottom-left floating card — Team Update */}
-                <div className={s.floatCardLeft}>
-                  <div className={s.cardHead}>
-                    <span className={s.cardIcon} style={{ background: '#f0fdf4', color: '#16a34a' }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                      </svg>
-                    </span>
-                    <strong>Team Update</strong>
-                  </div>
-                  <div className={s.cardSub}>Sarah completed 3 tasks today</div>
-                </div>
+                <Image
+                  fill
+                  src="/Picture/about/hero-img.jpg"
+                  alt="Solveye team"
+                  style={{ objectFit: 'cover' }}
+                  priority
+                />
               </div>
             </div>
 
@@ -276,22 +267,12 @@ export default function AboutPage() {
 
           {/* KPI strip — full width below the grid */}
           <div className={s.strip}>
-            <div>
-              <strong><AnimatedNumber value="2014" /></strong>
-              <span className={s.kpiLabel}>Founded</span>
-            </div>
-            <div>
-              <strong><AnimatedNumber value="1,247" /></strong>
-              <span className={s.kpiLabel}>Team members</span>
-            </div>
-            <div>
-              <strong><AnimatedNumber value="480+" /></strong>
-              <span className={s.kpiLabel}>Active customers</span>
-            </div>
-            <div>
-              <strong><AnimatedNumber value="38" /></strong>
-              <span className={s.kpiLabel}>US states served</span>
-            </div>
+            {KPI_STRIP.map((kpi) => (
+              <div key={kpi.label} className={s.stripItem}>
+                <strong><AnimatedNumber value={kpi.value} /></strong>
+                <span className={s.kpiLabel}>{kpi.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -300,29 +281,27 @@ export default function AboutPage() {
       <section className={s.sectionAlt}>
         <div className="container">
           <div className={s.originGrid}>
-            <div className={s.originImg} />
-            <div>
+            <div className={s.originImg}>
+              <Image fill src="/Picture/about/origin.jpg" alt="Solveye origin story" style={{ objectFit: 'cover' }} />
+            </div>
+            <div className={s.originContent}>
               <span className={s.eyebrow}>Origin</span>
-              <h2>
-                Built By Operators Who&rsquo;d Run The Back Office And Knew It
-                Could Be Better.
+              <h2>Built By Operators Who&rsquo;d Run The Back Office And Knew It
+                  Could Be Better.
               </h2>
-              <p>
-                Solveye started in 2014 in a small office above a pharmacy in
+              <p>Solveye started in 2014 in a small office above a pharmacy in
                 Philadelphia. Our founders — Maya Patel, Daniel Roth, and Ravi
                 Krishnan — had spent the previous decade inside a multi-state
                 cardiology group, watching brilliant clinicians lose 12% of
                 their revenue to administrative friction.
               </p>
-              <p>
-                The diagnosis was clear: BPOs sold labor by the hour with no
+              <p>The diagnosis was clear: BPOs sold labor by the hour with no
                 skin in the outcome, software vendors sold tools with no humans
                 behind them, and the hospital&rsquo;s own AR team had no
                 leverage with payers. Nobody was accountable for the dollar
                 that went out the door.
               </p>
-              <p>
-                We built Solveye on a different premise: pods of named
+              <p>We built Solveye on a different premise: pods of named
                 specialists, paid on outcomes, working inside the
                 customer&rsquo;s existing EHR, with full transparency. Twelve
                 years later, that&rsquo;s still the operating model.
@@ -333,8 +312,8 @@ export default function AboutPage() {
           <div className={s.timeline}>
             {TIMELINE.map((item) => (
               <div key={item.year} className={s.tlItem}>
-                <div className={s.year}>{item.year}</div>
-                <h5>{item.title}</h5>
+                <span className={s.year}>{item.year}</span>
+                <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
             ))}
@@ -346,15 +325,13 @@ export default function AboutPage() {
       <section className={s.section}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
-              <span className={s.eyebrow}>What we stand for</span>
-              <h2>Mission. Vision. Values.</h2>
-            </div>
+            <span className={s.eyebrow}>What we stand for</span>
+            <h2>Mission. Vision. Values.</h2>
           </div>
 
           <div className={s.mvvGrid}>
-            <article className={s.mvvCard}>
-              <div className={s.label}>Mission</div>
+            <div  className={s.mvvCard}>
+              <span className={s.label}>Mission</span>
               <h3>Make every dollar earned in healthcare make it home.</h3>
               <p>
                 An estimated $250 billion in legitimately-earned healthcare
@@ -362,10 +339,10 @@ export default function AboutPage() {
                 That&rsquo;s the gap we exist to close — claim by claim, code
                 by code, denial by denial.
               </p>
-            </article>
+            </div>
 
-            <article className={s.mvvCard}>
-              <div className={s.label}>Vision</div>
+            <div  className={s.mvvCard}>
+              <span className={s.label}>Vision</span>
               <h3>
                 The default operating partner for every healthcare provider in
                 America.
@@ -376,10 +353,10 @@ export default function AboutPage() {
                 SLAs. One trustworthy partner that scales with you instead of
                 against you.
               </p>
-            </article>
+            </div>
 
-            <article className={s.mvvCard}>
-              <div className={s.label}>Values</div>
+            <div  className={s.mvvCard}>
+              <span className={s.label}>Values</span>
               <h3>Five non-negotiables we hire for and fire on.</h3>
               <p>
                 Patient privacy is sacred. Outcomes over effort. Transparency
@@ -388,7 +365,7 @@ export default function AboutPage() {
               <p className={s.small}>
                 Every value is measured. Every value can get you fired.
               </p>
-            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -435,9 +412,9 @@ export default function AboutPage() {
 
           <div className={s.ceoSign}>
             <div className={s.avatar} />
-            <div>
-              <div className={s.name}>Maya Patel</div>
-              <div className={s.title}>Co-founder &amp; CEO, Solveye Health</div>
+            <div className={s.signText}>
+              <span className={s.name}>Maya Patel</span>
+              <span className={s.title}>Co-founder &amp; CEO, Solveye Health</span>
             </div>
           </div>
         </div>
@@ -447,27 +424,24 @@ export default function AboutPage() {
       <section id="culture" className={s.section}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
-              <span className={s.eyebrow}>How we work</span>
-              <h2>Nine Principles That Shape Every Solveye Day.</h2>
-              <div className={s.note}>
+            <span className={s.eyebrow}>How we work</span>
+            <h2>Nine Principles That Shape Every Solveye Day.</h2>
+            <p className={s.note}>
               These aren&rsquo;t poster slogans. They&rsquo;re how we make
               hiring decisions, run reviews, and structure compensation.
-            </div>            
-            </div>
-            
+            </p>
           </div>
 
           <div className={s.principles}>
             {PRINCIPLES.map((p) => (
               <div key={p.n} className={s.principle}>
-                <div className={s.pn}>Principle {p.n}</div>
-                <h4>{p.title}</h4>
+                <span className={s.pn}>Principle {p.n}</span>
+                <h3>{p.title}</h3>
                 <p>{p.desc}</p>
-                <div className={s.means}>
+                <p  className={s.means}>
                   <strong>What this means in practice</strong>
                   {p.means}
-                </div>
+                </p>
               </div>
             ))}
           </div>
@@ -478,7 +452,7 @@ export default function AboutPage() {
       <section className={s.sectionAlt}>
         <div className="container">
           <div className={s.deiGrid}>
-            <div>
+            <div className={s.deiContent}>
               <span className={s.eyebrow}>Diversity, equity &amp; inclusion</span>
               <h2>
                 Healthcare&rsquo;s Back Office Should Look Like The Patients It
@@ -497,27 +471,18 @@ export default function AboutPage() {
                 not mentorship for under-represented roles), and an active ERG
                 program with budget and exec sponsors.
               </p>
-
               <div className={s.deiStats}>
-                <div>
-                  <strong><AnimatedNumber value="52%" /></strong>
-                  <span className={s.kpiLabel}>Women across the company</span>
-                </div>
-                <div>
-                  <strong><AnimatedNumber value="44%" /></strong>
-                  <span className={s.kpiLabel}>Women in leadership (Director+)</span>
-                </div>
-                <div>
-                  <strong><AnimatedNumber value="100%" /></strong>
-                  <span className={s.kpiLabel}>Pay equity audit pass, 4 years running</span>
-                </div>
-                <div>
-                  <strong><AnimatedNumber value="7" /></strong>
-                  <span className={s.kpiLabel}>Active employee resource groups</span>
-                </div>
+                {DEI_STATS.map((stat) => (
+                  <div key={stat.label} className={s.statItem}>
+                    <span><AnimatedNumber value={stat.value} /></span>
+                    <p className={s.kpiLabel}>{stat.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className={s.deiImg} />
+            <div className={s.deiImg}>
+              <Image fill src="/Picture/about/backoffice.jpg" alt="Solveye back office team" style={{ objectFit: 'cover' }} />
+            </div>
           </div>
         </div>
       </section>
@@ -526,19 +491,16 @@ export default function AboutPage() {
       <section className={s.section}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
-              <span className={s.eyebrow}>Awards &amp; recognition</span>
-              <h2>Recognition We&rsquo;re A Little Proud Of.</h2>
-            </div>
+            <span className={s.eyebrow}>Awards &amp; recognition</span>
+            <h2>Recognition We&rsquo;re A Little Proud Of.</h2>
           </div>
-
           <div className={s.awards}>
             {AWARDS.map((a) => (
-              <article key={a.title} className={s.award}>
+              <div key={a.title} className={s.award}>
                 <div className={s.yr}>{a.yr}</div>
                 <h5>{a.title}</h5>
                 <p>{a.desc}</p>
-              </article>
+              </div>
             ))}
           </div>
         </div>
@@ -557,20 +519,19 @@ export default function AboutPage() {
 
           <div className={s.certGrid}>
             {CERTS.map((c) => (
-              <article key={c.title} className={s.cert}>
+              <div key={c.title} className={s.cert}>
                 <div className={s.badge}>{c.badge}</div>
                 <h4>{c.title}</h4>
                 <p>{c.desc}</p>
                 <div className={s.det}>{c.det}</div>
-              </article>
+              </div>
             ))}
           </div>
 
           <div className={s.compFooter}>
-            <div>
+            <div className={s.compText}>
               <h3>Need our compliance package?</h3>
-              <p>
-                SOC 2 report, HITRUST letter, BAA template, and security
+              <p>SOC 2 report, HITRUST letter, BAA template, and security
                 questionnaire — sent within 24 hours under NDA.
               </p>
             </div>
@@ -585,20 +546,18 @@ export default function AboutPage() {
       <section className={s.sectionLocations}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
-              <span className={s.eyebrow}>Where we work</span>
-              <h2>Four Hubs. Twenty-Four-Hour Coverage.</h2>
-              <div className={s.note}>
-                Pods are anchored in one hub but supported around the clock.
-                Coding charts handed off at 8pm ET in Philadelphia are coded by
-                morning, US time.
-              </div>
-            </div>
+            <span className={s.eyebrow}>Where we work</span>
+            <h2>Four Hubs. Twenty-Four-Hour Coverage.</h2>
+            <p className={s.note}>
+              Pods are anchored in one hub but supported around the clock.
+              Coding charts handed off at 8pm ET in Philadelphia are coded by
+              morning, US time.
+            </p>
           </div>
 
           <div className={s.locations}>
             {LOCATIONS.map((loc) => (
-              <article key={loc.city} className={s.location}>
+              <div key={loc.city} className={s.location}>
                 <div className={s.city}>{loc.city}</div>
                 <div className={s.country}>{loc.country}</div>
                 <address className={s.addr}>
@@ -614,7 +573,7 @@ export default function AboutPage() {
                     <span key={m}>{m}</span>
                   ))}
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>
@@ -624,7 +583,7 @@ export default function AboutPage() {
       <section className={s.ctaWrap}>
         <div className="container">
           <div className={s.ctaBand}>
-            <div>
+            <div className={s.ctaContent}>
               <h2>Want To Work Somewhere That Actually Means It?</h2>
               <p>
                 We&rsquo;re hiring billers, coders, AR analysts, engineers, and

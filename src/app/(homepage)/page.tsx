@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import StatCounter from '@/components/StatCounter'
 import SubmitResumeModal from '@/components/careers/SubmitResumeModal'
@@ -174,7 +175,15 @@ export default function Home() {
             </div>
 
             <div className={s.heroVisual}>
-              <div className={s.heroPhoto} />
+              <div className={s.heroPhoto}>
+                <Image
+                  fill
+                  src="/Picture/Index/Pic2.jpg"
+                  alt="Solveye team"
+                  style={{ objectFit: 'cover' }}
+                  priority
+                />
+              </div>
             </div>
           </div>
           <div className={s.statsGrid}>
@@ -241,7 +250,7 @@ export default function Home() {
             <ul className={s.trustBadges} aria-label="Compliance certifications">
             <li className={s.badge}>
               <span className={s.badgeIcon} aria-hidden="true">
-                <img src="/Picture/Index/SOC 2.png" alt="SOC 2" width="48" height="48" style={{ objectFit: 'contain' }} />
+                <Image src="/Picture/Index/SOC 2.png" alt="SOC 2" width={48} height={48} style={{ objectFit: 'contain' }} />
               </span>
               <div>
                 <strong>SOC 2 Type II</strong>
@@ -251,7 +260,7 @@ export default function Home() {
 
             <li className={s.badge}>
                <span className={s.badgeIcon} aria-hidden="true">
-                <img src="/Picture/Index/HIPAA-logo.png" alt="Hippa" width="48" height="48" style={{ objectFit: 'contain' }} />
+                <Image src="/Picture/Index/HIPAA-logo.png" alt="HIPAA" width={48} height={48} style={{ objectFit: 'contain' }} />
               </span>
               <div>
                 <strong>HIPAA Compliant</strong>
@@ -261,7 +270,7 @@ export default function Home() {
 
             <li className={s.badge}>
               <span className={s.badgeIcon} aria-hidden="true">
-                <img src="/Picture/Index/HITRUST-logo.png" alt="Hitrust" width="48" height="48" style={{ objectFit: 'contain' }} />
+                <Image src="/Picture/Index/HITRUST-logo.png" alt="HITRUST" width={48} height={48} style={{ objectFit: 'contain' }} />
               </span>
               <div>
                 <strong>HITRUST CSF</strong>
@@ -380,10 +389,14 @@ export default function Home() {
           <div className={s.insightGrid}>
             {INSIGHTS.map((item) => (
               <Link key={item.title} href="#" className={s.insightCard}>
-                <div
-                  className={s.insightPhoto}
-                  style={{ backgroundImage: `url('${item.img}')` }}
-                />
+                <div className={s.insightPhoto}>
+                  <Image
+                    fill
+                    src={item.img}
+                    alt={item.title}
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
                 <div className={s.meta}>
                   <span>{item.tag}</span>
                   <span>&middot; {item.time}</span>

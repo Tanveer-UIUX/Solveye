@@ -244,11 +244,9 @@
 .heroPhoto {
   position: absolute;
   inset: 0;
-  background-image: url('/Picture/Index/Pic2.jpg');
-  background-size: cover;
-  background-position: center;
   border-radius: var(--se-radius-lg);
   box-shadow: var(--se-shadow-lg);
+  overflow: hidden;
 }
 
 .statNum {
@@ -854,10 +852,10 @@
 }
 
 .insightPhoto {
+  position: relative;
+  overflow: hidden;
   aspect-ratio: 16 / 10;
   border-radius: var(--se-radius);
-  background-size: cover;
-  background-position: center;
   margin-bottom: var(--se-space-3xs);
   position: relative;
   overflow: hidden;

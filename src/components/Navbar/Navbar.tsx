@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import s from './Navbar.module.scss'
 
@@ -16,7 +17,7 @@ export default function Navbar() {
     <header className={s.nav}>
       <div className={s.inner}>
         <Link href="/" className={s.brand}>
-          <img src="/logo/SolvEye-Logo.png" alt="SolvEye" />
+          <Image src="/logo/SolvEye-Logo.png" alt="SolvEye" width={140} height={36} />
         </Link>
 
         <nav className={s.links} aria-label="Primary">
