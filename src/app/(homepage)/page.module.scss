@@ -610,7 +610,8 @@
 }
 
 .diffImage {
-  background: url('/Picture/Index/Pic3.jpg') center / cover;
+  position: relative;
+  overflow: hidden;
   border-radius: var(--se-radius-lg);
   align-self: stretch;
   min-height: 100%;

@@ -329,7 +329,14 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className={s.diffImage} />
+            <div className={s.diffImage}>
+              <Image
+                fill
+                src="/Picture/Index/Pic3.jpg"
+                alt="Solveye difference"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
           </div>
         </div>
       </section>
