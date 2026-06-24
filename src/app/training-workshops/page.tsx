@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import AnimatedNumber from '@/components/AnimatedNumber'
 import FaqAccordion from './FaqAccordion'
 import HeroScroll from './HeroScroll'
@@ -14,6 +15,20 @@ export const metadata: Metadata = {
   },
   robots: 'index,follow',
 }
+
+const KPI_STRIP = [
+  { value: '96+', suffix: null, label: 'Hours · year one' },
+  { value: '38',  suffix: null, label: 'Active programs' },
+  { value: '14',  suffix: null, label: 'Internal trainers' },
+  { value: '4.8', suffix: '/5', label: 'Avg session rating' },
+]
+
+const IMPACT_STATS = [
+  { value: '-42%', label: 'Avoidable denial rate · post-training' },
+  { value: '2.3×', label: 'Faster ramp · new hires' },
+  { value: '89%',  label: 'Internal promotion rate · trained cohort' },
+  { value: '612',  label: 'Industry certifications earned' },
+]
 
 const TRACKS = [
   {
@@ -262,24 +277,15 @@ export default function TrainingWorkshopsPage() {
 
           {/* Stats strip — full width below the grid */}
           <div className={s.strip}>
-            <div>
-              <div className={s.statNum}><AnimatedNumber value="96+" /></div>
-              <div className={s.statLabel}>Hours · year one</div>
-            </div>
-            <div>
-              <div className={s.statNum}><AnimatedNumber value="38" /></div>
-              <div className={s.statLabel}>Active programs</div>
-            </div>
-            <div>
-              <div className={s.statNum}><AnimatedNumber value="14" /></div>
-              <div className={s.statLabel}>Internal trainers</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <AnimatedNumber value="4.8" /><span className={s.statDenom}>/5</span>
+            {KPI_STRIP.map((kpi) => (
+              <div key={kpi.label} className={s.stripItem}>
+                <div className={s.statNum}>
+                  <AnimatedNumber value={kpi.value} />
+                  {kpi.suffix && <span className={s.statDenom}>{kpi.suffix}</span>}
+                </div>
+                <div className={s.statLabel}>{kpi.label}</div>
               </div>
-              <div className={s.statLabel}>Avg session rating</div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -431,22 +437,12 @@ export default function TrainingWorkshopsPage() {
             Measurable shifts that came out of how we train — not anecdotes.
           </p>
           <div className={s.impactGrid}>
-            <div>
-              <div className={s.impactNum}><AnimatedNumber value="-42%" /></div>
-              <div className={s.impactLabel}>Avoidable denial rate · post-training</div>
-            </div>
-            <div>
-              <div className={s.impactNum}><AnimatedNumber value="2.3×" /></div>
-              <div className={s.impactLabel}>Faster ramp · new hires</div>
-            </div>
-            <div>
-              <div className={s.impactNum}><AnimatedNumber value="89%" /></div>
-              <div className={s.impactLabel}>Internal promotion rate · trained cohort</div>
-            </div>
-            <div>
-              <div className={s.impactNum}><AnimatedNumber value="612" /></div>
-              <div className={s.impactLabel}>Industry certifications earned</div>
-            </div>
+            {IMPACT_STATS.map((stat) => (
+              <div key={stat.label} className={s.impactItem}>
+                <div className={s.impactNum}><AnimatedNumber value={stat.value} /></div>
+                <div className={s.impactLabel}>{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

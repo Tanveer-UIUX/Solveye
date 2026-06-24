@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   robots: 'index,follow',
 }
 
+const KPI_STRIP = [
+  { value: '1,247', label: 'Team members' },
+  { value: '87%',   label: 'Internal mobility (3-yr avg)' },
+  { value: '94%',   label: 'Glassdoor recommend rate' },
+  { value: '4 weeks', label: 'Minimum PTO' },
+]
+
 const REASONS = [
   {
     title: 'Real ownership, on day one',
@@ -509,23 +516,13 @@ export default function CareersPage() {
           </div>
 
           <div className={s.strip}>
-            <div>
-              <strong><AnimatedNumber value="1,247" /></strong>
-              <span className={s.kpiLabel}>Team members</span>
+            {KPI_STRIP.map((kpi) => (
+              <div key={kpi.label} className={s.stripItem}>
+                <strong><AnimatedNumber value={kpi.value} /></strong>
+                <span className={s.kpiLabel}>{kpi.label}</span>
               </div>
-                <div>
-                  <strong><AnimatedNumber value="87%" /></strong>
-                  <span className={s.kpiLabel}>Internal mobility (3-yr avg)</span>
-                </div>
-                <div>
-                  <strong><AnimatedNumber value="94%" /></strong>
-                  <span className={s.kpiLabel}>Glassdoor recommend rate</span>
-                </div>
-                <div>
-                  <strong><AnimatedNumber value="4 weeks" /></strong>
-                  <span className={s.kpiLabel}>Minimum PTO</span>
-                </div>
-            </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -533,7 +530,9 @@ export default function CareersPage() {
       <section id="why" className={s.sectionLight}>
         <div className="container">
           <div className={s.whyGrid}>
-            <div className={s.whyImg} />
+            <div className={s.whyImg}>
+              <Image fill src="/Picture/careers/whyImg.jpg" alt="Why join Solveye" style={{ objectFit: 'cover' }} />
+            </div>
             <div>
               <span className={s.eyebrow}>Why join us</span>
               <h2>Five Reasons People Stay Seven Years.</h2>
@@ -575,11 +574,11 @@ export default function CareersPage() {
 
           <div className={s.benGrid}>
             {BENEFITS.map((b) => (
-              <article key={b.title} className={s.ben}>
+              <div key={b.title} className={s.ben}>
                 <div className={s.ic}>{b.icon}</div>
                 <h5>{b.title}</h5>
                 <p>{b.desc}</p>
-              </article>
+              </div>
             ))}
           </div>
         </div>

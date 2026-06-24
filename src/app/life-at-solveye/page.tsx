@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import AnimatedNumber from '@/components/AnimatedNumber'
 import Timeline from './Timeline'
 import s from './page.module.scss'
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
   },
   robots: 'index,follow',
 }
+
+const KPI_STRIP = [
+  { value: '92%', suffix: null,   label: 'Would recommend' },
+  { value: '4.7', suffix: '/5',   label: 'Glassdoor' },
+  { value: '3.8', suffix: ' yrs', label: 'Avg tenure' },
+  { value: '87%', suffix: null,   label: 'Internal promotions' },
+]
 
 const VALUES = [
   {
@@ -142,32 +150,23 @@ export default function LifeAtSolveyePage() {
             </div>
 
             {/* Right: team photo */}
-            <div className={s.heroPhoto} />
+            <div className={s.heroPhoto}>
+              <Image fill src="/Picture/header-life-atsolveye.jpg" alt="Life at Solveye" style={{ objectFit: 'cover' }} priority />
+            </div>
 
           </div>
 
           {/* Stats strip — full width below the grid */}
           <div className={s.strip}>
-            <div>
-              <div className={s.statNum}><AnimatedNumber value="92%" /></div>
-              <div className={s.statLabel}>Would recommend</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <AnimatedNumber value="4.7" /><span className={s.statDenom}>/5</span>
+            {KPI_STRIP.map((kpi) => (
+              <div key={kpi.label} className={s.stripItem}>
+                <div className={s.statNum}>
+                  <AnimatedNumber value={kpi.value} />
+                  {kpi.suffix && <span className={s.statDenom}>{kpi.suffix}</span>}
+                </div>
+                <div className={s.statLabel}>{kpi.label}</div>
               </div>
-              <div className={s.statLabel}>Glassdoor</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                <AnimatedNumber value="3.8" /><span className={s.statDenom}> yrs</span>
-              </div>
-              <div className={s.statLabel}>Avg tenure</div>
-            </div>
-            <div>
-              <div className={s.statNum}><AnimatedNumber value="87%" /></div>
-              <div className={s.statLabel}>Internal promotions</div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

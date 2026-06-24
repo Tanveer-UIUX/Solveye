@@ -378,10 +378,10 @@
   padding-bottom: var(--se-space-d3);
   border-top: 1px solid var(--se-color-line);
 
-  > div {
+  > .stripItem {
     padding: 0 var(--se-space-d1);
 
-    & + div {
+    & + .stripItem {
       border-left: 1px solid var(--se-color-line);
     }
 
@@ -439,8 +439,8 @@
 }
 
 .whyImg {
-  background: url('/Picture/careers/whyImg.jpg')
-    center / cover;
+  position: relative;
+  overflow: hidden;
   aspect-ratio: 5 / 5;
   border-radius: var(--se-radius-lg);
   box-shadow: var(--se-shadow-lg);
