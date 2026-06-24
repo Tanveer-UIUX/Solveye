@@ -458,7 +458,7 @@ export default function CareersPage() {
           </div>
 
           <div className={s.heroGrid}>
-            <div>
+            <div className={s.heroContent}>
               <span className={s.eyebrow}>Careers at Solveye</span>
               <h1>
                 Ready To Make
@@ -485,7 +485,7 @@ export default function CareersPage() {
 
               <div className={`${s.floater} ${s.f1}`}>
                 <span className={s.dot} aria-hidden="true" />
-                <div>
+                <div className={s.floaterText}>
                   <strong>7 roles open</strong>
                   <span className={s.sub}>across 5 locations</span>
                 </div>
@@ -497,7 +497,7 @@ export default function CareersPage() {
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
-                <div>
+                <div className={s.floaterText}>
                   <strong>94% recommend</strong>
                   <span className={s.sub}>on Glassdoor</span>
                 </div>
@@ -533,7 +533,7 @@ export default function CareersPage() {
             <div className={s.whyImg}>
               <Image fill src="/Picture/careers/whyImg.jpg" alt="Why join Solveye" style={{ objectFit: 'cover' }} />
             </div>
-            <div>
+            <div className={s.whyContent}>
               <span className={s.eyebrow}>Why join us</span>
               <h2>Five Reasons People Stay Seven Years.</h2>
               <p>
@@ -547,7 +547,7 @@ export default function CareersPage() {
                     <span className={s.check}>
                       <Check />
                     </span>
-                    <div>
+                    <div className={s.whyItemText}>
                       <strong>{r.title}</strong>
                       <p>{r.desc}</p>
                     </div>
@@ -588,7 +588,7 @@ export default function CareersPage() {
       <section id="roles" className={s.section}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Open roles</span>
               <h2>{JOBS.length} Open Roles Right Now.</h2>
             </div>
@@ -631,7 +631,7 @@ export default function CareersPage() {
       <section className={s.sectionLight}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Voices from the team</span>
               <h2>In Their Own Words.</h2>
             </div>
@@ -647,7 +647,7 @@ export default function CareersPage() {
                     style={{ backgroundImage: `url('${t.avatar}')` }}
                     aria-hidden="true"
                   />
-                  <div>
+                  <div className={s.citeText}>
                     <div className={s.nm}>{t.name}</div>
                     <div className={s.ti}>{t.title}</div>
                   </div>
@@ -662,7 +662,7 @@ export default function CareersPage() {
       <section className={s.ctaWrap}>
         <div className="container">
           <div className={s.ctaBand}>
-            <div>
+            <div className={s.ctaContent}>
               <h2>Don&rsquo;t See The Right Role?</h2>
               <p>
                 Send us a note anyway. We&rsquo;re always open to talented

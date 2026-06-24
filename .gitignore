@@ -8,3 +8,5 @@ temp_interactive_push.bat
 .gitignore
 .vercel
 .env*.local
+branch_structure.json
+config.bat

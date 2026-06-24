@@ -178,7 +178,7 @@ export default function LifeAtSolveyePage() {
       <section className={s.values}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>What we hire for</span>
               <h2>Four Operating Principles, Written In Plain English.</h2>
             </div>
@@ -221,7 +221,7 @@ export default function LifeAtSolveyePage() {
       <section className={s.collage}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Around the office</span>
               <h2>A Few Moments From The Last Quarter.</h2>
             </div>
@@ -242,7 +242,7 @@ export default function LifeAtSolveyePage() {
       <section className={s.perks}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Practical stuff</span>
               <h2>The Benefits We Lead With — Because They Actually Matter.</h2>
             </div>
@@ -252,7 +252,7 @@ export default function LifeAtSolveyePage() {
             {PERKS.map((perk) => (
               <div key={perk.title} className={s.perk}>
                 <div className={s.perkIcon}>{perk.icon}</div>
-                <div>
+                <div className={s.perkText}>
                   <h4>{perk.title}</h4>
                   <p>{perk.desc}</p>
                 </div>
@@ -266,7 +266,7 @@ export default function LifeAtSolveyePage() {
       <section className={s.testimonial}>
         <div className="container">
           <div className={s.testiGrid}>
-            <div>
+            <div className={s.testiContent}>
               <span className={s.eyebrow}>In their words</span>
               <h2>Real Voices.</h2>
               <blockquote className={s.quote}>
@@ -288,7 +288,7 @@ export default function LifeAtSolveyePage() {
       <section className={s.ctaWrap}>
         <div className="container">
           <div className={s.ctaBand}>
-            <div>
+            <div className={s.ctaContent}>
               <h2>If This Feels Like The Rhythm You&rsquo;re Looking For —</h2>
               <p>
                 We&rsquo;re hiring across ops, engineering, clinical, and go-to-market. Open roles update weekly.
