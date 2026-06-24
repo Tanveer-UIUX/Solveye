@@ -294,7 +294,7 @@ export default function TrainingWorkshopsPage() {
       <section className={s.tracks}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Curriculum</span>
               <h2>Six Tracks. Built For The Work People Actually Do.</h2>
               <p className={s.lead}>
@@ -333,7 +333,7 @@ export default function TrainingWorkshopsPage() {
       <section className={s.formats}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Formats · 100% on-site at the Solveye office</span>
               <h2>Live, In-Person, Face-To-Face. That&rsquo;s The Whole Format Philosophy.</h2>
               <p className={s.lead}>
@@ -360,7 +360,7 @@ export default function TrainingWorkshopsPage() {
       <section className={s.series}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Workshop series · Skills spotlights</span>
               <h2>Short, Intensive Workshops — Hosted Throughout The Year At Our Solveye Office.</h2>
               <p className={s.lead}>
@@ -391,7 +391,7 @@ export default function TrainingWorkshopsPage() {
       <section className={s.workshopGallery}>
         <div className="container">
           <div className={s.secHead}>
-            <div>
+            <div className={s.secHeadContent}>
               <span className={s.eyebrow}>Around the office</span>
               <h2>Workshops That Shaped How We Train.</h2>
               <p className={s.lead}>
@@ -454,7 +454,7 @@ export default function TrainingWorkshopsPage() {
       <section className={s.ctaWrap}>
         <div className="container">
           <div className={s.ctaBand}>
-            <div>
+            <div className={s.ctaContent}>
               <h2>Want To Know What Training Looks Like For A Specific Role?</h2>
               <p>Hop on a call with our L&amp;D team. 20 minutes, no pitch.</p>
             </div>

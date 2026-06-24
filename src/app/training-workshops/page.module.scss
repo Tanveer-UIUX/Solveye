@@ -41,6 +41,8 @@
     letter-spacing: var(--se-tracking-tight);
     margin: var(--se-space-xs) 0 var(--se-space);
   }
+
+  .secHeadContent { display: flex; flex-direction: column; }
 }
 
 // =============================================
@@ -998,6 +1000,8 @@
   p {
     color: var(--se-color-slate-300);
   }
+
+  .ctaContent { display: flex; flex-direction: column; }
 
   @media (max-width: 48rem) {
     grid-template-columns: 1fr;

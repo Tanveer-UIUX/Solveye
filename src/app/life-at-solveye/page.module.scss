@@ -43,6 +43,8 @@
     margin: var(--se-space-xs) 0 var(--se-space);
     max-width: 45rem;
   }
+
+  .secHeadContent { display: flex; flex-direction: column; }
 }
 
 // =============================================
@@ -611,6 +613,8 @@
     box-shadow: var(--se-shadow);
   }
 
+  .perkText { display: flex; flex-direction: column; }
+
   h4 {
     font-size: var(--se-text-de);
     margin: 0 0 var(--se-space-4xs);
@@ -652,6 +656,8 @@
   align-items: center;
 
   @media (max-width: 56.25rem) { grid-template-columns: 1fr; }
+
+  .testiContent { display: flex; flex-direction: column; }
 
   h2 {
     font-size: var(--se-text-fluid-h2-sm);
@@ -727,6 +733,8 @@
   p {
     color: var(--se-color-slate-300);
   }
+
+  .ctaContent { display: flex; flex-direction: column; }
 
   @media (max-width: 48rem) {
     grid-template-columns: 1fr;

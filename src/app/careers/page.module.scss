@@ -106,6 +106,8 @@
     font-size: var(--se-text-sm);
   }
 
+  .secHeadContent { display: flex; flex-direction: column; }
+
   @media (max-width: 48rem) {
     grid-template-columns: 1fr;
   }
@@ -149,6 +151,8 @@
     gap: var(--se-space-d2);
   }
 }
+
+.heroContent { display: flex; flex-direction: column; }
 
 // ---- Hero CTAs ----
 .heroCta {
@@ -340,6 +344,8 @@
   }
 }
 
+.floaterText { display: flex; flex-direction: column; }
+
 .f1 {
   top: var(--se-space-lg);
   left: calc(-1 * var(--se-space-lg));
@@ -447,6 +453,8 @@
   min-height: 25rem;
 }
 
+.whyContent { display: flex; flex-direction: column; }
+
 .whyList {
   display: grid;
   gap: var(--se-space);
@@ -483,6 +491,8 @@
   place-items: center;
   margin-top: 0.125rem;
 }
+
+.whyItemText { display: flex; flex-direction: column; }
 
 // =============================================
 // 3. BENEFITS
@@ -668,6 +678,8 @@
     align-items: center;
   }
 
+  .citeText { display: flex; flex-direction: column; }
+
   .av {
     width: 2.75rem;
     height: 2.75rem;
@@ -726,6 +738,8 @@
   p {
     color: var(--se-color-slate-300);
   }
+
+  .ctaContent { display: flex; flex-direction: column; }
 
   @media (max-width: 48rem) {
     grid-template-columns: 1fr;
